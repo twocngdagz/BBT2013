@@ -1,0 +1,26 @@
+# For security reasons, Option followsymlinks cannot be overridden.
+# Options +FollowSymlinks
+Options +SymLinksIfOwnerMatch
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule .* - [L]
+
+
+
+# -FrontPage-
+
+IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
+
+<Limit GET POST>
+order deny,allow
+deny from all
+allow from all
+</Limit>
+<Limit PUT DELETE>
+order deny,allow
+deny from all
+</Limit>
+AuthName bbt2013.alorit.com
+AuthUserFile /home/bbt2013a/public_html/_vti_pvt/service.pwd
+AuthGroupFile /home/bbt2013a/public_html/_vti_pvt/service.grp
