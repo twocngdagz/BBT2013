@@ -13,8 +13,8 @@
 	 */
 
 	# GET ROOT DOUCMENTS & DIRECTORIES
-	define("MCHN_ROOT", "http://localhost/BBT2013svn_local/");
-	define("MCHN_DIR_ROOT", "/wamp/www/BBT2013svn_local/");
+	define("MCHN_ROOT", "http://localhost/BBT2013/");
+	define("MCHN_DIR_ROOT", "/wamp/www/BBT2013/");
 	
 	define("MCHN_DIR_CORE", MCHN_DIR_ROOT ."core/");
 	define("CNTRLR", MCHN_DIR_CORE ."controller/");

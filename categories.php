@@ -10,8 +10,8 @@ if(!empty($gp['id']))
 	$category = category::getCategory($gp['id']);
 	$gp['id'] = $category[0]['id'];
 	$buffer =str_replace("%BBT2013%", $category[0]['name_short'] . " by BabyBeddingTown.com", $buffer);
-	echo $buffer;
 }
+echo $buffer;
 ?>
 <?php setlocale(LC_MONETARY, 'en_US'); ?>
 <script type="text/javascript">
