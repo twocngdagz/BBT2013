@@ -1,6 +1,6 @@
 
 <?php
-//CATEGORY
+//CATEGORY comment
 //Lambs and Ivy = 11, Glenna Jean = 22, Kidsline = 10, Sumersault = 24, Sweet JoJo Designs= 537, Sweet Kyla = 219
 $Lambs_and_Ivy = category::getCategoryURL(11);
 
