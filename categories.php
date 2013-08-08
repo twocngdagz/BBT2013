@@ -68,10 +68,10 @@ echo $buffer;
 				</div>
 				<?php if(!empty($topproducts)) { ?>
 				<div id="carousel-left">
-					<img src="images/arrow-left.png" />
+					<img src="/images/arrow-left.png" />
 				</div>
 				<div id="carousel-right">
-					<img src="images/arrow-right.png" />
+					<img src="/images/arrow-right.png" />
 				</div>
 				<?php } ?>
 				<?php } else {?>
