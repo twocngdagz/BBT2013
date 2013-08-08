@@ -1,3 +1,4 @@
+<?php error_reporting(E_ALL ^ E_NOTICE);?>
 <div class="navbar navbar-static-top">
 <div class="navbar-inner">
   <div class="container">

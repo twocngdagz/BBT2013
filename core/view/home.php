@@ -83,8 +83,6 @@ $Britax = products::getProducts(17164);
 
 
 //High Chairs Feeding'
-
-print_r($Hello_Kitty_Garden);
 ?>
 
 <div class="row-fluid">

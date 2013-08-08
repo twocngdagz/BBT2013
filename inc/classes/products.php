@@ -80,7 +80,7 @@ class Products {
 	# GET ALL PRODUCTS
 	public static function getProductsTop() 
 	{
-		$sql = "SELECT * FROM `products_items` order by `name_short` limit 0, 10";
+		$sql = "SELECT * FROM `products_items` limit 0, 10";
 		db::execute_query($sql);
 		$d_arr = db::get_result();
 		$r = array();

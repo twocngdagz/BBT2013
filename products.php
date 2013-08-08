@@ -24,7 +24,7 @@ if(!empty($gp['id']))
 }
 else
 {
-  $products = products::getAllProducts();
+  $products = products::getProductsTop();
 }
 ?>
 
@@ -44,12 +44,10 @@ else
   </p>
 
   <?php foreach( $products as $row):?>
-  print_r($row);
-  exit;
   <a class="product-container-link" href="./products.php?id=<?php html::p($row["id"]) ?>">
     <div class="pull-left well product-container">
       <center>
-      <img width="180" src="<?php 
+      <img style="width: 400px; height: 300px;" src="<?php 
       if(empty($row['image_small']))
       {
               html::p(MCHN_DIR_ASSETS."img/noimage.jpg"); 
@@ -59,8 +57,14 @@ else
               echo $row['image_small']; 
       }?>" />
       <br><br>
-      <b><?php html::p($row["name_short"]) ?></b>
-      <div>Price: <b><?php html::p($row["price"]) ?></b></div>
+      <div style="height: 40px;">
+			<a href="./products.php?id=<?php html::p($row["id"]) ?>"><b><?php html::p($row["name_short"]) ?>
+			</b> </a>
+		</div>
+     <div>
+		Price: <b>$<?php html::p(number_format($row["price"],2,".",",")); ?>
+		</b>
+	</div>
       <br>
       <form action="./cart.php" method="post">
         <input type="hidden" name="item" value="<?php html::p(number_format($row["price"],2,".",",")) ?>"/>
@@ -90,11 +94,21 @@ else
 </div>
 <div class="span7">
   <h2><?php html::p(ucwords($row["name_long"])) ?></h2>
-  <div style="color:red;font-size:32px;"><b>$<?php html::p(number_format($row["price"],2,".",",")) ?></b></div>
+  <div style="color:red;font-size:32px;">
+  		<b>$<?php html::p(number_format($row["price"],2,".",",")) ?></b>
+  		<div style="float: right">
+		  <form action="./cart.php" method="post">
+		    <input type="hidden" name="item" value="<?php html::p($row["id"]) ?>"/>
+		    <div><input type="hidden" name="quantity" value="1" /></div>
+		    <input type="hidden" name="direction" value="fromCart"/>      
+		    <input type="submit" class="btn btn-info btn-medium" value="ADD TO CART"/>
+		  </form>
+		</div>
+  </div>
   <br>
+  
   <ul id="myTab" class="nav nav-tabs">
     <li class="active"><a href="#Description" data-toggle="tab">Description</a></li>
-    <li class=""><a href="#Comments" data-toggle="tab">Comments</a></li>
   </ul>
   <div id="myTabContent" class="tab-content" style="min-height:350px;">
     <div class="tab-pane fade active in" id="Description">

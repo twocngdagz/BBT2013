@@ -102,14 +102,14 @@ echo $buffer;
 						<a href="./products.php?id=<?php html::p($row["id"]) ?>"><img
 							style="width: 400px; height: 300px;"
 							src="<?php 
-			  if(empty($row['image_small']))
-			  {
-					  html::p(MCHN_DIR_ASSETS."img/noimage.jpg"); 
-			  }
-			  else
-			  {
-					  echo $row['image_small']; 
-			  }?>" /> </a> <br> <br>
+							  if(empty($row['image_small']))
+							  {
+									  html::p(MCHN_DIR_ASSETS."img/noimage.jpg"); 
+							  }
+							  else
+							  {
+									  echo $row['image_small']; 
+							  }?>" /> </a> <br> <br>
 						<div style="height: 40px;">
 							<a href="./products.php?id=<?php html::p($row["id"]) ?>"><b><?php html::p($row["name_short"]) ?>
 							</b> </a>
