@@ -83,6 +83,8 @@ $Britax = products::getProducts(17164);
 
 
 //High Chairs Feeding'
+
+
 ?>
 
 <div class="row-fluid">
@@ -95,13 +97,16 @@ $Britax = products::getProducts(17164);
 				
 				<!-- CatEGORY -->
 				<div class="featured">
-
+					<a href="./<?php html::p($Lambs_and_Ivy[0]["url"]) ?>">
 					<h3><?php html::p($Lambs_and_Ivy[0]['name_short']);?></h3>
-					<p><?php html::p($Lambs_and_Ivy[0]['description_short']);?></p>
+					</a>
+					<p><?php echo $Lambs_and_Ivy[0]['description_short'];?></p>
 
 					<div class="pull-left" style="padding: 10px;">
-						<a><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Lambs_and_Ivy[0]['image_large']); ?>" alt=""> </a> <br>
+						<a href="./<?php html::p($Lambs_and_Ivy[0]["url"]) ?>">
+						<img width="620px" style="height: 290px" class="img-polaroid"
+							src="<?php html::p($Lambs_and_Ivy[0]['image_large']); ?>" alt="">
+						</a> <br>
 						
 					</div>
 
@@ -193,12 +198,13 @@ $Britax = products::getProducts(17164);
 
 				<!-- CatEGORY  KidsLine-->
 				<div class="featured">
-
+					<a href="./<?php html::p($KidsLine[0]["url"]) ?>">
 					<h3><?php html::p($KidsLine[0]['name_short']);?></h3>
-					<p><?php html::p($KidsLine[0]['description_short']);?></p>
+					</a>
+					<p><?php echo $KidsLine[0]['description_short']; ?></p>
 
 					<div class="pull-left" style="padding: 10px;">
-						<a><img width="620px" style="height: 290px" class="img-polaroid"
+						<a href="./<?php html::p($KidsLine[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
 							src="<?php html::p($KidsLine[0]['image_large']); ?>" alt=""> </a> <br>
 						
 					</div>
@@ -290,12 +296,12 @@ $Britax = products::getProducts(17164);
 
 				<!-- CatEGORY  Glenn jean-->
 				<div class="featured">
-
-					<h3><?php html::p($Glenn_Jean[0]['name_short']);?></h3>
-					<p><?php html::p($Glenn_Jean[0]['description_short']);?></p>
+					<a href="./<?php html::p($Glenn_Jean[0]["url"]) ?>">
+					<h3><?php html::p($Glenn_Jean[0]['name_short']); ?></h3></a>
+					<p><?php echo $Glenn_Jean[0]['description_short']; ?></p>
 
 					<div class="pull-left" style="padding: 10px;">
-						<a><img width="620px" style="height: 290px" class="img-polaroid"
+						<a href="./<?php html::p($Glenn_Jean[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
 							src="<?php html::p($Glenn_Jean[0]['image_large']); ?>" alt=""> </a> <br>
 						
 					</div>
@@ -386,12 +392,13 @@ $Britax = products::getProducts(17164);
 
 				<!-- CatEGORY  Summer-->
 				<div class="featured">
-
-					<h3><?php html::p($Sumersault[0]['name_short']);?></h3>
-					<p><?php html::p($Sumersault[0]['description_short']);?></p>
+					<a href="./<?php html::p($Sumersault[0]["url"]) ?>">
+						<h3><?php html::p($Sumersault[0]['name_short']) ;?></h3>
+					</a>
+					<p><?php echo $Sumersault[0]['description_short']; ?></p>
 
 					<div class="pull-left" style="padding: 10px;">
-						<a><img width="620px" style="height: 290px" class="img-polaroid"
+						<a href="./<?php html::p($Sumersault[0]["url"]) ?>" ><img width="620px" style="height: 290px" class="img-polaroid"
 							src="<?php html::p($Sumersault[0]['image_large']); ?>" alt=""> </a> <br>
 						
 					</div>
@@ -432,11 +439,13 @@ $Britax = products::getProducts(17164);
 				<!-- CatEGORY  Sweet jojo-->
 				<div class="featured">
 
-					<h3><?php html::p($Sweet_JoJo_Designs[0]['name_short']);?></h3>
-					<p><?php html::p($Sweet_JoJo_Designs[0]['description_short']);?></p>
+					<a href="./<?php html::p($Sweet_JoJo_Designs[0]["url"]) ?>">
+						<h3><?php html::p($Sweet_JoJo_Designs[0]['name_short']) ;?></h3>
+					</a>
+					<p><?php echo $Sweet_JoJo_Designs[0]['description_short'];?></p>
 
 					<div class="pull-left" style="padding: 10px;">
-						<a><img width="620px" style="height: 290px" class="img-polaroid"
+						<a href="./<?php html::p($Sweet_JoJo_Designs[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
 							src="<?php html::p($Sweet_JoJo_Designs[0]['image_large']); ?>" alt=""> </a> <br>
 						
 					</div>
@@ -527,12 +536,13 @@ $Britax = products::getProducts(17164);
 
 				<!-- CatEGORY  Sweet Kyla-->
 				<div class="featured">
-
-					<h3><?php html::p($Sweet_Kyla[0]['name_short']);?></h3>
-					<p><?php html::p($Sweet_Kyla[0]['description_short']);?></p>
+					<a href="./<?php html::p($Sweet_Kyla[0]["url"]) ?>">
+						<h3><?php html::p($Sweet_Kyla[0]['name_short']) ;?></h3>
+					</a>
+					<p><?php echo $Sweet_Kyla[0]['description_short'];?></p>
 
 					<div class="pull-left" style="padding: 10px;">
-						<a><img width="620px" style="height: 290px" class="img-polaroid"
+						<a href="./<?php html::p($Sweet_Kyla[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
 							src="<?php html::p($Sweet_Kyla[0]['image_large']); ?>" alt=""> </a> <br>
 						
 					</div>
@@ -624,11 +634,13 @@ $Britax = products::getProducts(17164);
 				<!-- CatEGORY Trend lab-->
 				<div class="featured">
 
-					<h3><?php html::p($Trend_Lab[0]['name_short']);?></h3>
-					<p><?php html::p($Trend_Lab[0]['description_short']);?></p>
+					<a href="./<?php html::p($Trend_Lab[0]["url"]) ?>">
+						<h3><?php html::p($Trend_Lab[0]['name_short']) ;?></h3>
+					</a>
+					<p><?php echo $Trend_Lab[0]['description_short'];?></p>
 
 					<div class="pull-left" style="padding: 10px;">
-						<a><img width="620px" style="height: 290px" class="img-polaroid"
+						<a href="./<?php html::p($Trend_Lab[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
 							src="<?php html::p($Trend_Lab[0]['image_large']); ?>" alt=""> </a> <br>
 						
 					</div>
@@ -695,11 +707,13 @@ $Britax = products::getProducts(17164);
 				<!-- CatEGORY  Young America-->
 				<div class="featured">
 
-					<h3><?php html::p($Young_America[0]['name_short']);?></h3>
-					<p><?php html::p($Young_America[0]['description_short']);?></p>
+					<a href="./<?php html::p($Young_America[0]["url"]) ?>">
+						<h3><?php html::p($Young_America[0]['name_short']) ;?></h3>
+					</a>
+					<p><?php echo $Young_America[0]['description_short'];?></p>
 
 					<div class="pull-left" style="padding: 10px;">
-						<a><img width="620px" style="height: 290px" class="img-polaroid"
+						<a href="./<?php html::p($Young_America[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
 							src="<?php html::p($Young_America[0]['image_large']); ?>" alt=""> </a> <br>
 						
 					</div>
@@ -791,11 +805,13 @@ $Britax = products::getProducts(17164);
 				<!-- CatEGORY  Corsican-->
 				<div class="featured">
 
-					<h3><?php html::p($Corsican_Design_Metal_Cribs[0]['name_short']);?></h3>
-					<p><?php html::p($Corsican_Design_Metal_Cribs[0]['description_short']);?></p>
+					<a href="./<?php html::p($Corsican_Design_Metal_Cribs[0]["url"]) ?>">
+						<h3><?php html::p($Corsican_Design_Metal_Cribs[0]['name_short']) ;?></h3>
+					</a>
+					<p><?php echo $Corsican_Design_Metal_Cribs[0]['description_short'];?></p>
 
 					<div class="pull-left" style="padding: 10px;">
-						<a><img width="620px" style="height: 290px" class="img-polaroid"
+						<a href="./<?php html::p($Corsican_Design_Metal_Cribs[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
 							src="<?php html::p($Corsican_Design_Metal_Cribs[0]['image_large']); ?>" alt=""> </a> <br>
 						
 					</div>
@@ -836,11 +852,13 @@ $Britax = products::getProducts(17164);
 				<!-- CatEGORY  Nursery-->
 				<div class="featured">
 
-					<h3><?php html::p($Nursery_Smart_Baby_Furniture[0]['name_short']);?></h3>
-					<p><?php html::p($Nursery_Smart_Baby_Furniture[0]['description_short']);?></p>
+					<a href="./<?php html::p($Nursery_Smart_Baby_Furniture[0]["url"]) ?>">
+						<h3><?php html::p($Nursery_Smart_Baby_Furniture[0]['name_short']) ;?></h3>
+					</a>
+					<p><?php echo $Nursery_Smart_Baby_Furniture[0]['description_short'];?></p>
 
 					<div class="pull-left" style="padding: 10px;">
-						<a><img width="620px" style="height: 290px" class="img-polaroid"
+						<a href="./<?php html::p($Nursery_Smart_Baby_Furniture[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
 							src="<?php html::p($Nursery_Smart_Baby_Furniture[0]['image_large']); ?>" alt=""> </a> <br>
 						
 					</div>
@@ -880,11 +898,13 @@ $Britax = products::getProducts(17164);
 				<!-- CatEGORY  Bassinets-->
 				<div class="featured">
 
-					<h3><?php html::p($Bassinets[0]['name_short']);?></h3>
-					<p><?php html::p($Bassinets[0]['description_short']);?></p>
+					<a href="./<?php html::p($Bassinets[0]["url"]) ?>">
+						<h3><?php html::p($Bassinets[0]['name_short']) ;?></h3>
+					</a>
+					<p><?php echo $Bassinets[0]['description_short'];?></p>
 
 					<div class="pull-left" style="padding: 10px;">
-						<a><img width="620px" style="height: 290px" class="img-polaroid"
+						<a href="./<?php html::p($Bassinets[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
 							src="<?php html::p($Bassinets[0]['image_large']); ?>" alt=""> </a> <br>
 						
 					</div>
@@ -902,11 +922,13 @@ $Britax = products::getProducts(17164);
 				<!-- CatEGORY  baby Doll-->
 				<div class="featured">
 
-					<h3><?php html::p($Baby_Doll[0]['name_short']);?></h3>
-					<p><?php html::p($Baby_Doll[0]['description_short']);?></p>
+					<a href="./<?php html::p($Baby_Doll[0]["url"]) ?>">
+						<h3><?php html::p($Baby_Doll[0]['name_short']) ;?></h3>
+					</a>
+					<p><?php echo $Baby_Doll[0]['description_short'];?></p>
 
 					<div class="pull-left" style="padding: 10px;">
-						<a><img width="620px" style="height: 290px" class="img-polaroid"
+						<a href="./<?php html::p($Baby_Doll[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
 							src="<?php html::p($Baby_Doll[0]['image_large']); ?>" alt=""> </a> <br>
 						
 					</div>
@@ -973,11 +995,13 @@ $Britax = products::getProducts(17164);
 				<!-- CatEGORY  Strollers-->
 				<div class="featured">
 
-					<h3><?php html::p($Strollers[0]['name_short']);?></h3>
-					<p><?php html::p($Strollers[0]['description_short']);?></p>
+					<a href="./<?php html::p($Strollers[0]["url"]) ?>">
+						<h3><?php html::p($Strollers[0]['name_short']) ;?></h3>
+					</a>
+					<p><?php echo $Strollers[0]['description_short'];?></p>
 
 					<div class="pull-left" style="padding: 10px;">
-						<a><img width="620px" style="height: 290px" class="img-polaroid"
+						<a href="./<?php html::p($Strollers[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
 							src="<?php html::p($Strollers[0]['image_large']); ?>" alt=""> </a> <br>
 						
 					</div>
@@ -1125,11 +1149,13 @@ $Britax = products::getProducts(17164);
 				<!-- CatEGORY  caCarseats-->
 				<div class="featured">
 
-					<h3><?php html::p($Carseats[0]['name_short']);?></h3>
-					<p><?php html::p($Carseats[0]['description_short']);?></p>
+					<a href="./<?php html::p($Carseats[0]["url"]) ?>">
+						<h3><?php html::p($Carseats[0]['name_short']) ;?></h3>
+					</a>
+					<p><?php echo $Carseats[0]['description_short'];?></p>
 
 					<div class="pull-left" style="padding: 10px;">
-						<a><img width="620px" style="height: 290px" class="img-polaroid"
+						<a href="./<?php html::p($Carseats[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
 							src="<?php html::p($Carseats[0]['image_large']); ?>" alt=""> </a> <br>
 						
 					</div>
@@ -1169,11 +1195,13 @@ $Britax = products::getProducts(17164);
 				<!-- CatEGORY  High Chairs-->
 				<div class="featured">
 
-					<h3><?php html::p($High_Chairs_Feeding[0]['name_short']);?></h3>
-					<p><?php html::p($High_Chairs_Feeding[0]['description_short']);?></p>
+					<a href="./<?php html::p($High_Chairs_Feeding[0]["url"]) ?>">
+						<h3><?php html::p($High_Chairs_Feeding[0]['name_short']) ;?></h3>
+					</a>
+					<p><?php echo $High_Chairs_Feeding[0]['description_short'];?></p>
 
 					<div class="pull-left" style="padding: 10px;">
-						<a><img width="620px" style="height: 290px" class="img-polaroid"
+						<a href="./<?php html::p($High_Chairs_Feeding[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
 							src="<?php html::p($High_Chairs_Feeding[0]['image_large']); ?>" alt=""> </a> <br>
 						
 					</div>

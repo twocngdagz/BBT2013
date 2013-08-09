@@ -11,10 +11,16 @@
 	 * 
 	 * Get new API/CLASS new directory on NEW LIB inc/classes
 	 */
+	$host = $_SERVER['HTTP_HOST'];	
 
 	# GET ROOT DOUCMENTS & DIRECTORIES
-	define("MCHN_ROOT", "http://localhost/BBT2013/");
-	define("MCHN_DIR_ROOT", "/wamp/www/BBT2013/");
+	if ($host == "localhost") {
+		define("MCHN_ROOT", "http://localhost/BBT2013/");
+		define("MCHN_DIR_ROOT", "/wamp/www/BBT2013/");
+	} else {
+		define("MCHN_ROOT", "http://bbt2013.alorit.com/");
+		define("MCHN_DIR_ROOT", "/home/bbt2013a/public_html/");
+	}
 	
 	define("MCHN_DIR_CORE", MCHN_DIR_ROOT ."core/");
 	define("CNTRLR", MCHN_DIR_CORE ."controller/");
