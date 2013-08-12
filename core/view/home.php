@@ -24,62 +24,62 @@ $High_Chairs_Feeding = category::getCategoryURL(61);
 //gamita ni na function product:getProducts(id);
 //PRODUCT
 //lambs and Ivy
-$Hello_Kitty_Garden = products::getProducts(43440);//notfound
-$Little_Traveler = products::getProducts(17170);
-$Peek_A_Boo_Jungle = products::getProducts(43021);
+$Hello_Kitty_Garden = products::getProducts(43628);
+$Little_Traveler = products::getProducts(43636);
+$Peek_A_Boo_Jungle = products::getProducts(42542);
 //kidsline
-$Carters_Safari = products::getProducts(38382);//notfound
-$Fleur_Crib_Bedding = products::getProducts(38378);//not found
-$Carter_Pink_Elephant = products::getProducts(38369);
+$Carters_Safari = products::getProducts(35620);
+$Fleur_Crib_Bedding = products::getProducts(40552);
+$Carter_Pink_Elephant = products::getProducts(46743);
 
 //'Glenn Jean'
-$McKenzie_Baby = products::getProducts(38920);
-$Isabella_Baby_5_Pc_Set = products::getProducts(31933);
-$Anastasia = products::getProducts(47640);
+$McKenzie_Baby = products::getProducts(14061);
+$Isabella_Baby_5_Pc_Set = products::getProducts(35346);
+$Anastasia = products::getProducts(43499);
 
-//'Glenn Jean'
-$Charlotte = products::getProducts(47440);
+//'Summersault'
+$Charlotte = products::getProducts(47472);
 
 //'Sweet_JoJo_Designs
-$Dot_Baby_Bedding= products::getProducts(35348);
-$Princess_Pink = products::getProducts(40141);
-$Jungle_Time = products::getProducts(52763);
+$Dot_Baby_Bedding= products::getProducts(44812);//not under this category
+$Princess_Pink = products::getProducts(45094);//not undder this categry
+$Jungle_Time = products::getProducts(44819);//not under this category
 
 //Sweet Kyla
-$Ebony_Rose = products::getProducts(49958);//notfound
-$Rockin_Robin = products::getProducts(17164);
-$Zoo_Teeny_Mocha = products::getProducts(43021);
+$Ebony_Rose = products::getProducts(52140);
+$Rockin_Robin = products::getProducts(40387);
+$Zoo_Teeny_Mocha = products::getProducts(50645);
 
 //'Trend Lab
-$Rock_Angel= products::getProducts(38382);
-$Rockstar = products::getProducts(38378);
+$Rock_Angel= products::getProducts(40585);//not under this category
+$Rockstar = products::getProducts(40587);//not under this category
 
 //Young America
-$Heavy_Antique_Rustic_Built_To_Grow_Crib = products::getProducts(34450);//notfound
-$Natural_Sleigh_Built_To_Grow_Crib = products::getProducts(17164);
-$Striping_Florentine_Crib = products::getProducts(43021);
+$Heavy_Antique_Rustic_Built_To_Grow_Crib = products::getProducts(34424);//not under this category
+$Natural_Sleigh_Built_To_Grow_Crib = products::getProducts(34432);//not under this category
+$Striping_Florentine_Crib = products::getProducts(34709);//not under this category
 
 //Cosican
-$Pumpkin_Carriage_Crib = products::getProducts(34450);//notfound
+$Pumpkin_Carriage_Crib = products::getProducts(14734);//not under this category
 
 //Nursery
-$Davenport_Convertible_Crib = products::getProducts(34450);//notfound
+$Davenport_Convertible_Crib = products::getProducts(38342);
 
 //Bassinets
 
 //Baby Doll'
-$Five_Tier_Lace_Bassinet_Liner = products::getProducts(34450);
-$Sherbert_Bassinet_Liner_Hood = products::getProducts(34450);
+$Five_Tier_Lace_Bassinet_Liner = products::getProducts(41497);
+$Sherbert_Bassinet_Liner_Hood = products::getProducts(41495);
 
 //Strollers'
-$Phil_Ted = products::getProducts(17164);
-$Peg_Perego = products::getProducts(17164);
-$Combi = products::getProducts(17164);
-$Bugaboo = products::getProducts(17164); 
-$Britax = products::getProducts(17164);
+$Phil_Ted = products::getProducts(24201);
+$Peg_Perego = products::getProducts(29821);
+$Combi = products::getProducts(35009);
+$Bugaboo = products::getProducts(34477); 
+$Britax_Strollers = products::getProducts(35010);
 
 //'Carseats'
-$Britax = products::getProducts(17164);
+$Britax = products::getProducts(26496);
 
 
 //High Chairs Feeding'
@@ -105,7 +105,7 @@ $Britax = products::getProducts(17164);
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Lambs_and_Ivy[0]["url"]) ?>">
 						<img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Lambs_and_Ivy[0]['image_large']); ?>" alt="">
+							src="<?php html::p($Lambs_and_Ivy[0]['image_small']); ?>" alt="">
 						</a> <br>
 						
 					</div>
@@ -116,8 +116,9 @@ $Britax = products::getProducts(17164);
 					<div class="product-container-link">
 							<div class="pull-left well product-container">
 								<center>
+
 									<a href="./products.php?id=<?php html::p($Hello_Kitty_Garden[0]["id"]) ?>">
-										<img style="width: 400px; height: 300px;" src="<?php echo $Hello_Kitty_Garden[0]['image_small']; ?>" />
+										<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Hello_Kitty_Garden[0]['image_small']; ?>" /></div>
 									</a>
 									<br> <br>
 									
@@ -143,7 +144,7 @@ $Britax = products::getProducts(17164);
 							<div class="pull-left well product-container">
 								<center>
 									<a href="./products.php?id=<?php html::p($Little_Traveler[0]["id"]) ?>">
-										<img style="width: 400px; height: 300px;" src="<?php echo $Little_Traveler[0]['image_small']; ?>" />
+										<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Little_Traveler[0]['image_small']; ?>" /></div>
 									</a>
 									<br> <br>
 									
@@ -169,7 +170,7 @@ $Britax = products::getProducts(17164);
 						<div class="pull-left well product-container">
 							<center>
 								<a href="./products.php?id=<?php html::p($Peek_A_Boo_Jungle[0]["id"]) ?>">
-									<img style="width: 400px; height: 300px;" src="<?php echo $Peek_A_Boo_Jungle[0]['image_small']; ?>" />
+									<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Peek_A_Boo_Jungle[0]['image_small']; ?>" /></div>
 								</a>
 								<br> <br>
 								
@@ -205,7 +206,7 @@ $Britax = products::getProducts(17164);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($KidsLine[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($KidsLine[0]['image_large']); ?>" alt=""> </a> <br>
+							src="<?php html::p($KidsLine[0]['image_small']); ?>" alt=""> </a> <br>
 						
 					</div>
 
@@ -216,7 +217,7 @@ $Britax = products::getProducts(17164);
 							<div class="pull-left well product-container">
 								<center>
 									<a href="./products.php?id=<?php html::p($Carters_Safari[0]["id"]) ?>">
-										<img style="width: 400px; height: 300px;" src="<?php echo $Carters_Safari[0]['image_small']; ?>" />
+										<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Carters_Safari[0]['image_small']; ?>" /></div>
 									</a>
 									<br> <br>
 									
@@ -242,7 +243,7 @@ $Britax = products::getProducts(17164);
 							<div class="pull-left well product-container">
 								<center>
 									<a href="./products.php?id=<?php html::p($Fleur_Crib_Bedding[0]["id"]) ?>">
-										<img style="width: 400px; height: 300px;" src="<?php echo $Fleur_Crib_Bedding[0]['image_small']; ?>" />
+										<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Fleur_Crib_Bedding[0]['image_small']; ?>" /></div>
 									</a>
 									<br> <br>
 									
@@ -268,7 +269,7 @@ $Britax = products::getProducts(17164);
 						<div class="pull-left well product-container">
 							<center>
 								<a href="./products.php?id=<?php html::p($Carter_Pink_Elephant[0]["id"]) ?>">
-									<img style="width: 400px; height: 300px;" src="<?php echo $Carter_Pink_Elephant[0]['image_small']; ?>" />
+									<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Carter_Pink_Elephant[0]['image_small']; ?>" /></div>
 								</a>
 								<br> <br>
 								
@@ -302,7 +303,7 @@ $Britax = products::getProducts(17164);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Glenn_Jean[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Glenn_Jean[0]['image_large']); ?>" alt=""> </a> <br>
+							src="<?php html::p($Glenn_Jean[0]['image_small']); ?>" alt=""> </a> <br>
 						
 					</div>
 
@@ -313,7 +314,7 @@ $Britax = products::getProducts(17164);
 							<div class="pull-left well product-container">
 								<center>
 									<a href="./products.php?id=<?php html::p($McKenzie_Baby[0]["id"]) ?>">
-										<img style="width: 400px; height: 300px;" src="<?php echo $McKenzie_Baby[0]['image_small']; ?>" />
+										<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $McKenzie_Baby[0]['image_small']; ?>" /></div>
 									</a>
 									<br> <br>
 									
@@ -339,7 +340,7 @@ $Britax = products::getProducts(17164);
 							<div class="pull-left well product-container">
 								<center>
 									<a href="./products.php?id=<?php html::p($Isabella_Baby_5_Pc_Set[0]["id"]) ?>">
-										<img style="width: 400px; height: 300px;" src="<?php echo $Isabella_Baby_5_Pc_Set[0]['image_small']; ?>" />
+										<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Isabella_Baby_5_Pc_Set[0]['image_small']; ?>" /></div>
 									</a>
 									<br> <br>
 									
@@ -365,7 +366,7 @@ $Britax = products::getProducts(17164);
 						<div class="pull-left well product-container">
 							<center>
 								<a href="./products.php?id=<?php html::p($Anastasia[0]["id"]) ?>">
-									<img style="width: 400px; height: 300px;" src="<?php echo $Anastasia[0]['image_small']; ?>" />
+									<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Anastasia[0]['image_small']; ?>" /></div>
 								</a>
 								<br> <br>
 								
@@ -399,7 +400,7 @@ $Britax = products::getProducts(17164);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Sumersault[0]["url"]) ?>" ><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Sumersault[0]['image_large']); ?>" alt=""> </a> <br>
+							src="<?php html::p($Sumersault[0]['image_small']); ?>" alt=""> </a> <br>
 						
 					</div>
 
@@ -410,7 +411,7 @@ $Britax = products::getProducts(17164);
 							<div class="pull-left well product-container">
 								<center>
 									<a href="./products.php?id=<?php html::p($Charlotte[0]["id"]) ?>">
-										<img style="width: 400px; height: 300px;" src="<?php echo $Charlotte[0]['image_small']; ?>" />
+										<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Charlotte[0]['image_small']; ?>" /></div>
 									</a>
 									<br> <br>
 									
@@ -446,7 +447,7 @@ $Britax = products::getProducts(17164);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Sweet_JoJo_Designs[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Sweet_JoJo_Designs[0]['image_large']); ?>" alt=""> </a> <br>
+							src="<?php html::p($Sweet_JoJo_Designs[0]['image_small']); ?>" alt=""> </a> <br>
 						
 					</div>
 
@@ -457,7 +458,7 @@ $Britax = products::getProducts(17164);
 							<div class="pull-left well product-container">
 								<center>
 									<a href="./products.php?id=<?php html::p($Dot_Baby_Bedding[0]["id"]) ?>">
-										<img style="width: 400px; height: 300px;" src="<?php echo $Dot_Baby_Bedding[0]['image_small']; ?>" />
+										<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Dot_Baby_Bedding[0]['image_small']; ?>" /></div>
 									</a>
 									<br> <br>
 									
@@ -483,7 +484,7 @@ $Britax = products::getProducts(17164);
 							<div class="pull-left well product-container">
 								<center>
 									<a href="./products.php?id=<?php html::p($Princess_Pink[0]["id"]) ?>">
-										<img style="width: 400px; height: 300px;" src="<?php echo $Princess_Pink[0]['image_small']; ?>" />
+										<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Princess_Pink[0]['image_small']; ?>" /></div>
 									</a>
 									<br> <br>
 									
@@ -509,7 +510,7 @@ $Britax = products::getProducts(17164);
 						<div class="pull-left well product-container">
 							<center>
 								<a href="./products.php?id=<?php html::p($Jungle_Time[0]["id"]) ?>">
-									<img style="width: 400px; height: 300px;" src="<?php echo $Jungle_Time[0]['image_small']; ?>" />
+									<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Jungle_Time[0]['image_small']; ?>" /></div>
 								</a>
 								<br> <br>
 								
@@ -543,7 +544,7 @@ $Britax = products::getProducts(17164);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Sweet_Kyla[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Sweet_Kyla[0]['image_large']); ?>" alt=""> </a> <br>
+							src="<?php html::p($Sweet_Kyla[0]['image_small']); ?>" alt=""> </a> <br>
 						
 					</div>
 
@@ -554,7 +555,7 @@ $Britax = products::getProducts(17164);
 							<div class="pull-left well product-container">
 								<center>
 									<a href="./products.php?id=<?php html::p($Ebony_Rose[0]["id"]) ?>">
-										<img style="width: 400px; height: 300px;" src="<?php echo $Ebony_Rose[0]['image_small']; ?>" />
+										<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Ebony_Rose[0]['image_small']; ?>" /></div>
 									</a>
 									<br> <br>
 									
@@ -580,7 +581,7 @@ $Britax = products::getProducts(17164);
 							<div class="pull-left well product-container">
 								<center>
 									<a href="./products.php?id=<?php html::p($Rockin_Robin[0]["id"]) ?>">
-										<img style="width: 400px; height: 300px;" src="<?php echo $Rockin_Robin[0]['image_small']; ?>" />
+										<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Rockin_Robin[0]['image_small']; ?>" /></div>
 									</a>
 									<br> <br>
 									
@@ -606,7 +607,7 @@ $Britax = products::getProducts(17164);
 						<div class="pull-left well product-container">
 							<center>
 								<a href="./products.php?id=<?php html::p($Zoo_Teeny_Mocha[0]["id"]) ?>">
-									<img style="width: 400px; height: 300px;" src="<?php echo $Zoo_Teeny_Mocha[0]['image_small']; ?>" />
+									<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Zoo_Teeny_Mocha[0]['image_small']; ?>" /></div>
 								</a>
 								<br> <br>
 								
@@ -641,7 +642,7 @@ $Britax = products::getProducts(17164);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Trend_Lab[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Trend_Lab[0]['image_large']); ?>" alt=""> </a> <br>
+							src="<?php html::p($Trend_Lab[0]['image_small']); ?>" alt=""> </a> <br>
 						
 					</div>
 
@@ -652,7 +653,7 @@ $Britax = products::getProducts(17164);
 							<div class="pull-left well product-container">
 								<center>
 									<a href="./products.php?id=<?php html::p($Rock_Angel[0]["id"]) ?>">
-										<img style="width: 400px; height: 300px;" src="<?php echo $Rock_Angel[0]['image_small']; ?>" />
+										<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Rock_Angel[0]['image_small']; ?>" /></div>
 									</a>
 									<br> <br>
 									
@@ -678,7 +679,7 @@ $Britax = products::getProducts(17164);
 							<div class="pull-left well product-container">
 								<center>
 									<a href="./products.php?id=<?php html::p($Rockstar[0]["id"]) ?>">
-										<img style="width: 400px; height: 300px;" src="<?php echo $Rockstar[0]['image_small']; ?>" />
+										<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Rockstar[0]['image_small']; ?>" /></div>
 									</a>
 									<br> <br>
 									
@@ -714,7 +715,7 @@ $Britax = products::getProducts(17164);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Young_America[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Young_America[0]['image_large']); ?>" alt=""> </a> <br>
+							src="<?php html::p($Young_America[0]['image_small']); ?>" alt=""> </a> <br>
 						
 					</div>
 
@@ -725,7 +726,7 @@ $Britax = products::getProducts(17164);
 							<div class="pull-left well product-container">
 								<center>
 									<a href="./products.php?id=<?php html::p($Heavy_Antique_Rustic_Built_To_Grow_Crib[0]["id"]) ?>">
-										<img style="width: 400px; height: 300px;" src="<?php echo $Heavy_Antique_Rustic_Built_To_Grow_Crib[0]['image_small']; ?>" />
+										<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Heavy_Antique_Rustic_Built_To_Grow_Crib[0]['image_small']; ?>" /></div>
 									</a>
 									<br> <br>
 									
@@ -751,7 +752,7 @@ $Britax = products::getProducts(17164);
 							<div class="pull-left well product-container">
 								<center>
 									<a href="./products.php?id=<?php html::p($Natural_Sleigh_Built_To_Grow_Crib[0]["id"]) ?>">
-										<img style="width: 400px; height: 300px;" src="<?php echo $Natural_Sleigh_Built_To_Grow_Crib[0]['image_small']; ?>" />
+										<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Natural_Sleigh_Built_To_Grow_Crib[0]['image_small']; ?>" /></div>
 									</a>
 									<br> <br>
 									
@@ -777,7 +778,7 @@ $Britax = products::getProducts(17164);
 						<div class="pull-left well product-container">
 							<center>
 								<a href="./products.php?id=<?php html::p($Striping_Florentine_Crib[0]["id"]) ?>">
-									<img style="width: 400px; height: 300px;" src="<?php echo $Striping_Florentine_Crib[0]['image_small']; ?>" />
+									<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Striping_Florentine_Crib[0]['image_small']; ?>" /></div>
 								</a>
 								<br> <br>
 								
@@ -812,7 +813,7 @@ $Britax = products::getProducts(17164);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Corsican_Design_Metal_Cribs[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Corsican_Design_Metal_Cribs[0]['image_large']); ?>" alt=""> </a> <br>
+							src="<?php html::p($Corsican_Design_Metal_Cribs[0]['image_small']); ?>" alt=""> </a> <br>
 						
 					</div>
 
@@ -823,7 +824,7 @@ $Britax = products::getProducts(17164);
 						<div class="pull-left well product-container">
 							<center>
 								<a href="./products.php?id=<?php html::p($Pumpkin_Carriage_Crib[0]["id"]) ?>">
-									<img style="width: 400px; height: 300px;" src="<?php echo $Pumpkin_Carriage_Crib[0]['image_small']; ?>" />
+									<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Pumpkin_Carriage_Crib[0]['image_small']; ?>" /></div>
 								</a>
 								<br> <br>
 								
@@ -859,7 +860,7 @@ $Britax = products::getProducts(17164);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Nursery_Smart_Baby_Furniture[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Nursery_Smart_Baby_Furniture[0]['image_large']); ?>" alt=""> </a> <br>
+							src="<?php html::p($Nursery_Smart_Baby_Furniture[0]['image_small']); ?>" alt=""> </a> <br>
 						
 					</div>
 
@@ -870,7 +871,7 @@ $Britax = products::getProducts(17164);
 						<div class="pull-left well product-container">
 							<center>
 								<a href="./products.php?id=<?php html::p($Davenport_Convertible_Crib[0]["id"]) ?>">
-									<img style="width: 400px; height: 300px;" src="<?php echo $Davenport_Convertible_Crib[0]['image_small']; ?>" />
+									<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Davenport_Convertible_Crib[0]['image_small']; ?>" /></div>
 								</a>
 								<br> <br>
 								
@@ -905,7 +906,7 @@ $Britax = products::getProducts(17164);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Bassinets[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Bassinets[0]['image_large']); ?>" alt=""> </a> <br>
+							src="<?php html::p($Bassinets[0]['image_small']); ?>" alt=""> </a> <br>
 						
 					</div>
 
@@ -929,7 +930,7 @@ $Britax = products::getProducts(17164);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Baby_Doll[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Baby_Doll[0]['image_large']); ?>" alt=""> </a> <br>
+							src="<?php html::p($Baby_Doll[0]['image_small']); ?>" alt=""> </a> <br>
 						
 					</div>
 
@@ -940,7 +941,7 @@ $Britax = products::getProducts(17164);
 							<div class="pull-left well product-container">
 								<center>
 									<a href="./products.php?id=<?php html::p($Five_Tier_Lace_Bassinet_Liner[0]["id"]) ?>">
-										<img style="width: 400px; height: 300px;" src="<?php echo $Five_Tier_Lace_Bassinet_Liner[0]['image_small']; ?>" />
+										<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Five_Tier_Lace_Bassinet_Liner[0]['image_small']; ?>" /></div>
 									</a>
 									<br> <br>
 									
@@ -966,7 +967,7 @@ $Britax = products::getProducts(17164);
 						<div class="pull-left well product-container">
 							<center>
 								<a href="./products.php?id=<?php html::p($Sherbert_Bassinet_Liner_Hood[0]["id"]) ?>">
-									<img style="width: 400px; height: 300px;" src="<?php echo $Sherbert_Bassinet_Liner_Hood[0]['image_small']; ?>" />
+									<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Sherbert_Bassinet_Liner_Hood[0]['image_small']; ?>" /></div>
 								</a>
 								<br> <br>
 								
@@ -1002,7 +1003,7 @@ $Britax = products::getProducts(17164);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Strollers[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Strollers[0]['image_large']); ?>" alt=""> </a> <br>
+							src="<?php html::p($Strollers[0]['image_small']); ?>" alt=""> </a> <br>
 						
 					</div>
 
@@ -1013,7 +1014,7 @@ $Britax = products::getProducts(17164);
 							<div class="pull-left well product-container">
 								<center>
 									<a href="./products.php?id=<?php html::p($Phil_Ted[0]["id"]) ?>">
-										<img style="width: 400px; height: 300px;" src="<?php echo $Phil_Ted[0]['image_small']; ?>" />
+										<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Phil_Ted[0]['image_small']; ?>" /></div>
 									</a>
 									<br> <br>
 									
@@ -1039,7 +1040,7 @@ $Britax = products::getProducts(17164);
 							<div class="pull-left well product-container">
 								<center>
 									<a href="./products.php?id=<?php html::p($Peg_Perego[0]["id"]) ?>">
-										<img style="width: 400px; height: 300px;" src="<?php echo $Peg_Perego[0]['image_small']; ?>" />
+										<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Peg_Perego[0]['image_small']; ?>" /></div>
 									</a>
 									<br> <br>
 									
@@ -1066,7 +1067,7 @@ $Britax = products::getProducts(17164);
 							<div class="pull-left well product-container">
 								<center>
 									<a href="./products.php?id=<?php html::p($Combi[0]["id"]) ?>">
-										<img style="width: 400px; height: 300px;" src="<?php echo $Combi[0]['image_small']; ?>" />
+										<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Combi[0]['image_small']; ?>" /></div>
 									</a>
 									<br> <br>
 									
@@ -1093,7 +1094,7 @@ $Britax = products::getProducts(17164);
 							<div class="pull-left well product-container">
 								<center>
 									<a href="./products.php?id=<?php html::p($Bugaboo[0]["id"]) ?>">
-										<img style="width: 400px; height: 300px;" src="<?php echo $Bugaboo[0]['image_small']; ?>" />
+										<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Bugaboo[0]['image_small']; ?>" /></div>
 									</a>
 									<br> <br>
 									
@@ -1119,20 +1120,20 @@ $Britax = products::getProducts(17164);
 					<div class="product-container-link">
 						<div class="pull-left well product-container">
 							<center>
-								<a href="./products.php?id=<?php html::p($Britax[0]["id"]) ?>">
-									<img style="width: 400px; height: 300px;" src="<?php echo $Britax[0]['image_small']; ?>" />
+								<a href="./products.php?id=<?php html::p($Britax_Strollers[0]["id"]) ?>">
+									<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Britax_Strollers[0]['image_small']; ?>" /></div>
 								</a>
 								<br> <br>
 								
 								<div style="height: 40px;">
-									<a href="./products.php?id=<?php html::p($Britax[0]['id']) ?>"><b><?php html::p($Britax[0]['name_short']) ?> </b> </a>
+									<a href="./products.php?id=<?php html::p($Britax_Strollers[0]['id']) ?>"><b><?php html::p($Britax_Strollers[0]['name_short']) ?> </b> </a>
 								</div>
 								
-								<div>Price: <b> $<?php html::p(number_format($Britax[0]['price'],2,".",",")); ?> </b> </div>
+								<div>Price: <b> $<?php html::p(number_format($Britax_Strollers[0]['price'],2,".",",")); ?> </b> </div>
 								<br>
 											
 								<form action="./cart.php" method="post">
-									<input type="hidden" name="item" value="<?php html::p($Britax[0]['id']) ?>" />
+									<input type="hidden" name="item" value="<?php html::p($Britax_Strollers[0]['id']) ?>" />
 										<div>
 											<input type="hidden" name="quantity" value="1" />
 										</div>
@@ -1156,7 +1157,7 @@ $Britax = products::getProducts(17164);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Carseats[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Carseats[0]['image_large']); ?>" alt=""> </a> <br>
+							src="<?php html::p($Carseats[0]['image_small']); ?>" alt=""> </a> <br>
 						
 					</div>
 
@@ -1167,7 +1168,7 @@ $Britax = products::getProducts(17164);
 						<div class="pull-left well product-container">
 							<center>
 								<a href="./products.php?id=<?php html::p($Britax[0]["id"]) ?>">
-									<img style="width: 400px; height: 300px;" src="<?php echo $Britax[0]['image_small']; ?>" />
+									<div style="width: 200px; height:300px; background-color:#fff; display:table-cell; vertical-align:middle;" ><img  style="width:200px;" src="<?php echo $Britax[0]['image_small']; ?>" /></div>
 								</a>
 								<br> <br>
 								
@@ -1202,7 +1203,7 @@ $Britax = products::getProducts(17164);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($High_Chairs_Feeding[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($High_Chairs_Feeding[0]['image_large']); ?>" alt=""> </a> <br>
+							src="<?php html::p($High_Chairs_Feeding[0]['image_small']); ?>" alt=""> </a> <br>
 						
 					</div>
 
