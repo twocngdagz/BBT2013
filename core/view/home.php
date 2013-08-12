@@ -1216,8 +1216,6 @@ $Britax = products::getProducts(26496);
 				<div style="clear: both"></div>
 				<!-- END CATEGORY -->
 
-
-
 			</div>
 		</div>
 	</div>
