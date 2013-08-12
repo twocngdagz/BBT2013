@@ -55,7 +55,7 @@ $Rock_Angel= products::getProducts(40585);//not under this category
 $Rockstar = products::getProducts(40587);//not under this category
 
 //Young America
-<<<<<<< HEAD
+
 $Heavy_Antique_Rustic_Built_To_Grow_Crib = products::getProducts(17083);//notfound
 $Natural_Sleigh_Built_To_Grow_Crib = products::getProducts(17164);
 $Striping_Florentine_Crib = products::getProducts(43021);
@@ -65,7 +65,7 @@ $Pumpkin_Carriage_Crib = products::getProducts(17226);//notfound
 
 //Nursery
 $Davenport_Convertible_Crib = products::getProducts(17207);//notfound
-=======
+
 $Heavy_Antique_Rustic_Built_To_Grow_Crib = products::getProducts(34424);//not under this category
 $Natural_Sleigh_Built_To_Grow_Crib = products::getProducts(34432);//not under this category
 $Striping_Florentine_Crib = products::getProducts(34709);//not under this category
@@ -75,12 +75,12 @@ $Pumpkin_Carriage_Crib = products::getProducts(14734);//not under this category
 
 //Nursery
 $Davenport_Convertible_Crib = products::getProducts(38342);
->>>>>>> f4da22e2dead60d2e6a002cfabcf6dafe1ab3505
+
 
 //Bassinets
 
 //Baby Doll'
-<<<<<<< HEAD
+
 $Five_Tier_Lace_Bassinet_Liner = products::getProducts(34390);
 $Sherbert_Bassinet_Liner_Hood = products::getProducts(34391);
 
@@ -90,7 +90,7 @@ $Peg_Perego = products::getProducts(17164);
 $Combi = products::getProducts(17164);
 $Bugaboo = products::getProducts(17164); 
 $Britax = products::getProducts(17027);
-=======
+
 $Five_Tier_Lace_Bassinet_Liner = products::getProducts(41497);
 $Sherbert_Bassinet_Liner_Hood = products::getProducts(41495);
 
@@ -100,7 +100,7 @@ $Peg_Perego = products::getProducts(29821);
 $Combi = products::getProducts(35009);
 $Bugaboo = products::getProducts(34477); 
 $Britax_Strollers = products::getProducts(35010);
->>>>>>> f4da22e2dead60d2e6a002cfabcf6dafe1ab3505
+
 
 //'Carseats'
 $Britax = products::getProducts(26496);
