@@ -165,7 +165,7 @@ $role = array (
 							</u>
 						</p>
 						<p>&#160;</p>
-						<img alt="" src="/images/about_bbt.jpg" />
+						<img alt="" src="<?php echo MCHN_ROOT ?>/images/about_bbt.jpg" />
 						<p>Established in 1936, Baby Toytown was a pioneering company in
 							the baby bedding market. Started by Murray and Betty Zwick, Baby
 							Toytown began with a small store located in Rosemead, CA. They

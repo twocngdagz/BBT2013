@@ -7,9 +7,7 @@
   </a>
   <ul class="nav pull-right">
     <li><a href="<?php html::p(MCHN_ROOT) ?>">Home</a></li>
-    <li><a href="<?php html::p(MCHN_ROOT."about.php") ?>">About</a></li>
-    <li><a href="<?php html::p(MCHN_ROOT."categories.php") ?>">Categories</a></li>
-    <li><a href="<?php html::p(MCHN_ROOT."products.php") ?>">Products</a></li>
+    <li><a href="<?php html::p(MCHN_ROOT."about-us.php") ?>">About</a></li>
     <li><a href="<?php html::p(MCHN_ROOT."categories.php") ?>">Contact Us</a></li>
     <li><a href="<?php html::p(MCHN_ROOT."cart.php") ?>">Cart</a></li>
   <?php if(!empty($s['user_id'])): ?>
