@@ -100,8 +100,8 @@
   <div class="row-fluid"> 
     <div class="span12">
       <div class="pull-left" style="margin-top:15px;">
-      <a href=""><img src="<?php html::p(MCHN_DIR_ASSETS."img/facebook.png"); ?>" alt=""></a>
-      <a href=""><img src="<?php html::p(MCHN_DIR_ASSETS."img/twitter.png"); ?>" alt=""></a>
+      <a href="https://www.facebook.com/babybeddingtown"><img src="<?php html::p(MCHN_DIR_ASSETS."img/facebook.png"); ?>" alt=""></a>
+      <a href="https://twitter.com/babybeddingtown"><img src="<?php html::p(MCHN_DIR_ASSETS."img/twitter.png"); ?>" alt=""></a>
       &nbsp;
       </div>  
       <div style="width:200px;" class="pull-left">
