@@ -103,12 +103,34 @@
       <a href="https://www.facebook.com/babybeddingtown"><img src="<?php html::p(MCHN_DIR_ASSETS."img/facebook.png"); ?>" alt=""></a>
       <a href="https://twitter.com/babybeddingtown"><img src="<?php html::p(MCHN_DIR_ASSETS."img/twitter.png"); ?>" alt=""></a>
       &nbsp;
-      </div>  
-      <div style="width:200px;" class="pull-left">
-        BABY BEDDING TOWN
-        Ut wisi enim ad minim veniam, quis nostrud exerci tation
-        <a href="#">bbt2013.alorit.com</a>
       </div>
+
+
+      <?php
+        $config = array(
+        'directory' => '', //The path used to store the .tweetcache cache file.
+        'key' => 'RMZaquoFjzpeh4NGG6aI6g',
+        'secret' => 'YniV8sBO17Y1YwqGo37N7Oq1hTnyDvTu7nzAd18v8W8',
+        'token' => '159227822-5q2fcXiF7rkFU5DFg9ryKbFxsQAue5cMItDUUgbE',
+        'token_secret' => 'FadiIU8gtk1m4GhAlp0ttnikMP1053CQOBweYm1Aw',
+        'screenname' => '<Twitter Screename>', //This is now deprecated and you shouldn't define this - but it's here for backwards compatibility
+        'cache_expire' => 3600 //The duration of the cache  
+        );
+
+        $twitter = new StormTwitter($config);
+
+        // getTweets is the only public method. For legacy reasons, it takes between 0 and 3 parameters.
+        // getTweets(number_of_tweets, twitter_screenname, custom_parameters_to_go_twitter);
+
+        $tweets = $twitter->getTweets(2,'babybeddingtown');
+        foreach ($tweets as $tweet) {
+      ?>
+          <div style="width:250px;" class="pull-left">
+            <p style="padding:10px 10px 0 40px;; background:url(images/quote.png) no-repeat top left;">
+              <?php echo $tweet['text']; ?>
+            </p>
+          </div>
+      <?php } ?>
       <div class="pull-right">
         <div class="input-append" style="margin-top:15px;">
           <input class="span10" id="appendedInputButtons" type="text">
