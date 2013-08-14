@@ -10,11 +10,11 @@
 	<div class="container">
 		<div class="row-fluid">
 			<div class="span12">
+
 							<div class="pull-left" style="">
 					<a href="./baby-bedding"><img width="152px" style="height:45px; padding:1px;"
 						src="images/categories/small/footer/BabybeddingthemesMain.jpg"
-						alt=""> </a>
-				</div>
+
 								<div class="pull-left" style="">
 					<a href="./baby-accessories"><img width="152px" style="height:45px; padding:1px;"
 						src="images/categories/small/footer/BabybeddingBabyboybedding.jpg"
