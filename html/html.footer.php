@@ -3,181 +3,114 @@
 </div>
 <footer> <div class="footer-specials">
 	<div class="container">
-		<div class="row-fluid">
-			<div class="span12">
-							<div class="pull-left" style="padding: 10px;">
-					<a><img width="280px" class="img-polaroid"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/bbt-sample.jpg"); ?>"
-						alt=""> </a>
-				</div>
-								<div class="pull-left" style="padding: 10px;">
-					<a><img width="280px" class="img-polaroid"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/bbt-sample.jpg"); ?>"
-						alt=""> </a>
-				</div>
-								<div class="pull-left" style="padding: 10px;">
-					<a><img width="280px" class="img-polaroid"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/bbt-sample.jpg"); ?>"
-						alt=""> </a>
-				</div>
-							</div>
-		</div>
+		
 	</div>
 </div>
 <div class="footer-logo-gallery">
 	<div class="container">
 		<div class="row-fluid">
 			<div class="span12">
+
 							<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
+					<a href="./baby-bedding"><img width="152px" style="height:45px; padding:1px;"
+						src="images/categories/small/footer/BabybeddingthemesMain.jpg"
+
+								<div class="pull-left" style="">
+					<a href="./baby-accessories"><img width="152px" style="height:45px; padding:1px;"
+						src="images/categories/small/footer/BabybeddingBabyboybedding.jpg"
 						alt=""> </a>
 				</div>
 								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
+					<a href="./baby-accessories"><img width="152px" style="height:45px; padding:1px;"
+						src="images/categories/small/footer/BabyaccessoriesMain.jpg"
 						alt=""> </a>
 				</div>
 								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
+					<a href="./baby-blankets"><img width="152px" style="height:45px; padding:1px;"
+						src="images/categories/small/footer/babybeddingBabyorganicbedding.jpg"
 						alt=""> </a>
 				</div>
 								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
+					<a href="./lamps"><img width="152px" style="height:45px; padding:1px;"
+						src="images/categories/small/footer/babybeddingBabysheets.jpg"
 						alt=""> </a>
 				</div>
 								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
+					<a href="./wall-decor"><img width="152px" style="height:45px; padding:1px;"
+						src="images/categories/small/footer/WalldecorMain.jpg"
 						alt=""> </a>
 				</div>
 								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
+					<a href="./mobiles"><img width="152px" style="height:45px; padding:1px;"
+						src="images/categories/small/footer/BabyaccessoriesMobiles.jpg"
 						alt=""> </a>
 				</div>
 								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
+					<a href="./room-decor"><img width="152px" style="height:45px; padding:1px;"
+						src="images/categories/small/footer/BabybeddingCradlebedding.jpg"
 						alt=""> </a>
 				</div>
 								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
+					<a href="./gift-items"><img width="152px" style="height:45px; padding:1px;"
+						src="images/categories/small/footer/GiftitemsMain.jpg"
 						alt=""> </a>
 				</div>
 								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
+					<a href="./pillows"><img width="152px" style="height:45px; padding:1px;"
+						src="images/categories/small/footer/BabybeddingCribbedding.jpg"
 						alt=""> </a>
 				</div>
 								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
+					<a href="./kids-furniture"><img width="152px" style="height:45px; padding:1px;"
+						src="images/categories/small/footer/BabybeddingCribsheets.jpg"
 						alt=""> </a>
 				</div>
 								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
+					<a href="./my-haven-furniture-by-stanley"><img width="152px" style="height:45px; padding:1px;"
+						src="images/categories/small/footer/BabybeddingMattresses.jpg"
 						alt=""> </a>
 				</div>
 								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
+					<a href="./valances"><img width="152px" style="height:45px; padding:1px;"
+						src="images/categories/small/footer/BabybeddingPortacribbedding.jpg"
 						alt=""> </a>
 				</div>
 								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
+					<a href="./kidkraft"><img width="152px" style="height:45px; padding:1px;"
+						src="images/categories/small/footer/BabybeddingToddlerbedding.jpg"
 						alt=""> </a>
 				</div>
 								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
+					<a href="./4-seasons-by-stanley"><img width="152px" style="height:45px; padding:1px;"
+						src="images/categories/small/footer/StanleyyoungamericaMain (2).jpg"
 						alt=""> </a>
 				</div>
 								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
+					<a href="./stanley-young-america-furniture"><img width="152px" style="height:45px; padding:1px;"
+						src="images/categories/small/footer/Stanleyyoungamerica.jpg"
 						alt=""> </a>
 				</div>
 								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
+					<a href="./kids-bedding"><img width="152px" style="height:45px; padding:1px;"
+						src="images/categories/small/footer/KidsbeddingFullbedding.jpg"
 						alt=""> </a>
 				</div>
 								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
+					<a href="./rugs"><img width="152px" style="height:45px; padding:1px;"
+						src="images/categories/small/footer/BabybeddingToddlerdustruffles.jpg"
 						alt=""> </a>
 				</div>
 								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
+					<a href="./diaper-stackers"><img width="152px" style="height:45px; padding:1px;"
+						src="images/categories/small/footer/DiaperstackersMain.jpg"
 						alt=""> </a>
 				</div>
 								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
+					<a href="./baby-furniture"><img width="152px" style="height:45px; padding:1px;"
+						src="images/categories/small/footer/KidsfurnitureMain.jpg"
 						alt=""> </a>
 				</div>
-								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
-						alt=""> </a>
-				</div>
-								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
-						alt=""> </a>
-				</div>
-								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
-						alt=""> </a>
-				</div>
-								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
-						alt=""> </a>
-				</div>
-								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
-						alt=""> </a>
-				</div>
-								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
-						alt=""> </a>
-				</div>
-								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
-						alt=""> </a>
-				</div>
-								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
-						alt=""> </a>
-				</div>
-								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
-						alt=""> </a>
-				</div>
-								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
-						alt=""> </a>
-				</div>
-								<div class="pull-left" style="">
-					<a><img width="155px"
-						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
-						alt=""> </a>
-				</div>
+								   
 							</div>
 		</div>
 	</div>

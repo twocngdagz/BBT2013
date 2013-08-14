@@ -105,7 +105,7 @@ $Britax = products::getProducts(26496);
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Lambs_and_Ivy[0]["url"]) ?>">
 						<img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Lambs_and_Ivy[0]['image_small']); ?>" alt="">
+							src="images/categories/large/home/LambsandivyMain.jpg" alt="">
 						</a> <br>
 						
 					</div>
@@ -206,7 +206,7 @@ $Britax = products::getProducts(26496);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($KidsLine[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($KidsLine[0]['image_small']); ?>" alt=""> </a> <br>
+							src="images/categories/large/home/KidslineMain.jpg" alt=""> </a> <br>
 						
 					</div>
 
@@ -303,7 +303,7 @@ $Britax = products::getProducts(26496);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Glenn_Jean[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Glenn_Jean[0]['image_small']); ?>" alt=""> </a> <br>
+							src="images/categories/large/home/GlennajeanMain.jpg" alt=""> </a> <br>
 						
 					</div>
 
@@ -400,7 +400,7 @@ $Britax = products::getProducts(26496);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Sumersault[0]["url"]) ?>" ><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Sumersault[0]['image_small']); ?>" alt=""> </a> <br>
+							src="images/categories/large/home/Sumersault.jpg" alt=""> </a> <br>
 						
 					</div>
 
@@ -447,7 +447,7 @@ $Britax = products::getProducts(26496);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Sweet_JoJo_Designs[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Sweet_JoJo_Designs[0]['image_small']); ?>" alt=""> </a> <br>
+							src="images/categories/large/home/" alt=""> </a> <br>
 						
 					</div>
 
@@ -544,7 +544,7 @@ $Britax = products::getProducts(26496);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Sweet_Kyla[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Sweet_Kyla[0]['image_small']); ?>" alt=""> </a> <br>
+							src="images/categories/large/home/Sweetkyla.jpg" alt=""> </a> <br>
 						
 					</div>
 
@@ -642,7 +642,7 @@ $Britax = products::getProducts(26496);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Trend_Lab[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Trend_Lab[0]['image_small']); ?>" alt=""> </a> <br>
+							src="images/categories/large/home/" alt=""> </a> <br>
 						
 					</div>
 
@@ -715,7 +715,7 @@ $Britax = products::getProducts(26496);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Young_America[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Young_America[0]['image_small']); ?>" alt=""> </a> <br>
+							src="images/categories/large/home/Stanleyyoungamerica.jpg" alt=""> </a> <br>
 						
 					</div>
 
@@ -813,7 +813,7 @@ $Britax = products::getProducts(26496);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Corsican_Design_Metal_Cribs[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Corsican_Design_Metal_Cribs[0]['image_small']); ?>" alt=""> </a> <br>
+							src="images/categories/large/home/" alt=""> </a> <br>
 						
 					</div>
 
@@ -860,7 +860,7 @@ $Britax = products::getProducts(26496);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Nursery_Smart_Baby_Furniture[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Nursery_Smart_Baby_Furniture[0]['image_small']); ?>" alt=""> </a> <br>
+							src="images/categories/large/home/Nurserysmart.jpg" alt=""> </a> <br>
 						
 					</div>
 
@@ -906,7 +906,7 @@ $Britax = products::getProducts(26496);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Bassinets[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Bassinets[0]['image_small']); ?>" alt=""> </a> <br>
+							src="images/categories/large/home/" alt=""> </a> <br>
 						
 					</div>
 
@@ -930,7 +930,7 @@ $Britax = products::getProducts(26496);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Baby_Doll[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Baby_Doll[0]['image_small']); ?>" alt=""> </a> <br>
+							src="images/categories/large/home/BabydollMain.jpg" alt=""> </a> <br>
 						
 					</div>
 
@@ -1003,7 +1003,7 @@ $Britax = products::getProducts(26496);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Strollers[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Strollers[0]['image_small']); ?>" alt=""> </a> <br>
+							src="images/categories/large/home/StrollerbrandsMain.jpg" alt=""> </a> <br>
 						
 					</div>
 
@@ -1158,7 +1158,7 @@ $Britax = products::getProducts(26496);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Carseats[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($Carseats[0]['image_small']); ?>" alt=""> </a> <br>
+							src="images/categories/large/home/CarseatsMain.jpg" alt=""> </a> <br>
 						
 					</div>
 
@@ -1204,7 +1204,7 @@ $Britax = products::getProducts(26496);
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($High_Chairs_Feeding[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="<?php html::p($High_Chairs_Feeding[0]['image_small']); ?>" alt=""> </a> <br>
+							src="images/categories/large/home/HighchairsMain.jpg" alt=""> </a> <br>
 						
 					</div>
 
