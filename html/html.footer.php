@@ -110,7 +110,7 @@
 						src="images/categories/small/footer/KidsfurnitureMain.jpg"
 						alt=""> </a>
 				</div>
-								
+								   
 							</div>
 		</div>
 	</div>
