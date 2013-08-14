@@ -126,12 +126,12 @@
 
 					<div class="pull-left"
 						style="margin-top: -5px; margin-right: 5px; width: 800px;">
-						<a href="" style="margin-right: -2px;"><img width="35px"
+						<a href="mailto:customerservice@babybeddingtown.com" style="margin-right: -2px;"><img width="35px"
 							src="<?php html::p(MCHN_DIR_ASSETS."img/footer/social/email.jpg"); ?>"
-							alt=""> </a> <a href="" style="margin-right: -2px;"><img
+							alt=""> </a> <a href="https://www.facebook.com/babybeddingtown" style="margin-right: -2px;"><img
 							width="35px"
 							src="<?php html::p(MCHN_DIR_ASSETS."img/footer/social/facebook.jpg"); ?>"
-							alt=""> </a> <a href="" style="margin-right: -2px;"><img
+							alt=""> </a> <a href="https://twitter.com/babybeddingtown" style="margin-right: -2px;"><img
 							width="35px"
 							src="<?php html::p(MCHN_DIR_ASSETS."img/footer/social/twitter.jpg"); ?>"
 							alt=""> </a> <a href="" style="margin-right: -2px;"><img

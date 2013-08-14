@@ -86,7 +86,7 @@
     <div class="item active">
       <img src="<?php html::p(MCHN_DIR_ASSETS."img/carousel/baby-sleeping.jpg"); ?>" alt="">
       <div class="container">
-        <h1 style="margin-top:150px;">SAMPLE HEADINGS</h1>
+        <h1 style="margin-top:150px;">Baby Bedding Town</h1>
       </div>
     </div>
   </div>
@@ -100,8 +100,8 @@
   <div class="row-fluid"> 
     <div class="span12">
       <div class="pull-left" style="margin-top:15px;">
-      <a href=""><img src="<?php html::p(MCHN_DIR_ASSETS."img/facebook.png"); ?>" alt=""></a>
-      <a href=""><img src="<?php html::p(MCHN_DIR_ASSETS."img/twitter.png"); ?>" alt=""></a>
+      <a href="https://www.facebook.com/babybeddingtown"><img src="<?php html::p(MCHN_DIR_ASSETS."img/facebook.png"); ?>" alt=""></a>
+      <a href="https://twitter.com/babybeddingtown"><img src="<?php html::p(MCHN_DIR_ASSETS."img/twitter.png"); ?>" alt=""></a>
       &nbsp;
       </div>
 
