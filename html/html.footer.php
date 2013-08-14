@@ -28,12 +28,12 @@
 	<div class="container">
 		<div class="row-fluid">
 			<div class="span12">
-							<div class="pull-left" style="">
+				<div class="pull-left" style="">
 					<a><img width="155px"
 						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
 						alt=""> </a>
 				</div>
-								<div class="pull-left" style="">
+				<div class="pull-left" style="">
 					<a><img width="155px"
 						src="<?php html::p(MCHN_DIR_ASSETS."img/logo-samp.png"); ?>"
 						alt=""> </a>
