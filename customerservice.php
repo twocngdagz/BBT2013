@@ -173,7 +173,8 @@
 							<input name="name" id="name" title="Name" value=""
 								class="input-text required-entry" type="text" />
 						</div>
-
+					</li>
+					<li>
 						<div class="input-box">
 							<label for="email">Email <span class="required">*</span> </label><br />
 							<input name="email" id="email" title="Email" value=""

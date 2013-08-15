@@ -109,7 +109,7 @@ $Britax = products::getProducts(26496);
 					if(!empty($Lambs_and_Ivy[0]['description_short']))
 					{
 						
-						$description =str_replace("...", "<a href='./". $Lambs_and_Ivy[0]['url']. "'>(more)</a>" , $description);
+						$description =str_replace("...", "<a href='./". $Lambs_and_Ivy[0]['url']. "'> more</a>" , $description);
 					}
 					
 					?>
@@ -224,7 +224,7 @@ $Britax = products::getProducts(26496);
 					if(!empty($KidsLine[0]['description_short']))
 					{
 						
-						$description =str_replace("...", "<a href='./". $KidsLine[0]['url']. "'>(more)</a>" , $description);
+						$description =str_replace("...", "<a href='./". $KidsLine[0]['url']. "'> more</a>" , $description);
 					}
 					
 					?>
@@ -335,7 +335,7 @@ $Britax = products::getProducts(26496);
 					if(!empty($Glenn_Jean[0]['description_short']))
 					{
 						
-						$description =str_replace("...", "<a href='./". $Glenn_Jean[0]['url']. "'>(more)</a>" , $description);
+						$description =str_replace("...", "<a href='./". $Glenn_Jean[0]['url']. "'> more</a>" , $description);
 					}
 					
 					?>
@@ -446,7 +446,7 @@ $Britax = products::getProducts(26496);
 					if(!empty($Sumersault[0]['description_short']))
 					{
 						
-						$description =str_replace("...", "<a href='./". $Sumersault[0]['url']. "'>(more)</a>" , $description);
+						$description =str_replace("...", "<a href='./". $Sumersault[0]['url']. "'> more</a>" , $description);
 					}
 					
 					?>
@@ -507,7 +507,7 @@ $Britax = products::getProducts(26496);
 					if(!empty($Sweet_JoJo_Designs[0]['description_short']))
 					{
 						
-						$description =str_replace("...", "<a href='./". $Sweet_JoJo_Designs[0]['url']. "'>(more)</a>" , $description);
+						$description =str_replace("...", "<a href='./". $Sweet_JoJo_Designs[0]['url']. "'> more</a>" , $description);
 					}
 					
 					?>
@@ -613,7 +613,7 @@ $Britax = products::getProducts(26496);
 					if(!empty($Sweet_Kyla[0]['description_short']))
 					{
 						
-						$description =str_replace("...", "<a href='./". $Sweet_Kyla[0]['url']. "'>(more)</a>" , $description);
+						$description =str_replace("...", "<a href='./". $Sweet_Kyla[0]['url']. "'> more</a>" , $description);
 					}
 					
 					?>
@@ -725,7 +725,7 @@ $Britax = products::getProducts(26496);
 					if(!empty($Trend_Lab[0]['description_short']))
 					{
 						
-						$description =str_replace("...", "<a href='./". $Trend_Lab[0]['url']. "'>(more)</a>" , $description);
+						$description =str_replace("...", "<a href='./". $Trend_Lab[0]['url']. "'> more</a>" , $description);
 					}
 					
 					?>
@@ -806,7 +806,7 @@ $Britax = products::getProducts(26496);
 					if(!empty($Young_America[0]['description_short']))
 					{
 						
-						$description =str_replace("...", "<a href='./". $Young_America[0]['url']. "'>(more)</a>" , $description);
+						$description =str_replace("...", "<a href='./". $Young_America[0]['url']. "'> more</a>" , $description);
 					}
 					
 					?>
@@ -918,7 +918,7 @@ $Britax = products::getProducts(26496);
 					if(!empty($Corsican_Design_Metal_Cribs[0]['description_short']))
 					{
 						
-						$description =str_replace("...", "<a href='./". $Corsican_Design_Metal_Cribs[0]['url']. "'>(more)</a>" , $description);
+						$description =str_replace("...", "<a href='./". $Corsican_Design_Metal_Cribs[0]['url']. "'> more</a>" , $description);
 					}
 					
 					?>
@@ -972,7 +972,7 @@ $Britax = products::getProducts(26496);
 					if(!empty($Nursery_Smart_Baby_Furniture[0]['description_short']))
 					{
 						
-						$description =str_replace("...", "<a href='./". $Nursery_Smart_Baby_Furniture[0]['url']. "'>(more)</a>" , $description);
+						$description =str_replace("...", "<a href='./". $Nursery_Smart_Baby_Furniture[0]['url']. "'> more</a>" , $description);
 					}
 					
 					?>
@@ -1032,7 +1032,7 @@ $Britax = products::getProducts(26496);
 					if(!empty($Bassinets[0]['description_short']))
 					{
 						
-						$description =str_replace("...", "<a href='./". $Bassinets[0]['url']. "'>(more)</a>" , $description);
+						$description =str_replace("...", "<a href='./". $Bassinets[0]['url']. "'> more</a>" , $description);
 					}
 					
 					?>
@@ -1064,7 +1064,7 @@ $Britax = products::getProducts(26496);
 					if(!empty($Baby_Doll[0]['description_short']))
 					{
 						
-						$description =str_replace("...", "<a href='./". $Baby_Doll[0]['url']. "'>(more)</a>" , $description);
+						$description =str_replace("...", "<a href='./". $Baby_Doll[0]['url']. "'> more</a>" , $description);
 					}
 					
 					?>
@@ -1151,7 +1151,7 @@ $Britax = products::getProducts(26496);
 					if(!empty($Strollers[0]['description_short']))
 					{
 						
-						$description =str_replace("...", "<a href='./". $Strollers[0]['url']. "'>(more)</a>" , $description);
+						$description =str_replace("...", "<a href='./". $Strollers[0]['url']. "'> more</a>" , $description);
 					}
 					
 					?>
@@ -1320,7 +1320,7 @@ $Britax = products::getProducts(26496);
 					if(!empty($Carseats[0]['description_short']))
 					{
 						
-						$description =str_replace("...", "<a href='./". $Carseats[0]['url']. "'>(more)</a>" , $description);
+						$description =str_replace("...", "<a href='./". $Carseats[0]['url']. "'> more</a>" , $description);
 					}
 					
 					?>
@@ -1380,7 +1380,7 @@ $Britax = products::getProducts(26496);
 					if(!empty($High_Chairs_Feeding[0]['description_short']))
 					{
 						
-						$description =str_replace("...", "<a href='./". $High_Chairs_Feeding[0]['url']. "'>(more)</a>" , $description);
+						$description =str_replace("...", "<a href='./". $High_Chairs_Feeding[0]['url']. "'> more</a>" , $description);
 					}
 					
 					?>
