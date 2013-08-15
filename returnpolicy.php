@@ -3,7 +3,7 @@
 	"http://www.w3.org/TR/html4/strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
-	<title>About Us : Baby Bedding Sets : Nursery Bedding : Stanley Kids Furniture : Baby Bedding Town</title>
+	<title>Our Refund Policy : Stanley Cribs : Young America Furniture : Baby Bedding Town</title>
 	<meta name="keywords" content="Baby Bedding, Baby Furniture, Baby Bedding Sets, Nursery Bedding, Stanley Kids Furniture"/>
 	<meta name="description" content="Baby Bedding Town is a large selection of high quality baby bedding sets, nursery bedding and Stanley kids furniture to customers in one location."/>
 

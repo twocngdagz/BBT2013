@@ -3,7 +3,7 @@
 	"http://www.w3.org/TR/html4/strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
-	<title>About Us : Baby Bedding Sets : Nursery Bedding : Stanley Kids Furniture : Baby Bedding Town</title>
+	<title>Shipping FAQ's : Baby Bedding Sets : Stanley Kids Furniture : Baby Bedding Town</title>
 	<meta name="keywords" content="Baby Bedding, Baby Furniture, Baby Bedding Sets, Nursery Bedding, Stanley Kids Furniture"/>
 	<meta name="description" content="Baby Bedding Town is a large selection of high quality baby bedding sets, nursery bedding and Stanley kids furniture to customers in one location."/>
 
@@ -93,7 +93,7 @@
 			}
 
 			.container {
-				
+
 			}
 		</style>
 		<?php include (MCHN_DIR_HTML . 'html.navigation.php'); ?>
@@ -225,7 +225,7 @@
 													you can consolidate them with other orders. This process saves
 													international customers up to 82% off typical international shipping
 													rates. Click Here to get your own US address with Bongo International
-													<script>var ht = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape('%3Cscript type="text/javascript" src="'+ht+'bongous.com/applink/loadAppLink.php?logo=23&key1=NTc5&key2=1e0abf797747311cc8e6806ee9a07c23&url='+ht+'bongous.com"%3E%3C/script%3E'));</script><br />
+													<br />
 													<br /> </font><strong><font size="2" face="Verdana" color="#666666">How
 													will I know when my order has shipped? </font>
 												</strong>
