@@ -443,13 +443,6 @@ $Britax = products::getProducts(26496);
 						<h3><?php html::p($Sweet_JoJo_Designs[0]['name_short']) ;?></h3>
 					</a>
 					<p><?php echo $Sweet_JoJo_Designs[0]['description_short'];?></p>
-
-					<div class="pull-left" style="padding: 10px;">
-						<a href="./<?php html::p($Sweet_JoJo_Designs[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="images/categories/large/home/" alt=""> </a> <br>
-						
-					</div>
-
 					<div style="clear: both"></div>
 				</div>
 
@@ -638,13 +631,6 @@ $Britax = products::getProducts(26496);
 						<h3><?php html::p($Trend_Lab[0]['name_short']) ;?></h3>
 					</a>
 					<p><?php echo $Trend_Lab[0]['description_short'];?></p>
-
-					<div class="pull-left" style="padding: 10px;">
-						<a href="./<?php html::p($Trend_Lab[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="images/categories/large/home/" alt=""> </a> <br>
-						
-					</div>
-
 					<div style="clear: both"></div>
 				</div>
 
@@ -810,12 +796,6 @@ $Britax = products::getProducts(26496);
 					</a>
 					<p><?php echo $Corsican_Design_Metal_Cribs[0]['description_short'];?></p>
 
-					<div class="pull-left" style="padding: 10px;">
-						<a href="./<?php html::p($Corsican_Design_Metal_Cribs[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="images/categories/large/home/" alt=""> </a> <br>
-						
-					</div>
-
 					<div style="clear: both"></div>
 				</div>
 
@@ -902,12 +882,6 @@ $Britax = products::getProducts(26496);
 						<h3><?php html::p($Bassinets[0]['name_short']) ;?></h3>
 					</a>
 					<p><?php echo $Bassinets[0]['description_short'];?></p>
-
-					<div class="pull-left" style="padding: 10px;">
-						<a href="./<?php html::p($Bassinets[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
-							src="images/categories/large/home/" alt=""> </a> <br>
-						
-					</div>
 
 					<div style="clear: both"></div>
 				</div>

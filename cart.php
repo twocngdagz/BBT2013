@@ -66,6 +66,7 @@ $host = $_SERVER['HTTP_HOST'];
   </tr>
 </thead>
 <tbody>
+
 <?php if ( !empty($_COOKIE['cart']) ) { 
   arsort($_COOKIE['cart']); ?>
 <?php foreach ( $_COOKIE['cart'] as $item => $qty):?>
@@ -144,7 +145,7 @@ $host = $_SERVER['HTTP_HOST'];
     <a class="btn btn-medium" href="./products.php"><small>CONTINUE SHOPPING</small></a>
   </td>
   <td>
-    <a class="btn btn-medium btn-primary" href="<?php if ($host == "localhost") {echo "./checkout.php";} else {echo "https://www.babybeddingtown.com/checkout.php";}?>"><small>CHECKOUT</small></a>
+    <a class="btn btn-medium btn-primary" href="<?php if ($host == "localhost") {echo "./checkout.php";} else {echo "./checkout.php";}?>"><small>CHECKOUT</small></a>
   </td>
 </tr>
 </table>
