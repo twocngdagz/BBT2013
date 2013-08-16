@@ -10,9 +10,9 @@
 		if($row['parent_id'] == 0){
 	
 		}else if($row['name_short'] === "Default Category"){
-			$htmls.='<h5><a href="./categories.php?id='.$row['id'].'">Top Sellers</a></h5>';
+			$htmls.='<h5><a href="./'.$row['url'].'">Top Sellers</a></h5>';
 		}else{
-			$htmls.='<h5><a href="./categories.php?id='.$row['id'].'">'.$row['name_short'].'</a></h5>';
+			$htmls.='<h5><a href="./'.$row['url'].'">'.$row['name_short'].'</a></h5>';
 		}
 		$htmls.='<ul style="list-style: none;margin-left: 10px;">';
 
@@ -24,13 +24,14 @@
 			if ($count == 0){
 
 			}else{
-				$htmls.='<li><a href="./categories.php?id='.$row['id'].'">'.$row['name_short'].'</a></li>';
+				$htmls.='<li><a href="./'.$row['url'].'">'.$row['name_short'].'</a></li>';
 			}
 		}
 		$htmls.='</ul>';
 	}
 	
 	$htmls.='</div>';
+	
 		if($handle=fopen('side_testing.txt', 'a')) {
 			fwrite($handle, $htmls);
 			fclose($handle);
