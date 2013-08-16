@@ -28,6 +28,8 @@ RewriteRule ^customer-service$ customerservice.php?
 RewriteRule ^newsletter-subscription$ newsletter.php
 RewriteRule ^about-magento-demo-store$ about-us.php
 RewriteRule ^complete-check-list$ checklist.php
+RewriteRule ^shipping-faqs$ shippingfaq.php
+RewriteRule ^refund-policy$ returnpolicy.php
 
 RewriteCond %{QUERY_STRING} ^p=([0-9]*)$
 RewriteRule ^([A-Za-z-]+) categories.php?id=$1&p=%1

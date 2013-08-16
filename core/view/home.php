@@ -2,7 +2,8 @@
 <?php
 //CATEGORY comment
 //Lambs and Ivy = 11, Glenna Jean = 22, Kidsline = 10, Sumersault = 24, Sweet JoJo Designs= 537, Sweet Kyla = 219
-$Lambs_and_Ivy = category::getCategoryURL(11);
+
+$Lambs_and_Ivy = category::getCategoryURL(11);//11
 $KidsLine = category::getCategoryURL(10);
 $Glenn_Jean = category::getCategoryURL(22);
 $Sumersault = category::getCategoryURL(24);
@@ -17,7 +18,6 @@ $Baby_Doll = category::getCategoryURL(294);
 $Strollers = category::getCategoryURL(57);
 $Carseats = category::getCategoryURL(51);
 $High_Chairs_Feeding = category::getCategoryURL(61);
-
 
 //
 //Kung wala jud ang product bay pag query lang sa database og bisan unsa, iparehas lang sa pag buhat nko sa category
@@ -99,7 +99,21 @@ $Britax = products::getProducts(26496);
 					<a href="./<?php html::p($Lambs_and_Ivy[0]["url"]) ?>">
 					<h3><?php html::p($Lambs_and_Ivy[0]['name_short']);?></h3>
 					</a>
-					<p><?php echo $Lambs_and_Ivy[0]['description_short'];?></p>
+
+
+					<?php ob_start();?>
+					<?php echo $Lambs_and_Ivy[0]['description_short'];?>
+					<?php
+					$description = ob_get_contents();
+					ob_end_clean();
+					if(!empty($Lambs_and_Ivy[0]['description_short']))
+					{
+						
+						$description =$description. "<a href='./". $Lambs_and_Ivy[0]['url']. "'> more</a>";
+					}
+					
+					?>
+					<p><?php echo $description;?></p>
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Lambs_and_Ivy[0]["url"]) ?>">
@@ -201,7 +215,20 @@ $Britax = products::getProducts(26496);
 					<a href="./<?php html::p($KidsLine[0]["url"]) ?>">
 					<h3><?php html::p($KidsLine[0]['name_short']);?></h3>
 					</a>
-					<p><?php echo $KidsLine[0]['description_short']; ?></p>
+					
+					<?php ob_start();?>
+					<?php echo $KidsLine[0]['description_short'];?>
+					<?php
+					$description = ob_get_contents();
+					ob_end_clean();
+					if(!empty($KidsLine[0]['description_short']))
+					{
+						
+						$description =$description. "<a href='./". $KidsLine[0]['url']. "'> more</a>";
+					}
+					
+					?>
+					<p><?php echo $description;?></p>
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($KidsLine[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
@@ -298,7 +325,21 @@ $Britax = products::getProducts(26496);
 				<div class="featured">
 					<a href="./<?php html::p($Glenn_Jean[0]["url"]) ?>">
 					<h3><?php html::p($Glenn_Jean[0]['name_short']); ?></h3></a>
-					<p><?php echo $Glenn_Jean[0]['description_short']; ?></p>
+					
+
+					<?php ob_start();?>
+					<?php echo $Glenn_Jean[0]['description_short'];?>
+					<?php
+					$description = ob_get_contents();
+					ob_end_clean();
+					if(!empty($Glenn_Jean[0]['description_short']))
+					{
+						
+						$description =$description. "<a href='./". $Glenn_Jean[0]['url']. "'> more</a>";
+					}
+					
+					?>
+					<p><?php echo $description;?></p>
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Glenn_Jean[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
@@ -395,7 +436,22 @@ $Britax = products::getProducts(26496);
 					<a href="./<?php html::p($Sumersault[0]["url"]) ?>">
 						<h3><?php html::p($Sumersault[0]['name_short']) ;?></h3>
 					</a>
-					<p><?php echo $Sumersault[0]['description_short']; ?></p>
+					
+
+					<?php ob_start();?>
+					<?php echo $Sumersault[0]['description_short'];?>
+					<?php
+					$description = ob_get_contents();
+					ob_end_clean();
+					if(!empty($Sumersault[0]['description_short']))
+					{
+						
+						$description =$description. "<a href='./". $Sumersault[0]['url']. "'> more</a>";
+					}
+					
+					?>
+					<p><?php echo $description;?></p>
+
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Sumersault[0]["url"]) ?>" ><img width="620px" style="height: 290px" class="img-polaroid"
@@ -442,7 +498,22 @@ $Britax = products::getProducts(26496);
 					<a href="./<?php html::p($Sweet_JoJo_Designs[0]["url"]) ?>">
 						<h3><?php html::p($Sweet_JoJo_Designs[0]['name_short']) ;?></h3>
 					</a>
-					<p><?php echo $Sweet_JoJo_Designs[0]['description_short'];?></p>
+					
+					<?php ob_start();?>
+					<?php echo $Sweet_JoJo_Designs[0]['description_short'];?>
+					<?php
+					$description = ob_get_contents();
+					ob_end_clean();
+					if(!empty($Sweet_JoJo_Designs[0]['description_short']))
+					{
+						
+						$description =$description. "<a href='./". $Sweet_JoJo_Designs[0]['url']. "'> more</a>";
+					}
+					
+					?>
+					<p><?php echo $description;?></p>
+
+
 					<div style="clear: both"></div>
 				</div>
 
@@ -532,7 +603,21 @@ $Britax = products::getProducts(26496);
 					<a href="./<?php html::p($Sweet_Kyla[0]["url"]) ?>">
 						<h3><?php html::p($Sweet_Kyla[0]['name_short']) ;?></h3>
 					</a>
-					<p><?php echo $Sweet_Kyla[0]['description_short'];?></p>
+					
+
+					<?php ob_start();?>
+					<?php echo $Sweet_Kyla[0]['description_short'];?>
+					<?php
+					$description = ob_get_contents();
+					ob_end_clean();
+					if(!empty($Sweet_Kyla[0]['description_short']))
+					{
+						
+						$description =$description. "<a href='./". $Sweet_Kyla[0]['url']. "'> more</a>";
+					}
+					
+					?>
+					<p><?php echo $description;?></p>
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Sweet_Kyla[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
@@ -630,7 +715,23 @@ $Britax = products::getProducts(26496);
 					<a href="./<?php html::p($Trend_Lab[0]["url"]) ?>">
 						<h3><?php html::p($Trend_Lab[0]['name_short']) ;?></h3>
 					</a>
-					<p><?php echo $Trend_Lab[0]['description_short'];?></p>
+					
+
+					<?php ob_start();?>
+					<?php echo $Trend_Lab[0]['description_short'];?>
+					<?php
+					$description = ob_get_contents();
+					ob_end_clean();
+					if(!empty($Trend_Lab[0]['description_short']))
+					{
+						
+						$description =$description. "<a href='./". $Trend_Lab[0]['url']. "'> more</a>";
+					}
+					
+					?>
+					<p><?php echo $description;?></p>
+
+
 					<div style="clear: both"></div>
 				</div>
 
@@ -696,7 +797,20 @@ $Britax = products::getProducts(26496);
 					<a href="./<?php html::p($Young_America[0]["url"]) ?>">
 						<h3><?php html::p($Young_America[0]['name_short']) ;?></h3>
 					</a>
-					<p><?php echo $Young_America[0]['description_short'];?></p>
+					
+					<?php ob_start();?>
+					<?php echo $Young_America[0]['description_short'];?>
+					<?php
+					$description = ob_get_contents();
+					ob_end_clean();
+					if(!empty($Young_America[0]['description_short']))
+					{
+						
+						$description =$description. "<a href='./". $Young_America[0]['url']. "'> more</a>";
+					}
+					
+					?>
+					<p><?php echo $description;?></p>
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Young_America[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
@@ -794,7 +908,21 @@ $Britax = products::getProducts(26496);
 					<a href="./<?php html::p($Corsican_Design_Metal_Cribs[0]["url"]) ?>">
 						<h3><?php html::p($Corsican_Design_Metal_Cribs[0]['name_short']) ;?></h3>
 					</a>
-					<p><?php echo $Corsican_Design_Metal_Cribs[0]['description_short'];?></p>
+					
+
+					<?php ob_start();?>
+					<?php echo $Corsican_Design_Metal_Cribs[0]['description_short'];?>
+					<?php
+					$description = ob_get_contents();
+					ob_end_clean();
+					if(!empty($Corsican_Design_Metal_Cribs[0]['description_short']))
+					{
+						
+						$description =$description. "<a href='./". $Corsican_Design_Metal_Cribs[0]['url']. "'> more</a>";
+					}
+					
+					?>
+					<p><?php echo $description;?></p>
 
 					<div style="clear: both"></div>
 				</div>
@@ -835,7 +963,20 @@ $Britax = products::getProducts(26496);
 					<a href="./<?php html::p($Nursery_Smart_Baby_Furniture[0]["url"]) ?>">
 						<h3><?php html::p($Nursery_Smart_Baby_Furniture[0]['name_short']) ;?></h3>
 					</a>
-					<p><?php echo $Nursery_Smart_Baby_Furniture[0]['description_short'];?></p>
+					
+					<?php ob_start();?>
+					<?php echo $Nursery_Smart_Baby_Furniture[0]['description_short'];?>
+					<?php
+					$description = ob_get_contents();
+					ob_end_clean();
+					if(!empty($Nursery_Smart_Baby_Furniture[0]['description_short']))
+					{
+						
+						$description =$description. "<a href='./". $Nursery_Smart_Baby_Furniture[0]['url']. "'> more</a>";
+					}
+					
+					?>
+					<p><?php echo $description;?></p>
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Nursery_Smart_Baby_Furniture[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
@@ -881,7 +1022,21 @@ $Britax = products::getProducts(26496);
 					<a href="./<?php html::p($Bassinets[0]["url"]) ?>">
 						<h3><?php html::p($Bassinets[0]['name_short']) ;?></h3>
 					</a>
-					<p><?php echo $Bassinets[0]['description_short'];?></p>
+					
+
+					<?php ob_start();?>
+					<?php echo $Bassinets[0]['description_short'];?>
+					<?php
+					$description = ob_get_contents();
+					ob_end_clean();
+					if(!empty($Bassinets[0]['description_short']))
+					{
+						
+						$description =$description. "<a href='./". $Bassinets[0]['url']. "'> more</a>";
+					}
+					
+					?>
+					<p><?php echo $description;?></p>
 
 					<div style="clear: both"></div>
 				</div>
@@ -899,7 +1054,21 @@ $Britax = products::getProducts(26496);
 					<a href="./<?php html::p($Baby_Doll[0]["url"]) ?>">
 						<h3><?php html::p($Baby_Doll[0]['name_short']) ;?></h3>
 					</a>
-					<p><?php echo $Baby_Doll[0]['description_short'];?></p>
+					
+
+					<?php ob_start();?>
+					<?php echo $Baby_Doll[0]['description_short'];?>
+					<?php
+					$description = ob_get_contents();
+					ob_end_clean();
+					if(!empty($Baby_Doll[0]['description_short']))
+					{
+						
+						$description =$description. "<a href='./". $Baby_Doll[0]['url']. "'> more</a>";
+					}
+					
+					?>
+					<p><?php echo $description;?></p>
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Baby_Doll[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
@@ -972,7 +1141,21 @@ $Britax = products::getProducts(26496);
 					<a href="./<?php html::p($Strollers[0]["url"]) ?>">
 						<h3><?php html::p($Strollers[0]['name_short']) ;?></h3>
 					</a>
-					<p><?php echo $Strollers[0]['description_short'];?></p>
+					
+
+					<?php ob_start();?>
+					<?php echo $Strollers[0]['description_short'];?>
+					<?php
+					$description = ob_get_contents();
+					ob_end_clean();
+					if(!empty($Strollers[0]['description_short']))
+					{
+						
+						$description =$description. "<a href='./". $Strollers[0]['url']. "'> more</a>";
+					}
+					
+					?>
+					<p><?php echo $description;?></p>
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Strollers[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
@@ -1127,7 +1310,21 @@ $Britax = products::getProducts(26496);
 					<a href="./<?php html::p($Carseats[0]["url"]) ?>">
 						<h3><?php html::p($Carseats[0]['name_short']) ;?></h3>
 					</a>
-					<p><?php echo $Carseats[0]['description_short'];?></p>
+					
+
+					<?php ob_start();?>
+					<?php echo $Carseats[0]['description_short'];?>
+					<?php
+					$description = ob_get_contents();
+					ob_end_clean();
+					if(!empty($Carseats[0]['description_short']))
+					{
+						
+						$description =$description."<a href='./". $Carseats[0]['url']. "'> more</a>";
+					}
+					
+					?>
+					<p><?php echo $description;?></p>
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($Carseats[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
@@ -1173,7 +1370,21 @@ $Britax = products::getProducts(26496);
 					<a href="./<?php html::p($High_Chairs_Feeding[0]["url"]) ?>">
 						<h3><?php html::p($High_Chairs_Feeding[0]['name_short']) ;?></h3>
 					</a>
-					<p><?php echo $High_Chairs_Feeding[0]['description_short'];?></p>
+					
+
+					<?php ob_start();?>
+					<?php echo $High_Chairs_Feeding[0]['description_short'];?>
+					<?php
+					$description = ob_get_contents();
+					ob_end_clean();
+					if(!empty($High_Chairs_Feeding[0]['description_short']))
+					{
+						
+						$description =$description."<a href='./". $High_Chairs_Feeding[0]['url']. "'> more</a>";
+					}
+					
+					?>
+					<p><?php echo $description;?></p>
 
 					<div class="pull-left" style="padding: 10px;">
 						<a href="./<?php html::p($High_Chairs_Feeding[0]["url"]) ?>"><img width="620px" style="height: 290px" class="img-polaroid"
