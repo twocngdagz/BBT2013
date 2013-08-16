@@ -3,9 +3,9 @@ class database {
     public static $sql;
     
     private static $server   = 'localhost';
-    private static $username = 'root';
-    private static $password = '';
-    private static $database = 'bbt2013a_site';	
+    private static $username = '17670_site';
+    private static $password = 'nqan7sfn';
+    private static $database = '17670_devsite';	
     
    
 	/*

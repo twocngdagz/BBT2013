@@ -12,14 +12,13 @@
 	 * Get new API/CLASS new directory on NEW LIB inc/classes
 	 */
 	$host = $_SERVER['HTTP_HOST'];	
-
 	# GET ROOT DOUCMENTS & DIRECTORIES
 	if ($host == "localhost") {
 		define("MCHN_ROOT", "http://localhost/BBT2013/");
 		define("MCHN_DIR_ROOT", "/wamp/www/BBT2013/");
 	} else {
-		define("MCHN_ROOT", "http://bbt2013.alorit.com/");
-		define("MCHN_DIR_ROOT", "/home/bbt2013a/public_html/");
+		define("MCHN_ROOT", "http://dev.babybeddingtown.com/");
+		define("MCHN_DIR_ROOT", "/usr/www/virtual/alon/dev.babybeddingtown.com/");
 	}
 	
 	define("MCHN_DIR_CORE", MCHN_DIR_ROOT ."core/");
