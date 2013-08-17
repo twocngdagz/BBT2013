@@ -1,19 +1,20 @@
 <?php
 class database {
     public static $sql;
-    
+    /*
     private static $server   = 'localhost';
     private static $username = '17670_site';
     private static $password = 'nqan7sfn';
     private static $database = '17670_devsite';	
-    
+    */   
    
-	/*
+	
     private static $server 	 = 'localhost';
-	private static $username = 'bbt2013a_website';
-	private static $password = '(B+4#r&dk^KE';
+	private static $username = 'root';
+	private static $password = '';
 	private static $database = 'bbt2013a_site';
-	*/
+	
+
     public static function connection($server,$username,$password) {
         return mysql_connect($server,$username,$password) or die ("<b>Connection Errors:</b>&nbsp;" . mysql_error());
     }

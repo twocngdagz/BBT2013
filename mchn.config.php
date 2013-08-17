@@ -11,16 +11,24 @@
 	 * 
 	 * Get new API/CLASS new directory on NEW LIB inc/classes
 	 */
-	$host = $_SERVER['HTTP_HOST'];	
+
+	
+	if(!isset($_SERVER['HTTP_HOST'])){
+		define("MCHN_ROOT", "http://localhost/BBT2013/");
+		//define("MCHN_DIR_ROOT", "/wamp/www/BBT2013/");
+		define("MCHN_DIR_ROOT", "/xampp/htdocs/BBT2013/");
+	}else{
 	# GET ROOT DOUCMENTS & DIRECTORIES
+	$host = $_SERVER['HTTP_HOST'];	
 	if ($host == "localhost") {
 		define("MCHN_ROOT", "http://localhost/BBT2013/");
-		define("MCHN_DIR_ROOT", "/wamp/www/BBT2013/");
+		//define("MCHN_DIR_ROOT", "/wamp/www/BBT2013/");
+		define("MCHN_DIR_ROOT", "/xampp/htdocs/BBT2013/");
 	} else {
 		define("MCHN_ROOT", "http://dev.babybeddingtown.com/");
 		define("MCHN_DIR_ROOT", "/usr/www/virtual/alon/dev.babybeddingtown.com/");
 	}
-	
+	}	
 	define("MCHN_DIR_CORE", MCHN_DIR_ROOT ."core/");
 	define("CNTRLR", MCHN_DIR_CORE ."controller/");
 	define("MDL", MCHN_DIR_CORE ."model/");

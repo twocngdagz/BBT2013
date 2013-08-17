@@ -8,7 +8,7 @@
 	
 	foreach ($parentCategory as $row){
 		if($row['parent_id'] == 0){
-	
+		
 		}else if($row['name_short'] === "Default Category"){
 			$htmls.='<h5><a href="./'.$row['url'].'">Top Sellers</a></h5>';
 		}else{
