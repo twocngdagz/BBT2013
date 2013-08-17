@@ -11,18 +11,28 @@
 	 * 
 	 * Get new API/CLASS new directory on NEW LIB inc/classes
 	 */
-	$host = $_SERVER['HTTP_HOST'];	
 
+	
+	if(!isset($_SERVER['HTTP_HOST'])){
+		define("MCHN_ROOT", "http://localhost/BBT2013/");
+		//define("MCHN_DIR_ROOT", "/wamp/www/BBT2013/");
+		define("MCHN_DIR_ROOT", "/xampp/htdocs/BBT2013/");
+	}else{
 	# GET ROOT DOUCMENTS & DIRECTORIES
+<<<<<<< HEAD
 	echo $host;
+=======
+	$host = $_SERVER['HTTP_HOST'];	
+>>>>>>> 68de4bb1c1ffade39f5e934d085006ad75a86953
 	if ($host == "localhost") {
 		define("MCHN_ROOT", "http://localhost/BBT2013/");
-		define("MCHN_DIR_ROOT", "/wamp/www/BBT2013/");
+		//define("MCHN_DIR_ROOT", "/wamp/www/BBT2013/");
+		define("MCHN_DIR_ROOT", "/xampp/htdocs/BBT2013/");
 	} else {
-		define("MCHN_ROOT", "http://bbt2013.alorit.com/");
-		define("MCHN_DIR_ROOT", "/home/bbt2013a/public_html/");
+		define("MCHN_ROOT", "http://dev.babybeddingtown.com/");
+		define("MCHN_DIR_ROOT", "/usr/www/virtual/alon/dev.babybeddingtown.com/");
 	}
-	
+	}	
 	define("MCHN_DIR_CORE", MCHN_DIR_ROOT ."core/");
 	define("CNTRLR", MCHN_DIR_CORE ."controller/");
 	define("MDL", MCHN_DIR_CORE ."model/");
