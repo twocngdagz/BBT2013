@@ -14,6 +14,7 @@
 	$host = $_SERVER['HTTP_HOST'];	
 
 	# GET ROOT DOUCMENTS & DIRECTORIES
+	echo $host;
 	if ($host == "localhost") {
 		define("MCHN_ROOT", "http://localhost/BBT2013/");
 		define("MCHN_DIR_ROOT", "/wamp/www/BBT2013/");
