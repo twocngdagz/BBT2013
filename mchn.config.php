@@ -15,19 +15,15 @@
 	
 	if(!isset($_SERVER['HTTP_HOST'])){
 		define("MCHN_ROOT", "http://localhost/BBT2013/");
-		//define("MCHN_DIR_ROOT", "/wamp/www/BBT2013/");
-		define("MCHN_DIR_ROOT", "/xampp/htdocs/BBT2013/");
+		define("MCHN_DIR_ROOT", "/wamp/www/BBT2013/");
+		//define("MCHN_DIR_ROOT", "/xampp/htdocs/BBT2013/");
 	}else{
 	# GET ROOT DOUCMENTS & DIRECTORIES
-<<<<<<< HEAD
-	echo $host;
-=======
 	$host = $_SERVER['HTTP_HOST'];	
->>>>>>> 68de4bb1c1ffade39f5e934d085006ad75a86953
 	if ($host == "localhost") {
 		define("MCHN_ROOT", "http://localhost/BBT2013/");
-		//define("MCHN_DIR_ROOT", "/wamp/www/BBT2013/");
-		define("MCHN_DIR_ROOT", "/xampp/htdocs/BBT2013/");
+		define("MCHN_DIR_ROOT", "/wamp/www/BBT2013/");
+		//define("MCHN_DIR_ROOT", "/xampp/htdocs/BBT2013/");
 	} else {
 		define("MCHN_ROOT", "http://dev.babybeddingtown.com/");
 		define("MCHN_DIR_ROOT", "/usr/www/virtual/alon/dev.babybeddingtown.com/");

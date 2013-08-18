@@ -50,6 +50,11 @@ echo $buffer;
 		?>
 	<div class="span9">
 		<div class="row-fluid span12">
+			<div class="row-fluid">
+				<div class="page-title">
+					<h1><?php echo $category[0]['name_short']; ?></h1>
+				</div>
+			</div>
 			<div class="carousel-container">
 			<?php if ($total_count >= 3) { ?>
 				<div id="carousel">
@@ -99,7 +104,7 @@ echo $buffer;
 			<div class="product-container-link">
 				<div class="pull-left well product-container">
 					<center>
-						<a href="./products.php?id=<?php html::p($row["id"]) ?>"><img
+						<a href="<?php echo MCHN_ROOT;?>products.php?id=<?php html::p($row["id"]) ?>"><img
 							style="width: 400px; height: 300px;"
 							src="<?php 
 							  if(empty($row['image_small']))
@@ -111,7 +116,7 @@ echo $buffer;
 									  echo $row['image_small']; 
 							  }?>" /> </a> <br> <br>
 						<div style="height: 40px;">
-							<a href="./products.php?id=<?php html::p($row["id"]) ?>"><b><?php html::p($row["name_short"]) ?>
+							<a href="<?php echo MCHN_ROOT;?>products.php?id=<?php html::p($row["id"]) ?>"><b><?php html::p($row["name_short"]) ?>
 							</b> </a>
 						</div>
 						<div>
@@ -119,7 +124,7 @@ echo $buffer;
 							</b>
 						</div>
 						<br>
-						<form action="./cart.php" method="post">
+						<form action="<?php echo MCHN_ROOT;?>cart.php" method="post">
 							<input type="hidden" name="item"
 								value="<?php html::p($row["id"]) ?>" />
 							<div>
