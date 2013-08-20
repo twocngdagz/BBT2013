@@ -9,6 +9,17 @@ RewriteRule .* - [L]
 
 #START RULE IN MENU
 
+# Force SSL on checkout login account and admin pages
+RewriteCond %{HTTPS} off
+RewriteCond %{REQUEST_URI} checkout.php
+RewriteRule ^(.*)$ https://%2/$1 [R=301,L,QSA]
+
+# Remove SSL on other pages
+RewriteCond %{HTTPS} on
+RewriteCond %{REQUEST_URI} !checkout
+RewriteCond %{HTTP_HOST} ^(www\.)?(.*)$ [NC]
+RewriteRule ^(.*)$ http://www.%2/$1 [R=301,L,QSA]
+
 RewriteRule ^log.asp$ log.php
 RewriteRule ^login.asp$ login.php
 RewriteRule ^([A-z0-9]+)$ index.php?p1=$1

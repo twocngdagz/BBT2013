@@ -31,11 +31,11 @@
 	// Live Stripe Host and Keys.
 	$liveHost 	= array ('www.babybeddingtown.com', 'www.babybeddingtown.com');
 
-	// $liveSecretKey 		= 'sk_live_eoIbp671rGoFCiR8ZrckfwKH';
-	// $livePublishableKey 	= 'pk_live_vHAnsjJ4tF1yy9MlXbrfNLfs';	
+	 $liveSecretKey 		= 'sk_live_3Xerg1vprwQ4iYGaoAIwb4sX';
+	 $livePublishableKey 	= 'pk_live_POV4T0RHbvF21hP2CKAgr28t';	
 
-	$liveSecretKey 		= '';
-	$livePublishableKey = '';		
+	//$liveSecretKey 		= '';
+	//$livePublishableKey = '';		
 
 	// Check Details for new configuration from host.
 	if( !empty($host) && in_array($host, $testHost) ) 
@@ -43,7 +43,7 @@
 		$secretKey 		= $testSecretKey;
 		$publishableKey = $testPublishableKey;		
 	}
-	else if( !empty($host) && in_array($host, $testHost) ) 
+	else if( !empty($host) && in_array($host, $liveHost) ) 
 	{
 		$secretKey 		= $liveSecretKey;
 		$publishableKey = $livePublishableKey;		
