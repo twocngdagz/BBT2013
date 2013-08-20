@@ -163,6 +163,7 @@
 		<div class="page-title">
 			<h2>Contact Us</h2>
 		</div>
+		<!-- <form action="./mail.php" id="contactForm" method="post"  onSubmit="javascript:return checkInput()"> -->
 		<form action="" id="contactForm" method="post">
 			<fieldset class="group-select">
 				<h3 class="legend">Contact Information</h3>
@@ -196,17 +197,18 @@
 			</fieldset>
 			<p class="required">* Required Fields</p>
 			<div class="buttons-set">
-				<button type="submit" class="button">
+				<button type="submit" class="button" id="btnlogin">
 					<span>Submit</span>
 				</button>
 			</div>
 		</form>
 		<script type="text/javascript">
 //<![CDATA[
-    var contactForm = new VarienForm('contactForm', true);
+   // var contactForm = new VarienForm('contactForm', true);
 //]]>
 </script>
 		</p>
+		<div class="message" style="color:#FF0000;"></div>
 		<p class="container">
 			<strong>Customer Service Hours </strong>
 		</p>
@@ -220,8 +222,79 @@
 		<p class="container">Rosemead, CA 91770</p>
 	</div>
 	<p>&#160;</p>
-	<script type="text/javascript"
-		src="http://pixel.sitescout.com/ap/3fe68f1fc14ce1a1"></script>
+	<script type="text/javascript" >
+			
+	$( document ).ready(function() {
+		//console.log('ready');
+		$('#btnlogin').click(function(e){
+			e.preventDefault();
+			//console.log('Enter');
+			
+
+			if(document.getElementById("name").value.split(" ").join("") == "")
+			{
+				alert("Please Enter receiptent Name");
+				document.getElementById("name").focus();
+				return false;											
+			}
+
+			if(document.getElementById("email").value.split(" ").join("") == "")
+			{
+				alert("Please Enter your Email");
+				document.getElementById("email").focus();
+				return false;											
+			}
+			if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById("email").value))){
+				alert("Please Enter Valid Email");
+				document.getElementById("email").focus();
+				return false;											
+			}
+
+			if(document.getElementById("comment").value.split(" ").join("") == "")
+			{
+				alert("Please Enter you message");
+				document.getElementById("comment").focus();
+				return false;
+			}
+
+			var url = 'mail.php'
+
+			$.ajax({
+				url: url,
+				type: 'POST',
+				dataType: 'json',
+				data: $("form").serialize(),
+				success: function(data) {
+					if(data) {
+						if(data == "sent"){
+							$( ".message" ).append( "<p>Mail successfully sent</p>" ).fadeOut(10000).delay(1000);
+							clearTextbox();
+							
+						}else{
+							$( ".message" ).append( "<h2>Email not send, something went wrong</h2>" );
+						}
+					}
+				},
+				error: function(req, status, err) {
+					console.log('err');
+					console.log(req.responseText);
+				}
+			});
+		});
+
+	function clearTextbox(){
+		$('#name').val('');
+		$('#email').val('');
+		$('#comment').val('');
+		$('#telephone').val('');
+	}
+	
+	});
+ 
+    
+	
+
+	</script>
 </div>
 </br class="clear">
 <?php include (MCHN_DIR_HTML . 'html.footer.php'); ?>
