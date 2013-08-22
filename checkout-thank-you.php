@@ -29,6 +29,8 @@ $total = 0;
 ?>
 
 <div class='well'>
+  <br>
+  <?php html::alert('success', 'Checkout has been successful', 'Thank you for ordering!'); ?>
   <?php
   $content  = '';
   $content .= "<div>";
@@ -145,14 +147,12 @@ $total = 0;
   $headers     = 'MIME-Version: 1.0' . "\r\n";
   $headers  .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
   $headers    .= "From: Baby Bedding Town <orders@babybeddingtown.com>". "\r\n";
-  $headers    .= "Bcc: Alon Cohen <alon@alon-cohen.com>, Abz <abz.kanda@gmail.com>". "\r\n";
+  $headers    .= "Bcc: Alon Cohen <alon@alon-cohen.com>, Mederic Beldia <twocngdagz@yahoo.com>". "\r\n";
   $headers    .= "Reply-To: Baby Bedding Town Orders <orders@babybeddingtown.com>". "\r\n";
   
 
   @mail($u_email, $subject, $content, $headers);
 ?>
-<br>
-<?php html::alert('success', 'Checkout has been successful', 'Thank you for ordering!'); ?>
 </div>
 
 <?php include (MCHN_DIR_HTML . 'html.footer.php'); ?>

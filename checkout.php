@@ -161,7 +161,7 @@
       </tr>
       <tr>
         <td style="text-align:right;">
-          <a class="btn btn-medium" href="./products.php"><small>CONTINUE SHOPPING</small></a>
+          <a class="btn btn-medium" href="./"><small>CONTINUE SHOPPING</small></a>
         </td>
         <td>
           Click at the bottom.
@@ -219,14 +219,14 @@
   <?php if ($success): ?>
     <?php html::alert('success', 'Checkout has been successful', 'Account Charged'); ?>
     <?php
+    $customer_id = "";
   // payment_method payment_receipt_number
     if(!empty($_REQUEST['email'])) 
     {
       $checkUser = checkout::findCustomerByEmail($_REQUEST['email']);
-
       if(empty($checkUser)) {
       // TAKE NOTE OF THE INPUT
-        checkout::insertCustomerAccount($_REQUEST['firstname'], $_REQUEST['lastname'], $_REQUEST['email'], $_REQUEST['phone'], $_REQUEST['address1'], $_REQUEST['address2'], $_REQUEST['city'], $_REQUEST['state'], $_REQUEST['zipcode'], $_REQUEST['country'], 0);
+        $customer_id = checkout::insertCustomerAccount($_REQUEST['firstname'], $_REQUEST['lastname'], $_REQUEST['email'], $_REQUEST['phone'], $_REQUEST['address1'], $_REQUEST['address2'], $_REQUEST['city'], $_REQUEST['state'], $_REQUEST['zipcode'], $_REQUEST['country'], 0);
 
       // CHECK TO COPY FROM BILLING DETAILS FOR SHIPPING DETAILS.
         if( isset($_REQUEST['s_copy_billing'])) {
@@ -240,7 +240,7 @@
         }
 
       // CREATE ORDER ITEMS
-        checkout::insertOrderItems($_COOKIE['cart'], "Credit Card: Stripe", $charge->id);
+        checkout::insertOrderItems($_COOKIE['cart'], "Credit Card: Stripe", $charge->id, $customer_id);
 
       // SHIPPING PREFERENCES
         checkout::insertShippingDetails($shippingPrice,1);
@@ -249,8 +249,8 @@
       } 
       else 
       {
+        $customer_id = $checkUser[0]['id'];
         checkout::updateCustomerAccount($_REQUEST['firstname'], $_REQUEST['lastname'], $_REQUEST['email'], $_REQUEST['phone'], $_REQUEST['address1'], $_REQUEST['address2'], $_REQUEST['city'], $_REQUEST['state'], $_REQUEST['zipcode'], $_REQUEST['country'], 0);
-        checkout::insertOrderItems($_COOKIE['cart'], NULL, NULL);
 
       // CHECK TO COPY FROM BILLING DETAILS FOR SHIPPING DETAILS.
         if( isset($_REQUEST['s_copy_billing'])) {
@@ -264,7 +264,7 @@
         }
 
       // CREATE ORDER ITEMS
-        checkout::insertOrderItems($_COOKIE['cart'], "Credit Card: Stripe", $charge->id);
+        checkout::insertOrderItems($_COOKIE['cart'], "Credit Card: Stripe", $charge->id, $customer_id);
 
       // SHIPPING PREFERENCES
         checkout::insertShippingDetails($shippingPrice,1);

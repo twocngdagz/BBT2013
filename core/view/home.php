@@ -2,7 +2,6 @@
 <?php
 //CATEGORY comment
 //Lambs and Ivy = 11, Glenna Jean = 22, Kidsline = 10, Sumersault = 24, Sweet JoJo Designs= 537, Sweet Kyla = 219
-
 $Lambs_and_Ivy = category::getCategoryURL(11);//11
 $KidsLine = category::getCategoryURL(10);
 $Glenn_Jean = category::getCategoryURL(22);
@@ -83,7 +82,6 @@ $Britax = products::getProducts(26496);
 
 
 //High Chairs Feeding'
-
 ?>
 
 <div class="row-fluid">

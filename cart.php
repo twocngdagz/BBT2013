@@ -141,7 +141,7 @@
         </tr>
         <tr>
           <td style="text-align:right;">
-            <a class="btn btn-medium" href="./products.php"><small>CONTINUE SHOPPING</small></a>
+            <a class="btn btn-medium" href="./"><small>CONTINUE SHOPPING</small></a>
           </td>
           <td>
             <a class="btn btn-medium btn-primary" href="<?php if ($host == "localhost") {echo "./checkout.php";} else {echo "https://www.babybeddingtown.com/checkout.php";}?>"><small>CHECKOUT</small></a>
