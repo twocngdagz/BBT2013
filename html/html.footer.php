@@ -13,102 +13,114 @@
 				<div class="pull-left" style="">
 					<a href="./baby-bedding"><img width="152px"
 						style="height: 45px; padding: 1px;"
-						src="images/categories/small/footer/BabybeddingthemesMain.png"
-						<div class="pull-left" style="">
+						src="images/categories/small/footer/BabybeddingthemesMain.png" alt="">
+					</a>
+					<center><a href="./baby-bedding"><p style="color:#ff0000;">baby-bedding</p></a></center>
+				</div>
+				<div class="pull-left" style="">
 					<a href="./baby-accessories"><img width="152px" style="height:45px; padding:1px;"
 						src="images/categories/small/footer/BabybeddingBabyboybedding.png"
 						alt=""> </a>
+						<center><a href="./baby-accessories"><p style="color:#ff0000;">baby-accessories</p></a></center>
 				</div>
-						<div class="pull-left" style="">
-					<a href="./baby-accessories"><img width="152px" style="height:45px; padding:1px;"
-						src="images/categories/small/footer/BabyaccessoriesMain.png"
-						alt=""> </a>
-				</div>
+					
 						<div class="pull-left" style="">
 					<a href="./baby-blankets"><img width="152px" style="height:45px; padding:1px;"
 						src="images/categories/small/footer/babybeddingBabyorganicbedding.png"
 						alt=""> </a>
+						<center><a href="./baby-blankets"><p style="color:#ff0000;">baby-blankets</p></a></center>
 				</div>
 						<div class="pull-left" style="">
 					<a href="./lamps"><img width="152px" style="height:45px; padding:1px;"
 						src="images/categories/small/footer/babybeddingBabysheets.png"
 						alt=""> </a>
+						<center><a href="./lamps"><p style="color:#ff0000;">lamps</p></a></center>
 				</div>
 						<div class="pull-left" style="">
 					<a href="./wall-decor"><img width="152px" style="height:45px; padding:1px;"
 						src="images/categories/small/footer/WalldecorMain.png"
 						alt=""> </a>
+						<center><a href="./wall-decor"><p style="color:#ff0000;">wall-decor</p></a></center>
 				</div>
 						<div class="pull-left" style="">
 					<a href="./mobiles"><img width="152px" style="height:45px; padding:1px;"
 						src="images/categories/small/footer/BabyaccessoriesMobiles.png"
 						alt=""> </a>
+						<center><a href="./mobiles"><p style="color:#ff0000;">mobiles</p></a></center>
 				</div>
 						<div class="pull-left" style="">
 					<a href="./room-decor"><img width="152px" style="height:45px; padding:1px;"
 						src="images/categories/small/footer/BabybeddingCradlebedding.png"
 						alt=""> </a>
+						<center><a href="./room-decor"><p style="color:#ff0000;">room-decor</p></a></center>
 				</div>
 						<div class="pull-left" style="">
 					<a href="./gift-items"><img width="152px" style="height:45px; padding:1px;"
 						src="images/categories/small/footer/GiftitemsMain.png"
 						alt=""> </a>
+						<center><a href="./gift-items"><p style="color:#ff0000;">gift-items</p></a></center>
 				</div>
 						<div class="pull-left" style="">
 					<a href="./pillows"><img width="152px" style="height:45px; padding:1px;"
 						src="images/categories/small/footer/BabybeddingCribbedding.png"
 						alt=""> </a>
+						<center><a href="./pillows"><p style="color:#ff0000;">pillows</p></a></center>
 				</div>
 						<div class="pull-left" style="">
 					<a href="./kids-furniture"><img width="152px" style="height:45px; padding:1px;"
 						src="images/categories/small/footer/BabybeddingCribsheets.png"
 						alt=""> </a>
+						<center><a href="./kids-furniture"><p style="color:#ff0000;">kids-furniture</p></a></center>
 				</div>
 						<div class="pull-left" style="">
 					<a href="./my-haven-furniture-by-stanley"><img width="152px" style="height:45px; padding:1px;"
 						src="images/categories/small/footer/BabybeddingMattresses.png"
 						alt=""> </a>
+						<center><a href="./my-haven-furniture-by-stanley"><p style="color:#ff0000;">my-haven</p></a></center>
 				</div>
 						<div class="pull-left" style="">
 					<a href="./valances"><img width="152px" style="height:45px; padding:1px;"
 						src="images/categories/small/footer/BabybeddingPortacribbedding.png"
 						alt=""> </a>
+						<center><a href="./valances"><p style="color:#ff0000;">valances</p></a></center>
 				</div>
 						<div class="pull-left" style="">
 					<a href="./kidkraft"><img width="152px" style="height:45px; padding:1px;"
 						src="images/categories/small/footer/BabybeddingToddlerbedding.png"
 						alt=""> </a>
+						<center><a href="./kidkraft"><p style="color:#ff0000;">kidkraft</p></a></center>
 				</div>
 						<div class="pull-left" style="">
 					<a href="./4-seasons-by-stanley"><img width="152px" style="height:45px; padding:1px;"
 						src="images/categories/small/footer/StanleyyoungamericaMain (2).png"
 						alt=""> </a>
+						<center><a href="./4-seasons-by-stanley"><p style="color:#ff0000;">4-seasons</p></a></center>
 				</div>
 						<div class="pull-left" style="">
 					<a href="./stanley-young-america-furniture"><img width="152px" style="height:45px; padding:1px;"
 						src="images/categories/small/footer/Stanleyyoungamerica.png"
 						alt=""> </a>
+						<center><a href="./stanley-young-america-furniture"><p style="color:#ff0000;">young-america</p></a></center>
 				</div>
 						<div class="pull-left" style="">
 					<a href="./kids-bedding"><img width="152px" style="height:45px; padding:1px;"
 						src="images/categories/small/footer/KidsbeddingFullbedding.png"
 						alt=""> </a>
+						<center><a href="./kids-bedding"><p style="color:#ff0000;">kids-bedding</p></a></center>
 				</div>
 						<div class="pull-left" style="">
 					<a href="./rugs"><img width="152px" style="height:45px; padding:1px;"
 						src="images/categories/small/footer/BabybeddingToddlerdustruffles.png"
 						alt=""> </a>
+						<center><a href="./rugs"><p style="color:#ff0000;">rugs</p></a></center>
 				</div>
 						<div class="pull-left" style="">
 					<a href="./diaper-stackers"><img width="152px" style="height:45px; padding:1px;"
 						src="images/categories/small/footer/DiaperstackersMain.png"
 						alt=""> </a>
+						<center><a href="./diaper-stackers"><p style="color:#ff0000;">diaper-stackers</p></a></center>
 				</div>
-						<div class="pull-left" style="">
-					<a href="./baby-furniture"><img width="152px" style="height:45px; padding:1px;"
-						src="images/categories/small/footer/KidsfurnitureMain.png"
-						alt=""> </a>
-				</div>
+
 				
 				</div>
 			</div>
