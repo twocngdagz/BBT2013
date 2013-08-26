@@ -38,7 +38,7 @@
 	//$livePublishableKey = '';		
 
 	// Check Details for new configuration from host.
-	if( !empty($host) && in_array($host, $liveHost) ) 
+	if( !empty($host) && in_array($host, $testHost) ) 
 	{
 		$secretKey 		= $testSecretKey;
 		$publishableKey = $testPublishableKey;		

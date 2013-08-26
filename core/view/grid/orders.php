@@ -37,7 +37,7 @@ $sql 	= "SELECT  `customer_orders`. * ,  `customer_order_items`. * , `customer_a
 			WHERE `customer_addresses`.`active` = 1
 			GROUP BY  `customer_order_items`.`order_fk`  
 			$where $sort $limit";
-echo $sql;
+
 $result = db::execute_query($sql);
 $rows 	= db::get_result();
 $total 	= countRec("`customer_orders`.`id`","`customer_orders` $where");
