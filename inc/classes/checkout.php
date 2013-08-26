@@ -7,11 +7,11 @@
  * 
  */
 
-class Checkout {
+class checkout {
   
   public static function findCustomerByEmail($email=NULL) 
   {
-    $sql = "SELECT * FROM `customer_account` WHERE `email`='{$email}' LIMIT 1";
+    $sql = "SELECT * FROM `customer_account` WHERE (`email`='{$email}');";
     db::execute_query($sql);
     $d_arr = db::get_result();
     $r = array();
@@ -96,21 +96,21 @@ class Checkout {
     }
   }
 
-  public static function insertOrderItems($ordersArr, $payment_method=NULL, $payment_receipt_number=NULL) 
+  public static function insertOrderItems($ordersArr, $payment_method=NULL, $payment_receipt_number=NULL, $customer_id) 
   {
-    self::findLastCustomer();
-
+    $customer_address_0 = self::findLastCustomerAddress($customer_id,0);
+    $customer_address_1 = self::findLastCustomerAddress($customer_id,1);
     $sql = "INSERT INTO `customer_orders` (`id`, `cust_fk`, `billing_fk`, `shipping_fk`, 
           `payment_method`, `payment_receipt_number`) 
-        VALUES (NULL, '".self::findLastCustomer()."', '".self::findLastCustomerAddress(self::findLastCustomer(),0)."', '".self::findLastCustomerAddress(self::findLastCustomer(),1)."', '".html::cln($payment_method)."', '".html::cln($payment_receipt_number)."');";
+        VALUES (NULL, '".$customer_id."', '".$customer_address_0."', '".$customer_address_1."', '".html::cln($payment_method)."', '".html::cln($payment_receipt_number)."');";
     db::execute_query($sql);
+    $customer_order = mysql_insert_id();
 
     // SHIPPING AND BILLING FOR THANK YOU PAGE.
-    $_SESSION['checkout_billing_user_id'] = self::findLastCustomerAddress(self::findLastCustomer(),0);
-    $_SESSION['checkout_shipping_user_id'] = self::findLastCustomerAddress(self::findLastCustomer(),1);
-
+    $_SESSION['checkout_billing_user_id'] = $customer_address_0;
+    $_SESSION['checkout_shipping_user_id'] = $customer_address_1;
     self::findLastCustomerOrder();
-    $_SESSION['checkout_order_id'] = self::findLastCustomerOrder();
+    $_SESSION['checkout_order_id'] = $customer_order;
 
     foreach($ordersArr as $item => $qty)
     {
@@ -118,7 +118,7 @@ class Checkout {
       foreach( $products as $row)
       {
         $sql_2 = "INSERT INTO `customer_order_items` (`id`, `order_fk`, `product_items_fk`, `products_item_option_fk`, `product_name`, `option_name`, `weight`, `price`, `qty`) 
-            VALUES (NULL, '".self::findLastCustomerOrder()."', '".$item."', '', '".html::cln($row["name_short"])."', '', '', '".html::cln(number_format($row["price"], 2))."', '".html::cln($qty)."');";
+            VALUES (NULL, '".$customer_order."', '".$item."', '', '".html::cln($row["name_short"])."', '', '', '".html::cln(number_format($row["price"], 2))."', '".html::cln($qty)."');";
         db::execute_query($sql_2);
       } 
     }
@@ -130,6 +130,7 @@ class Checkout {
         VALUES (NULL, '".html::cln($firstname)."', '".html::cln($lastname)."', '".html::cln($email)."', '".html::cln($phone)."', 
         '".html::cln($password)."');";
     db::execute_query($sql);
+    return mysql_insert_id();
   }
 
   public static function insertCustomerAddress($firstname, $lastname, $email, $phone, $address1, $address2, $city, $state, $zipcode, $country, $billing_or_shipping, $password=NULL) 
