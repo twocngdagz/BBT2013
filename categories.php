@@ -98,7 +98,47 @@ echo $buffer;
 			</div>
 		</div>
 		<div class="row-fluid">
-		<?php echo $category[0]['description_long']; ?>
+
+		<?php 
+		ob_start();
+		echo $category[0]['description_long']; 
+		$descrip_accord = ob_get_contents();
+		
+		ob_end_clean();
+		
+		?>
+		<div class="descript_div">
+		<?php echo strip_tags($descrip_accord, '<h3></h3><div></div><p></p>'); ?>
+		</div>
+		<script >
+			$(function() {
+				event.preventDefault();
+
+				if($( "h3:contains('Click to read more about')" ).val() != null){
+					$(".descript_div h3").first().appendTo( "#catname" );
+					$( "h3:contains('Click to read more about')" ).appendTo( ".accord" );
+					$(".descript_div p").appendTo( ".d_content" );
+					$(".descript_div").appendTo( ".no_accord" );
+				}else{
+					$(".descript_div p").first().appendTo( ".no_accord" );
+				}
+		
+				$( "#accordion" ).accordion({
+					heightStyle: "content", autoHeight: false, clearStyle: true, icons: null, collapsible: true, active: false
+				});
+		
+			});
+		</script>
+		<!-- description div -->
+		<h3 id="catname"></h3>
+		<div class="no_accord"></div>
+		<div id="accordion">
+			<h3 class="accord" style="color:#ea1c66; font-weight:bold; font-size:23px; border:0px; background: url('')"></h3>
+			<div  class="d_content" style="background: url(''); border: 0px;">
+				
+			</div>
+		</div>
+		<!-- description div -->
 			<br />
 			<?php foreach( $products as $row):?>
 			<div class="product-container-link">
