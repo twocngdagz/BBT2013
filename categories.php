@@ -60,7 +60,7 @@ echo $buffer;
 				<div id="carousel">
 				<?php foreach( $topproducts as $toprow):?>
 					<div class="carousel-feature" style="width: 450px; height: 230px">
-						<a href="<?php echo MCHN_ROOT;?>products.php?id=<?php html::p($toprow["id"]) ?>"><img
+						<a href="./products.php?id=<?php html::p($toprow["id"]) ?>"><img
 							class="carousel-image" alt="Image Caption"
 							src="<?php html::p($toprow['image_large']); ?>"> </a>
 						<div class="carousel-caption">
@@ -103,7 +103,7 @@ echo $buffer;
 		ob_start();
 		echo $category[0]['description_long']; 
 		$descrip_accord = ob_get_contents();
-		
+		$descrip_accord = preg_replace('#<script(.*?)>(.*?)</script>#is', '', $descrip_accord);
 		ob_end_clean();
 		
 		?>
