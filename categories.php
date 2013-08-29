@@ -112,9 +112,8 @@ echo $buffer;
 		</div>
 		<script >
 			$(function() {
-				event.preventDefault();
-
 				if($( "h3:contains('Click to read more about')" ).val() != null){
+					alert('hit');
 					$(".descript_div h3").first().appendTo( "#catname" );
 					$( "h3:contains('Click to read more about')" ).appendTo( ".accord" );
 					$(".descript_div p").appendTo( ".d_content" );
