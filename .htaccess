@@ -9,8 +9,7 @@ RewriteRule .* - [L]
 
 #START RULE IN MENU
 
-RewriteCond %{HTTP_HOST} !^www\.
-RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
 
 # Force SSL on checkout login account and admin pages
 RewriteCond %{HTTPS} off
