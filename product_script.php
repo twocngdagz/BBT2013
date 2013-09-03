@@ -9,6 +9,16 @@ include('mchn.config.php');
 <script src="<?php html::p(MCHN_DIR_3RDPARTY) ?>jquery/js/jquery-ui-1.10.0.custom.js"></script>
 <?php
 
+$sql = "SELECT * FROM `products_items`
+		WHERE (`category_id` = 435)
+		LIMIT 100
+		OFFSET 0";
+$productss = products::getSQL($sql);
+
+// foreach ($productss as $p) {
+// 	echo file_exists(str_replace('http://216.130.182.4/',MCHN_DIR_ROOT,$p['image_small'])) . "<br />";
+// }
+echo MCHN_DIR_ROOT;
 $products = products::getAllProducts();
 $no_image = html::cln(MCHN_ROOT).'images/products/noimage.jpg';
 

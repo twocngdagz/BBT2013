@@ -12,39 +12,44 @@ $products = products::getSQL($sql);
 $no_image = MCHN_DIR_ASSETS."img/noimage.jpg";
 
 
-foreach ($products as $row) {
 
-	//echo json_encode($row['id']);
-	if (empty(@get_headers($row['image_small']))) {
-		//$sql = "UPDATE `products_items` SET `image_small` =  '".$no_image."' WHERE `id` = '".$row['id']."'";
+foreach ($products as $row) {
+	if(file_exists(str_replace('/usr/www/virtual/alon/','http://',$row['image_small'])) == false){
 		$sqli = "UPDATE `products_items` SET `image_small` =  '".$no_image."' WHERE `id` = '".$row['id']."'";
 		products::getSQL($sqli);
 	}
 
-	if (empty(@get_headers($row['image_large']))) {
-		$sql = "UPDATE `products_items` SET `image_large` =  '".$no_image."' WHERE `id` = '".$row['id']."'";
-		products::getSQL($sql);
+	if(file_exists(str_replace('/usr/www/virtual/alon/','http://',$row['image_large'])) == false){
+		$sqli = "UPDATE `products_items` SET `image_large` =  '".$no_image."' WHERE `id` = '".$row['id']."'";
+		products::getSQL($sqli);
 	}
 
-	if (empty(@get_headers($row['image_thumbnail']))) {
-		$sql = "UPDATE `products_items` SET `image_thumbnail` =  '".$no_image."' WHERE `id` = '".$row['id']."'";
-		products::getSQL($sql);
+	if(file_exists(str_replace('/usr/www/virtual/alon/','http://',$row['image_thumbnail'])) == false){
+		$sqli = "UPDATE `products_items` SET `image_thumbnail` =  '".$no_image."' WHERE `id` = '".$row['id']."'";
+		products::getSQL($sqli);
 	}
 
-	if (empty(@get_headers($row['original_image_small']))) {
-		$sql = "UPDATE `products_items` SET `original_image_small` =  '".$no_image."' WHERE `id` = '".$row['id']."'";
-		products::getSQL($sql);
+	if(file_exists(str_replace('/usr/www/virtual/alon/','http://',$row['original_image_small'])) == false){
+		$sqli = "UPDATE `products_items` SET `original_image_small` =  '".$no_image."' WHERE `id` = '".$row['id']."'";
+		products::getSQL($sqli);
 	}
 
-	if (empty(@get_headers($row['original_image_large']))) {
-		$sql = "UPDATE `products_items` SET `original_image_large` =  '".$no_image."' WHERE `id` = '".$row['id']."'";
-		products::getSQL($sql);
+	if(file_exists(str_replace('/usr/www/virtual/alon/','http://',$row['original_image_large'])) == false){
+		$sqli = "UPDATE `products_items` SET `original_image_large` =  '".$no_image."' WHERE `id` = '".$row['id']."'";
+		products::getSQL($sqli);
 	}
 
-	if (empty(@get_headers($row['original_image_thumbnail']))) {
-		$sql = "UPDATE `products_items` SET `original_image_thumbnail` =  '".$no_image."' WHERE `id` = '".$row['id']."'";
-		products::getSQL($sql);
-	}		
+	if(file_exists(str_replace('/usr/www/virtual/alon/','http://',$row['original_image_thumbnail'])) == false){
+		$sqli = "UPDATE `products_items` SET `original_image_thumbnail` =  '".$no_image."' WHERE `id` = '".$row['id']."'";
+		products::getSQL($sqli);
+	}
+
 
 }
+
+
+function fileExists($path){
+    return (@fopen($path,"r")==true);
+}
+
 ?>

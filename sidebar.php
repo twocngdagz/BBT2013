@@ -4,7 +4,7 @@
 	<h5><a href="<?php echo MCHN_ROOT; ?>"<?php echo MCHN_ROOT;?>default-category">Top Sellers</a></h5>
 	<ul style="list-style: none;margin-left: 10px;">
 		
-		<li><a href="baby-bedding">Baby Bedding</a></li>
+		<li><a href="<?php echo MCHN_ROOT;?>baby-bedding">Baby Bedding</a></li>
 		
 		<li><a href="<?php echo MCHN_ROOT;?>baby-furniture">Baby Furniture</a></li>
 		
