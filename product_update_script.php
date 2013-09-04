@@ -1,3 +1,4 @@
+
 <?php
 $offset_val = $_REQUEST['offset'];
 $limits_val = $_REQUEST['limits'];
@@ -14,42 +15,34 @@ $no_image = MCHN_DIR_ASSETS."img/noimage.jpg";
 
 
 foreach ($products as $row) {
-	if(file_exists(str_replace('/usr/www/virtual/alon/','http://',$row['image_small'])) == false){
-		$sqli = "UPDATE `products_items` SET `image_small` =  '".$no_image."' WHERE `id` = '".$row['id']."'";
-		products::getSQL($sqli);
-	}
+	$path = str_replace('http://216.130.182.4',"http://www.babybeddingtown.com",$row['image_small']);
+	$sqli = "UPDATE `products_items` SET `image_small` =  '".$path."' WHERE `id` = '".$row['id']."'";
+	products::getSQL($sqli);
 
-	if(file_exists(str_replace('/usr/www/virtual/alon/','http://',$row['image_large'])) == false){
-		$sqli = "UPDATE `products_items` SET `image_large` =  '".$no_image."' WHERE `id` = '".$row['id']."'";
-		products::getSQL($sqli);
-	}
+	$path = str_replace('http://216.130.182.4',"http://www.babybeddingtown.com",$row['image_large']);
+	$sqli = "UPDATE `products_items` SET `image_large` =  '".$path."' WHERE `id` = '".$row['id']."'";
+	products::getSQL($sqli);
 
-	if(file_exists(str_replace('/usr/www/virtual/alon/','http://',$row['image_thumbnail'])) == false){
-		$sqli = "UPDATE `products_items` SET `image_thumbnail` =  '".$no_image."' WHERE `id` = '".$row['id']."'";
-		products::getSQL($sqli);
-	}
+	$path = str_replace('http://216.130.182.4',"http://www.babybeddingtown.com",$row['image_thumbnail']);
+	$sqli = "UPDATE `products_items` SET `image_thumbnail` =  '".$path."' WHERE `id` = '".$row['id']."'";
+	products::getSQL($sqli);
 
-	if(file_exists(str_replace('/usr/www/virtual/alon/','http://',$row['original_image_small'])) == false){
-		$sqli = "UPDATE `products_items` SET `original_image_small` =  '".$no_image."' WHERE `id` = '".$row['id']."'";
-		products::getSQL($sqli);
-	}
+	$path = str_replace('http://216.130.182.4',"http://www.babybeddingtown.com",$row['original_image_small']);
+	$sqli = "UPDATE `products_items` SET `original_image_small` =  '".$path."' WHERE `id` = '".$row['id']."'";
+	products::getSQL($sqli);
 
-	if(file_exists(str_replace('/usr/www/virtual/alon/','http://',$row['original_image_large'])) == false){
-		$sqli = "UPDATE `products_items` SET `original_image_large` =  '".$no_image."' WHERE `id` = '".$row['id']."'";
-		products::getSQL($sqli);
-	}
+	$path = str_replace('http://216.130.182.4',"http://www.babybeddingtown.com",$row['original_image_large']);
+	$sqli = "UPDATE `products_items` SET `original_image_large` =  '".$path."' WHERE `id` = '".$row['id']."'";
+	products::getSQL($sqli);
 
-	if(file_exists(str_replace('/usr/www/virtual/alon/','http://',$row['original_image_thumbnail'])) == false){
-		$sqli = "UPDATE `products_items` SET `original_image_thumbnail` =  '".$no_image."' WHERE `id` = '".$row['id']."'";
-		products::getSQL($sqli);
-	}
-
-
+	$path = str_replace('http://216.130.182.4',"http://www.babybeddingtown.com",$row['original_image_large']);
+	$sqli = "UPDATE `products_items` SET `original_image_large` =  '".$path."' WHERE `id` = '".$row['id']."'";
+	products::getSQL($sqli);
 }
 
 
 function fileExists($path){
-    return (@fopen($path,"r")==true);
+	return (@fopen($path,"r")==true);
 }
 
 ?>

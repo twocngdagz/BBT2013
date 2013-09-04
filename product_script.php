@@ -14,8 +14,9 @@ $sql = "SELECT * FROM `products_items`
 $productss = products::getSQL($sql);
 
 foreach ($productss as $p) {
-	echo $p['image_small'];
-	echo str_replace('http://216.130.182.4',"http://www.babybeddingtown.com",$p['image_small']) . "<br />";
+	$path = str_replace('http://216.130.182.4',"http://www.babybeddingtown.com",$p['image_small']);
+	$sql = "UPDATE `products_items` SET `image_small` =  '".$path."' WHERE `id` = '11608'";
+	products::getSQL($sql);
 }
 
 $products = products::getAllProducts();
@@ -36,7 +37,6 @@ $mod_idx = $count % $lims;
 if($mod_idx != 0){
 	$idx+=1;
 }
-
 
 echo '<ul>';
 for($i=0; $i<$idx; $i++){
@@ -71,6 +71,3 @@ echo '</ul>';
 		});
 	}
 </script>
-<?php
-
-?>
