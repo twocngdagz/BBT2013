@@ -42,7 +42,7 @@ LEFT OUTER JOIN  `customer_addresses` ON (
 $where
 AND  `customer_addresses`.`active` = 1 
 AND `customer_addresses`.`billing_or_shipping` = 0
-			 $sort $limit";
+			 $limit";
 $result = db::execute_query($sql);
 $rows 	= db::get_result();
 $total 	= countRec("`customer_account`.`id`","`customer_account` $where");
