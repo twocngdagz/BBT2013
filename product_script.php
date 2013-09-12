@@ -5,10 +5,14 @@
 include('mchn.config.php');
 
 ?>
+
 <script src="<?php html::p(MCHN_DIR_3RDPARTY) ?>jquery/js/jquery-1.9.0.js"></script>
 <script src="<?php html::p(MCHN_DIR_3RDPARTY) ?>jquery/js/jquery-ui-1.10.0.custom.js"></script>
 <?php
-
+$thumb = explode("/", "http://216.130.182.4/magentoProductImages/p/e/peaprincess-sm.jpg");
+echo "<pre>";
+print_r($thumb);
+echo "</pre>";
 $sql = "SELECT * FROM `products_items`
 		WHERE (`id` = 11628)";
 $productss = products::getSQL($sql);

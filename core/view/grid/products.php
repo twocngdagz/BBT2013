@@ -3,7 +3,7 @@ include_once('../../../mchn.config.php');
 $page 		= isset($_POST['page']) ? $_POST['page'] : 1;
 $rp 		= isset($_POST['rp']) ? $_POST['rp'] : 10;
 $sortname 	= isset($_POST['sortname']) ? $_POST['sortname'] : 'id';
-$sortorder 	= isset($_POST['sortorder']) ? $_POST['sortorder'] : 'desc';
+$sortorder 	= isset($_POST['sortorder']) ? $_POST['sortorder'] : 'asc';
 $query 		= isset($_POST['query']) ? $_POST['query'] : false;
 $qtype 		= isset($_POST['qtype']) ? $_POST['qtype'] : false;
 $id 		= isset($_POST['id']) ? $_POST['id'] : false;
@@ -16,7 +16,7 @@ function countRec($fname,$tname) {
 	$row = db::get_result();
 	return $row[0]['cnt'];
 }
-
+$sortorder = "ASC";
 $sort = "ORDER BY `products_items`.`$sortname` $sortorder";
 $start = (($page-1) * $rp);
 
@@ -40,11 +40,11 @@ foreach($rows as $row){
 	if(!empty($row['vendor_id'])) $vendor_id = $row['vendor_id']; else $vendor_id = "None";
 	
 	$thumb = explode("/", $row['image_thumbnail']);
-	if(!empty($row['image_thumbnail'])) $thumb = $thumb[4]; else $thumb = "None";
+	if(!empty($row['image_thumbnail'])) $thumb = $thumb[3]; else $thumb = "None";
 	$small = explode("/", $row['image_small']);
-	if(!empty($row['image_small'])) $small = $small[4]; else $small = "None";
+	if(!empty($row['image_small'])) $small = $small[3]; else $small = "None";
 	$large = explode("/", $row['image_large']);
-	if(!empty($row['image_large'])) $large = $large[4]; else $large = "None";
+	if(!empty($row['image_large'])) $large = $large[3]; else $large = "None";
 	
 	if($row['status'] == 1) $status = "active";	else $status = "inactive";
 	

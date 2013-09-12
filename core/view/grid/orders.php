@@ -35,7 +35,6 @@ $sql 	= "SELECT  `customer_orders`. * ,  `customer_order_items`. * , `customer_a
 			LEFT OUTER JOIN `customer_order_items` ON (  `customer_order_items`.`order_fk` =  `customer_orders`.`id` ) 
 			LEFT OUTER JOIN `customer_addresses` ON ( `customer_account`.`id` = `customer_addresses`.`cust_fk` )
 			WHERE `customer_addresses`.`active` = 1
-			GROUP BY  `customer_order_items`.`order_fk`  
 			$where $sort $limit";
 
 $result = db::execute_query($sql);
@@ -71,6 +70,6 @@ foreach($rows as $row){
 			'notes'=>$row['notes']
 		),
 	);
-	$jsonData['rows'][] = $entry;
+	$jsonData['rows'][] = $sql;
 }
 echo json_encode($jsonData);

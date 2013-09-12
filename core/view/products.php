@@ -297,7 +297,7 @@ $(document).ready(function() {
 							onDoubleClick: false,
 							multiSel: false,
 							sortname : "id",
-							sortorder : "desc",
+							sortorder : "asc",
 							usepager : true,
 							title : '',
 							useRp : true,
