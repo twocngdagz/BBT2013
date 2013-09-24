@@ -63,7 +63,7 @@
 											<option value='<?php echo $state; ?>'><?php echo $row ?></option>
 										<?php endforeach; ?>
 									</select>
-									<input type="text" name="zipcode" class="required input-block-level span4" value='' placeholder="Zipcode" />
+									<input type="text" id="zipcode" name="zipcode" class="required input-block-level span4" value='' placeholder="Zipcode" />
 
 									<?php $countryList = array('USA','Canada'); ?>
 									<select name="country" class='span4'>
@@ -258,8 +258,9 @@ $('.flexOrders').click(function(event){
 			url:"core/view/grid/orders.php",
 			data:"id="+$(this).attr('id').substr(3),
 			success:function(data) {
-				$.each(data.rows, function (index, value) {	
-					var options = $(".flexUpdateOrders").flexigrid({
+				$.each(data.rows, function (index, value) {
+					console.log('Mederic');
+					var options = $(".flexUpdateOrders").flexigrid(	{
 						url : 'core/view/grid/order_details.php',
 						dataType : 'json',
 						colModel : [ 
@@ -322,6 +323,7 @@ $.ajax({
 			$('#address').attr('value', value.cell.address);
 			$('#address2').attr('value', value.cell.address2);
 			$('#city').attr('value', value.cell.city);
+			$('#zipcode').attr('value', value.cell.zipcode);
 		});
 	},
 	dataType:'json'
@@ -395,6 +397,7 @@ $('#modal-create-orders').on('hidden', function () {
 
 //on click product options 		
 $('.flexProductOptions').click(function(event){
+	console.log('Tab clicked');
 	$('.trSelected', this).each( function(){	
 		$.ajax({
 			type:'POST',

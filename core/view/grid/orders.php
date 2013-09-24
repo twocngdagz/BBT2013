@@ -22,9 +22,9 @@ $start = (($page-1) * $rp);
 
 $limit = "LIMIT $start, $rp";
 
-$where = "";
+$where = "WHERE `customer_addresses`.`active` = 1";
 if ($query) $where = " WHERE $qtype LIKE '%".mysql_real_escape_string($query)."%' ";
-if ($id) $where = " WHERE `customer_orders`.`id` = $id";
+if ($id) $where = $where ." and `customer_orders`.`billing_fk` = $id";
 
 $sql 	= "SELECT  `customer_orders`. * ,  `customer_order_items`. * , `customer_account`.*, `customer_addresses`.*,
 			CONCAT(  `customer_account`.`last_name` ,  ', ',  `customer_account`.`first_name` ) AS  `fullname` , 
@@ -34,14 +34,14 @@ $sql 	= "SELECT  `customer_orders`. * ,  `customer_order_items`. * , `customer_a
 			LEFT OUTER JOIN `customer_account` ON (  `customer_orders`.`cust_fk` =  `customer_account`.`id` ) 
 			LEFT OUTER JOIN `customer_order_items` ON (  `customer_order_items`.`order_fk` =  `customer_orders`.`id` ) 
 			LEFT OUTER JOIN `customer_addresses` ON ( `customer_account`.`id` = `customer_addresses`.`cust_fk` )
-			WHERE `customer_addresses`.`active` = 1
+			$where
 			GROUP BY  `customer_order_items`.`order_fk`  
-			$where $sort $limit";
-
+			$sort $limit";
+$where = "";
 $result = db::execute_query($sql);
 $rows 	= db::get_result();
 $total 	= countRec("`customer_orders`.`id`","`customer_orders` $where");
-
+//echo json_encode($sql);
 header("Content-type: application/json");
 
 $jsonData = array('page'=>$page,'total'=>$total,'rows'=>array());
@@ -68,7 +68,8 @@ foreach($rows as $row){
 			'payment_receipt_number'=>$row['payment_receipt_number'],
 			'status'=>$row['order_status'],
 			'total'=>$row['total'],
-			'notes'=>$row['notes']
+			'notes'=>$row['notes'],
+			'zipcode'=>$row['zipcode']
 		),
 	);
 	$jsonData['rows'][] = $entry;
