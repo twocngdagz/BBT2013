@@ -24,9 +24,11 @@ $start = (($page-1) * $rp);
 $limit = "LIMIT $start, $rp";
 
 $where = "";
-if ($query) $where = " WHERE $qtype = ".mysql_real_escape_string($query)." ";
-if ($id) $where = " WHERE `customer_order_items`.`id` = $id";
+if ($query) $where = " WHERE `customer_order_items`.`order_fk` = $query";
+
 #if ($product_id) $where .= " WHERE `customer_order_items`.`product_items_fk` = $product_id";
+
+
 
 $sql 	= "SELECT `customer_order_items`.* FROM `customer_order_items` $where $sort $limit";
 $result = db::execute_query($sql);

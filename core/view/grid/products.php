@@ -40,11 +40,11 @@ foreach($rows as $row){
 	if(!empty($row['vendor_id'])) $vendor_id = $row['vendor_id']; else $vendor_id = "None";
 	
 	$thumb = explode("/", $row['image_thumbnail']);
-	if(!empty($row['image_thumbnail'])) $thumb = $thumb[4]; else $thumb = "None";
+	if(!empty($row['image_thumbnail'])) $thumb = $thumb[3]; else $thumb = "None";
 	$small = explode("/", $row['image_small']);
-	if(!empty($row['image_small'])) $small = $small[4]; else $small = "None";
+	if(!empty($row['image_small'])) $small = $small[3]; else $small = "None";
 	$large = explode("/", $row['image_large']);
-	if(!empty($row['image_large'])) $large = $large[4]; else $large = "None";
+	if(!empty($row['image_large'])) $large = $large[3]; else $large = "None";
 	
 	if($row['status'] == 1) $status = "active";	else $status = "inactive";
 	

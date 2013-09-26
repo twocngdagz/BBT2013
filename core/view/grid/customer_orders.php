@@ -27,6 +27,7 @@ $where = "";
 #if ($query) $where = " WHERE $qtype LIKE '%".mysql_real_escape_string($query)."%' ";
 if ($query) $where = " WHERE `customer_orders`.`cust_fk` = $query";
 #if ($customer_id) $where .= " WHERE `customer_orders`.`cust_fk` = $customer_id";
+if ($id) $where = " WHERE `customer_orders`.`id` = $id";
 
 
 $sql  = "SELECT  `customer_orders`. * ,  `customer_order_items`. * , 
@@ -55,6 +56,9 @@ foreach($rows as $row){
       'date'=>$row['date'],
       'total'=>$row['total'],
       'status'=>$row['order_status'],
+      'product_name'=>$row['product_name'],
+      'qty' => $row['qty'],
+      'price' => $row['price'],
     ),
   );
   $jsonData['rows'][] = $entry;

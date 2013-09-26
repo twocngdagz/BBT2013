@@ -20,37 +20,36 @@ function countRec($fname,$tname) {
 
 $where = "";
 #if ($query) $where = " WHERE $qtype LIKE '%".mysql_real_escape_string($query)."%' ";
-if ($id) $where = "WHERE `customer_orders`.`billing_fk` = $id";
+if ($id) $where = "WHERE `customer_orders`.`id` = $id";
 
 $sql  = "SELECT 
             `customer_account`.`id`, 
             `customer_account`.`email`,
             `customer_account`.`phone`,
+            `customer_orders`.`status`,
             `customer_addresses`.*, `customer_orders`.`cust_fk` FROM `customer_account` 
           LEFT OUTER JOIN `customer_addresses` on ( `customer_account`.`id` = `customer_addresses`.`cust_fk` ) 
           LEFT OUTER JOIN `customer_orders` ON ( `customer_account`.`id` = `customer_orders`.`cust_fk` )
           $where 
-          #WHERE `customer_orders`.`cust_fk` = 6
           AND `customer_addresses`.`active` = 1
           ";
 $result = db::execute_query($sql);
 $rows   = db::get_result();
 
 header("Content-type: application/json");
-
 $jsonData = array('rows'=>array());
 foreach($rows as $row){
 
   // Check if customer address is billing (0) or shipping info (1)
   if($row['billing_or_shipping'] == 1){
-    $first_name = $row['first_name'];
-    $last_name = $row['last_name'];
-    $address1 = $row['address1'];
-    $address2 = $row['address2'];
-    $city = $row['city'];
-    $state = $row['state'];
-    $zipcode = $row['zipcode'];
-    $country = $row['country'];
+    $sfirst_name = $row['first_name'];
+    $slast_name = $row['last_name'];
+    $saddress1 = $row['address1'];
+    $saddress2 = $row['address2'];
+    $scity = $row['city'];
+    $sstate = $row['state'];
+    $szipcode = $row['zipcode'];
+    $scountry = $row['country'];
   } else {
     $first_name = $row['first_name'];
     $last_name = $row['last_name'];
@@ -60,9 +59,11 @@ foreach($rows as $row){
     $state = $row['state'];
     $zipcode = $row['zipcode'];
     $country = $row['country'];
+    $phone = $row['phone'];
+    $email = $row['email'];
   }
-
-  $entry = array('id'=>$row['id'],
+}
+$entry = array('id'=>$row['id'],
     'cell'=>array(
 
       //billing details
@@ -86,9 +87,9 @@ foreach($rows as $row){
       'scity'=> $city,
       'sstate'=> $state,
       'szipcode'=> $zipcode,
-      'scountry'=> $country
+      'scountry'=> $country,
+      'status'=> $row['status'],
     ),
   );
-  $jsonData['rows'][] = $entry;
-}
+$jsonData['rows'][] = $entry;
 echo json_encode($jsonData);

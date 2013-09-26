@@ -47,7 +47,7 @@ foreach($rows as $row){
 	if(!empty($row['image_large'])) $large = $large[4]; else $large = "None";
 	
 	$product = products::getProducts($product_id);
-	
+	echo $product_id;
 	$entry = array('id'=>$row['id'],
 		'cell'=>array(
 			'id'=>$row['id'],

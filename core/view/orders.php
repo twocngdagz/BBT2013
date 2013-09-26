@@ -10,7 +10,7 @@
 	<ul id="myTab" class="nav nav-tabs">
 		<li class="active" id="order-select"><a href="#orders" data-toggle="tab">Order Status</a></li>
 		<li class="" id="order-items-select"><a href="#order_items" data-toggle="tab">Order Items</a></li>
-		<li class="" id="order-details-select"><a href="#order_details" data-toggle="tab">Order Details</a></li>
+		<!-- <li class="" id="order-details-select"><a href="#order_details" data-toggle="tab">Order Details</a></li> -->
 	</ul>
 
 	<div class="tab-content">
@@ -23,8 +23,8 @@
 					<select name="d[status]" id="status" required>
 						<option value=""></option>
 						<?php
-						$status = array("1" => "Active",
-							"0" => "Inactive");
+						$status = array("Active" => "Active",
+							"Inactive" => "Inactive", "Pending" => "Pending");
 							?>
 							<?php foreach ($status as $key => $row): ?>
 								<option value="<?php echo $key ?>" ><?php echo $row ?></option>
@@ -58,15 +58,15 @@
 
 								<div class="form-row">
 									<label for="name" class=""> State / Zipcode / Country</label>
-									<select name="d[state]" class='span4'>
+									<select name="d[state]" class='span4' id="state">
 										<?php foreach($options['state'] as $state =>$row): ?>
-											<option value='<?php echo $state; ?>'><?php echo $row ?></option>
+											<option value='<?php echo $row; ?>'><?php echo $row ?></option>
 										<?php endforeach; ?>
 									</select>
 									<input type="text" id="zipcode" name="zipcode" class="required input-block-level span4" value='' placeholder="Zipcode" />
 
 									<?php $countryList = array('USA','Canada'); ?>
-									<select name="country" class='span4'>
+									<select name="country" class='span4' id='country'>
 										<?php foreach($countryList as $country): ?>
 											<option value='<?php echo $country ?>'><?php echo $country ?></option>
 										<?php endforeach; ?>
@@ -79,33 +79,29 @@
 								<div><small>Shipping Address</small></div>
 								<div><small>Name *</small></div>
 
-								<input type="text" class="input-block-level span6" name="d[first_name]" required placeholder="" id="first_name">
-								<input type="text" class="input-block-level span6" name="d[last_name]" required placeholder="" id="last_name">
-								
-								
-								<div><small>Phone *</small></div>
-								<input type="text" class="" ng-pattern="[-+]?[0-9]*\.?[0-9]*." name="d[phone]" required placeholder="" id="phone">	
+								<input type="text" class="input-block-level span6" name="d[first_name]" required placeholder="" id="sfirst_name">
+								<input type="text" class="input-block-level span6" name="d[last_name]" required placeholder="" id="slast_name">
 								
 								<div><small>Address</small></div>
-								<input type="text" class="" name="d[address]" required placeholder="" id="address">
+								<input type="text" class="" name="d[address]" required placeholder="" id="saddress">
 
 								<div><small>Address 2</small></div>
-								<input type="text" class="" name="d[address2]" required placeholder="" id="address2">
+								<input type="text" class="" name="d[address2]" required placeholder="" id="saddress2">
 
 								<div><small>City</small></div>
-								<input type="text" class="" name="d[city]" required placeholder="" id="city">
+								<input type="text" class="" name="d[city]" required placeholder="" id="scity">
 
 								<div class="form-row">
 									<label for="name" class=""> State / Zipcode / Country</label>
-									<select name="d[state]" class='span4'>
+									<select name="d[state]" class='span4' id='sstate'>
 										<?php foreach($options['state'] as $state =>$row): ?>
-											<option value='<?php echo $state; ?>'><?php echo $row ?></option>
+											<option value='<?php echo $row; ?>'><?php echo $row ?></option>
 										<?php endforeach; ?>
 									</select>
-									<input type="text" name="zipcode" class="required input-block-level span4" value='' placeholder="Zipcode" />
+									<input type="text" name="zipcode" class="required input-block-level span4" value='' placeholder="Zipcode" id='szipcode'/>
 
 									<?php $countryList = array('USA','Canada'); ?>
-									<select name="country" class='span4'>
+									<select name="country" class='span4' id='scountry'>
 										<?php foreach($countryList as $country): ?>
 											<option value='<?php echo $country ?>'><?php echo $country ?></option>
 										<?php endforeach; ?>
@@ -139,7 +135,7 @@
 				</div>
 			</div>
 			
-			<div class="tab-pane" id="order_details">
+			<!-- <div class="tab-pane" id="order_details">
 				<form action="./orders" method="post" enctype="multipart/form-data">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -203,7 +199,7 @@
 						<input type="submit" class="btn btn-danger" value="Delete" id="delete-product-option" name="delete" style="display: none"/>
 					</div>
 				</form>
-			</div>
+			</div> -->
 		</div>
 
 	</div>
@@ -219,12 +215,12 @@
 				url : 'core/view/grid/orders.php',
 				dataType : 'json',
 				colModel : [ 
-				{ display : 'Id', name : 'id', width : 15, sortable : true, align : 'right'}, 
-				{ display : 'Customer', name : 'fullname', width : 120, sortable : false, align : 'left'},
+				{ display : 'Id', name : 'id', width : 45, sortable : true, align : 'right'}, 
+				{ display : 'Customer', name : 'fullname', width : 150, sortable : false, align : 'left'},
 				{ display : 'Date', name : 'date', width : 130, sortable : true, align : 'left'}, 
 				{ display : 'Receipt', name : 'payment_receipt_number', width : 180, sortable : true, align : 'left'},
 				{ display : 'Total', name : 'total', width : 180, sortable : false, align : 'left'},
-				{ display : 'Status', name : 'status', width : 40, sortable : true, align : 'left'}
+				{ display : 'Status', name : 'status', width : 50, sortable : true, align : 'left'}
 				],
 				searchitems : [ {
 					display : 'Id',
@@ -259,15 +255,16 @@
 						success:function(data) {
 							$.each(data.rows, function (index, value) {
 								console.log('Mederic');
-								var options = $(".flexUpdateOrders").flexigrid(	{
+								var options = $(".flexProductOptions").flexigrid(	{
 									url : 'core/view/grid/order_details.php',
 									dataType : 'json',
 									colModel : [ 
-									{ display : 'Id', name : 'id', width : 15, sortable : true, align : 'right'}, 
-									{ display : 'Name', name : 'option_name', width : 180, sortable : true, align : 'left'}, 
-									{ display : 'Description', name : 'option_description', width : 280, sortable : true, align : 'left'},
+									{ display : 'Id', name : 'product_items_fk', width : 45, sortable : true, align : 'right'}, 
+									{ display : 'Name', name : 'product_name', width : 300, sortable : true, align : 'left'}, 
+									{ display : 'Option Name', name : 'option_name', width : 200, sortable : true, align : 'left'},
 									{ display : 'Price', name : 'price', width : 60, sortable : true, align : 'left'},
-									{ display : 'Weight', name : 'weight', width : 60, sortable : true, align : 'left'}
+									{ display : 'Weight', name : 'weight', width : 60, sortable : true, align : 'left'},
+									{ display : 'Quantity', name : 'qty', width : 60, sortable : true, align : 'left'}
 									],
 									searchitems : [ {
 										display : 'Id',
@@ -295,6 +292,7 @@
 									resize: false,
 									rp : 10,
 									query: value.cell.id,
+									id: value.cell.id,
 									qtype :'`products_item_options`.`product_id`',
 									showTableToggleBtn : true,
 									width : 700,
@@ -323,6 +321,17 @@
 								$('#address2').attr('value', value.cell.address2);
 								$('#city').attr('value', value.cell.city);
 								$('#zipcode').attr('value', value.cell.zipcode);
+								$('#state').val(value.cell.state);
+								$('#country').val(value.cell.country);
+								$('#status').val(value.cell.status);
+								$('#sfirst_name').attr('value', value.cell.sfirst_name);
+								$('#slast_name').attr('value', value.cell.slast_name);
+								$('#saddress').attr('value', value.cell.saddress);
+								$('#saddress2').attr('value', value.cell.saddress2);
+								$('#scity').attr('value', value.cell.scity);
+								$('#szipcode').attr('value', value.cell.szipcode);
+								$('#sstate').val(value.cell.sstate);
+								$('#scountry').val(value.cell.scountry);
 							});
 						},
 						dataType:'json'
@@ -391,6 +400,103 @@
 				$('#brand_id').val('');
 				$('#vendor_id').val('');
 			});
+			
+
+			//on click grid from product to product options
+			// $('.flexOrders').click(function(event){       
+			//     $('.trSelected', this).each( function(){
+			// 		$.ajax({
+			// 			type:'POST',
+			// 			url:"core/view/grid/orders.php",
+			// 			data:"id="+$(this).attr('id').substr(3),
+			// 			success:function(data) {
+			// 					$.each(data.rows, function (index, value) {	
+			// 					var options = $(".flexProductOptions").flexigrid({
+			// 						url : 'core/view/grid/customer_orders.php',
+			// 						dataType : 'json',
+			// 						colModel : [ 
+			// 									{ display : 'Id', name : 'id', width : 45, sortable : true, align : 'right'},
+			// 									{ display : 'Product Name', name : 'product_name', width : 150, sortable : false, align : 'left'},
+			// 									{ display : 'Price', name : 'price', width : 150, sortable : false, align : 'left'},
+			// 									{ display : 'Quantity', name : 'qty', width : 130, sortable : true, align : 'left'}, 
+			// 									],
+			// 						searchitems : [ {
+			// 							display : 'Id',
+			// 							name : 'id'
+			// 						}, {
+			// 							display : 'Option Name',
+			// 							name : 'option_name',
+			// 							isdefault : false
+			// 						}, {
+			// 							display : 'Option Description',
+			// 							name : 'option_description',
+			// 							isdefault : false
+			// 						}, {
+			// 							display : 'Price',
+			// 							name : 'price',
+			// 							isdefault : false
+			// 						}],
+			// 						onDoubleClick: false,
+			// 						multiSel: false,
+			// 						sortname : "id",
+			// 						sortorder : "desc",
+			// 						usepager : true,
+			// 						title : '',
+			// 						useRp : true,
+			// 						resize: false,
+			// 						rp : 10,
+			// 						query: value.cell.id,
+			// 						qtype :'`products_item_options`.`product_id`',
+			// 						showTableToggleBtn : true,
+			// 						width : 700,
+			// 						onSuccess: function(data) {
+			// 						},
+			// 						singleSelect: true,
+			// 						height : 270
+			// 					});
+			// 					options.flexReload();
+			//         			$('#name_short').attr('value', value.cell.name_short);
+			//         			$('#name_long').attr('value', value.cell.name_long);
+			//         			$('#description_short').attr('value', value.cell.description_short);
+			//         			$('#description_long').text(value.cell.description_long);
+			        			
+			//         			$('#image_thumbnail_val').attr('src', value.cell.image_thumbnail);
+			//         			$('#image_thumbnail_link').attr('href', value.cell.image_thumbnail);
+			//         			$('#image_thumbnail_link span').html(value.cell.thumb);
+			        			
+			//         			$('#image_small_val').attr('src', value.cell.image_small);
+			//         			$('#image_small_link').attr('href', value.cell.image_small);
+			//         			$('#image_small_link span').html(value.cell.small);
+			        			
+			//         			$('#image_large_val').attr('src', value.cell.image_large);
+			//         			$('#image_large_link').attr('href', value.cell.image_large);
+			//         			$('#image_large_link span').html(value.cell.large);
+			        			
+		 //        				$('#thumbnail_current').attr('value', value.cell.image_thumbnail);
+		 //        				$('#small_current').attr('value', value.cell.image_small);
+		 //        				$('#large_current').attr('value', value.cell.image_large);
+		        				
+		 //        				$('#price').attr('value', value.cell.price);
+		        				
+		 //        				$('#category_id').val(value.cell.category_id);
+		 //        				$('#brand_id').val(value.cell.brand_id);
+		 //        				$('#vendor_id').val(value.cell.vendor_id);
+		 //        				$('#status').val(value.cell.status);
+			//         			$('#comments').text(value.cell.comments);
+			// 				});
+			// 			},
+			// 			dataType:'json'
+			// 		});
+					
+			//         $('#products-id').attr('value', $(this).attr('id').substr(3));
+			//     	$('#delete').show();
+			        		
+			//         $('#submitter').attr('value', 'Update');
+			//     	$('#action').attr('value', 'update');
+			//         $('#modal-create-products').modal('show');
+			//     });
+			// });
+
 
 			//on click product options 		
 			$('.flexProductOptions').click(function(event){
