@@ -326,7 +326,7 @@
 								$('#status').val(value.cell.status);
 								$('#sfirst_name').attr('value', value.cell.sfirst_name);
 								$('#slast_name').attr('value', value.cell.slast_name);
-								$('#saddress').attr('value', value.cell.saddress);
+								$('#saddress').attr('value', value.cell.saddress1);
 								$('#saddress2').attr('value', value.cell.saddress2);
 								$('#scity').attr('value', value.cell.scity);
 								$('#szipcode').attr('value', value.cell.szipcode);
