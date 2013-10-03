@@ -23,8 +23,9 @@
 					<select name="d[status]" id="status" required>
 						<option value=""></option>
 						<?php
-						$status = array("Active" => "Active",
-							"Inactive" => "Inactive", "Pending" => "Pending");
+						$status = array("Pending" => "Pending",
+							"On Hold" => "On Hold", "Partially Shipped" => "Partially Shipped", "Fully Shipped" => "Fully Shipped",
+							"Cancelled" => "Cancelled", "Fully Refunded" => "Fully Refunded", "Partially Refunded" => "Partially Refunded");
 							?>
 							<?php foreach ($status as $key => $row): ?>
 								<option value="<?php echo $key ?>" ><?php echo $row ?></option>
@@ -306,7 +307,7 @@
 						},
 						dataType:'json'
 					});
-
+					$('#order_id').attr('value', $(this).attr('id').substr(3));
 					$.ajax({
 						type:'POST',
 						url:"core/view/grid/order_customer_details.php",

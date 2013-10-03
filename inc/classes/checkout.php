@@ -147,6 +147,14 @@ class checkout {
 
   }
 
+  public static function updateOrderStatus($status, $id) {
+    $sql = "Update `customer_orders` SET
+            `status` = '".$status."'
+            WHERE `customer_orders`.`id`  = '$id'
+            ";
+    db::execute_query($sql);
+  }
+
   public static function updateCustomerAccount($firstname, $lastname, $email, $phone, $address1, $address2, $city, $state, $zipcode, $country, $billing_or_shipping) 
   {
     $sql = "UPDATE `customer_account` SET  
