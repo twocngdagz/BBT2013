@@ -22,22 +22,34 @@ $start = (($page-1) * $rp);
 
 $limit = "LIMIT $start, $rp";
 
-$where = "WHERE `customer_addresses`.`active` = 1";
+$where = "WHERE `CA`.`active` = 1";
 if ($query) $where = " WHERE $qtype LIKE '%".mysql_real_escape_string($query)."%' ";
 if ($id) $where = $where ." and `customer_orders`.`id` = $id";
 
-$sql 	= "SELECT  `customer_orders`. * ,  `customer_order_items`. * , `customer_account`.*, `customer_addresses`.*,
-			CONCAT(  `customer_account`.`last_name` ,  ', ',  `customer_account`.`first_name` ) AS  `fullname` , 
-			SUM(  `customer_order_items`.`price` *  `customer_order_items`.`qty` ) AS  `total`,
-			`customer_orders`.`status` AS  `order_status` ,
-			`customer_orders`.`id` AS `id`
-			FROM  `customer_orders` 
-			LEFT OUTER JOIN `customer_account` ON (  `customer_orders`.`cust_fk` =  `customer_account`.`id` ) 
-			LEFT OUTER JOIN `customer_order_items` ON (  `customer_order_items`.`order_fk` =  `customer_orders`.`id` ) 
-			LEFT OUTER JOIN `customer_addresses` ON ( `customer_account`.`id` = `customer_addresses`.`cust_fk` )
-			$where
-			GROUP BY  `customer_order_items`.`order_fk`  
-			$sort $limit";
+// $sql 	= "SELECT  `customer_orders`. * ,  `customer_order_items`. * , `customer_account`.*, `customer_addresses`.*,
+// 			CONCAT(  `customer_account`.`last_name` ,  ', ',  `customer_account`.`first_name` ) AS  `fullname` , 
+// 			SUM(  `customer_order_items`.`price` *  `customer_order_items`.`qty` ) AS  `total`,
+// 			`customer_orders`.`status` AS  `order_status` ,
+// 			`customer_orders`.`id` AS `id`
+// 			FROM  `customer_orders` 
+// 			LEFT OUTER JOIN `customer_account` ON (  `customer_orders`.`cust_fk` =  `customer_account`.`id` ) 
+// 			LEFT OUTER JOIN `customer_order_items` ON (  `customer_order_items`.`order_fk` =  `customer_orders`.`id` ) 
+// 			LEFT OUTER JOIN `customer_addresses` ON ( `customer_account`.`id` = `customer_addresses`.`cust_fk` )
+// 			$where
+// 			GROUP BY  `customer_order_items`.`order_fk`  
+// 			$sort $limit";
+
+$sql = "SELECT  `customer_orders`.id ,`customer_orders`.`date`,`customer_orders`.payment_receipt_number,`customer_orders`.`status`,
+		CONCAT(  CAcc.`last_name` ,  ', ',  `CAcc`.`first_name` ) AS  `fullname` ,
+		SUM(  `COI`.`price` *  `COI`.`qty` ) AS  `total`,
+		`customer_orders`.`status` AS  `order_status`, `CA`.zipcode, `CA`.billing_or_shipping
+		FROM  `customer_orders` 
+		LEFT OUTER JOIN `customer_account` as CAcc ON (  `customer_orders`.`cust_fk` =  `CAcc`.`id` ) 
+		LEFT OUTER JOIN `customer_order_items` as COI ON (  `COI`.`order_fk` =  `customer_orders`.`id` ) 
+		LEFT OUTER JOIN `customer_addresses` as CA ON ( `CAcc`.`id` = `CA`.`cust_fk` )
+		$where
+		GROUP BY  `COI`.`order_fk`
+		$sort $limit";
 $where = "";
 $result = db::execute_query($sql);
 $rows 	= db::get_result();
@@ -61,16 +73,10 @@ foreach($rows as $row){
 		'cell'=>array(
 			'id'=>$row['id'],
 			'fullname'=>$row['fullname'],
-			'first_name'=>$row['first_name'],
-			'cust_fk'=>$cust_fk,
-			'billing_fk'=>$billing_fk,
-			'shipping_fk'=>$shipping_fk,
 			'date'=>$row['date'],
-			'payment_method'=>$row['payment_method'],
 			'payment_receipt_number'=>$row['payment_receipt_number'],
 			'status'=>$row['order_status'],
 			'total'=>$row['total'],
-			'notes'=>$row['notes'],
 			'zipcode'=>$row['zipcode']
 		),
 	);
