@@ -52,7 +52,7 @@
 								<input type="text" class="" name="d[address]" required placeholder="" id="address">
 
 								<div><small>Address 2</small></div>
-								<input type="text" class="" name="d[address2]" required placeholder="" id="address2">
+								<input type="text" class="" name="d[address2]" placeholder="" id="address2">
 
 								<div><small>City</small></div>
 								<input type="text" class="" name="d[city]" required placeholder="" id="city">
@@ -87,7 +87,7 @@
 								<input type="text" class="" name="d[address]" required placeholder="" id="saddress">
 
 								<div><small>Address 2</small></div>
-								<input type="text" class="" name="d[address2]" required placeholder="" id="saddress2">
+								<input type="text" class="" name="d[address2]" placeholder="" id="saddress2">
 
 								<div><small>City</small></div>
 								<input type="text" class="" name="d[city]" required placeholder="" id="scity">
