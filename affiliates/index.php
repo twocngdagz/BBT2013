@@ -30,32 +30,36 @@
 						<div class="control-group">
 							<label for="name">Share A Sale ID <span class="required">*</span> </label>
 							<div class="controls">
-								<input name="name" id="name" title="Name" required value=""
+								<input name="name" id="id" title="Name" required value=""
 									class="input-text required-entry span9" type="text" />
 							</div>
 						</div>
 						<div class="control-group">
 							<label for="name">SAS afftrack ID (optional) <span class="required">*</span> </label>
 							<div class="controls">
-								<input name="name" id="name" title="Name" required value=""
+								<input name="name" id="sas" title="Name" required value=""
 									class="input-text required-entry span9" type="text" />
 							</div>
 						</div>
 						<div class="control-group">
 							<label for="name">Your Tracking Link <span class="required">*</span> </label>
 							<div class="controls">
-								<input name="name" id="name" title="Name" value="http://www.shareasale.com/r.cfm?b=266790&u={your_Share_A_Sale_ID}&m=30099&urllink=&afftrack={afftrack_value}%E2%80%9D]"
+								<input name="name" id="link" title="Name" value="http://www.shareasale.com/r.cfm?b=266790&u={your_Share_A_Sale_ID}&m=30099&urllink=&afftrack={afftrack_value}%E2%80%9D]"
 									class="input-text required-entry span9" type="text" />
 							</div>
 						</div>
 						<div class="form-actions" style="margin: 0;">
-							<button type="submit"
+							<button type="submit" id="btnSubmit"
 							class="btn btn-icon btn-primary glyphicons circle_ok">
 								<i></i>Submit
 							</button>
-							<button type="button"
+							<button type="button" id="btnReset"
 							class="btn btn-icon btn-default glyphicons circle_remove">
 								<i></i>Reset
+							</button>
+							<button type="button" id="btnVisit"
+							class="btn btn-icon btn-default glyphicons circle_remove">
+								<i></i>Visit Link
 							</button>
 						</div>
 
@@ -63,3 +67,38 @@
 		</form>
 	</div>
 </div>
+<script type="text/javascript">
+	$(document).on("ready", function() {
+		$('#btnVisit').hide();
+		$('#id').focus();
+		$('#btnSubmit').click(function(e) {
+			e.preventDefault();
+			var isValid = true;
+			var idNumeric = $.isNumeric($('#id').val());
+			var sasNumber = $.isNumeric($('#sas').val());
+			if (idNumeric && sasNumber) {
+				var link = "http://www.shareasale.com/r.cfm?b=266790&u=" + $('#id').val() + "&m=30099&urllink=&afftrack=" + $('#sas').val();
+				$('#link').val(link);
+				$('#btnVisit').show();
+				alert("The link has been updated with your information");
+			} else {
+
+				alert("Your Share A Sale User id should only be digits. Please check what you entered and try again");
+			}
+		});
+
+		$('#btnReset').click(function(e) {
+			e.preventDefault;
+			$('#id').val('');
+			$('#sas').val('');
+			$('#link').val('http://www.shareasale.com/r.cfm?b=266790&u={your_Share_A_Sale_ID}&m=30099&urllink=&afftrack={afftrack_value}%E2%80%9D]');
+			$('#btnVisit').hide();
+		});
+
+		$('#btnVisit').click(function(e) {
+			e.preventDefault();
+			var url = $('#link').val();
+			window.open(url, '_blank');
+		})
+	});
+</script>
