@@ -25,6 +25,67 @@ echo $buffer;
 		<div class="container"><a href="http://www.shareasale.com/shareasale.cfm?merchantID=30099" target="_blank"><img src="<?php echo MCHN_ROOT ?>images/signup.jpg"></img></a></div>
 		<div class="container">&#160;</div>
 		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/728x90.jpg"></img>
+		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/720x300.jpg"></img>
+		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/girls-728x90.jpg"></img>
+		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/girls-720x300.jpg"></img>
+		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/boys-728x90.jpg"></img>
+		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/boys-720x300.jpg"></img>
+		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/girls-125x125.gif"></img>
+		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/girls-120x600.jpg"></img>
+		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/girls-254x331.jpg"></img>
+		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/girls-234x60.gif"></img>
+		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/300x250a.jpg"></img>
+		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/254x331a.jpg"></img>
+		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/254x331.jpg"></img>
+		
+		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/girls-468x60.jpg"></img>
+		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/girls-300x250.jpg"></img>
+		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/girls-160x600.jpg"></img>
+		
+		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/girls-120x240.jpg"></img>
+		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/girls-88x31.gif"></img>
+		
+		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/boys-468x60.jpg"></img>
+		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/boys-300x250.jpg"></img>
+		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/boys-254x331.jpg"></img>
+		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/boys-234x60.gif"></img>
+		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/boys-160x600.jpg"></img>
+		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/boys-125x125.gif"></img>
+		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/boys-120x600.jpg"></img>
+		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/boys-120x240.jpg"></img>
+		<div class="container">&#160;</div>
+		<img src="<?php echo MCHN_ROOT ?>images/boys-88x31.gif"></img>
+		<div class="container">&#160;</div>
+		<div class="container">&#160;</div>
+		<div class="container">&#160;</div>
+
+
 		<p><b>More Money Making Opportunities</b></p>
 		<p>There are severa alternatives to our basic affiliate program. If you think your site has the potential, the brand or the traffic to send some serious business our way - let's talk.</p>
 		<p>Send an email to <img src="<?php html::p(MCHN_DIR_ASSETS."img/footer/social/email_lrg.png"); ?>" alt=""/> explore your options or propose other possibilities.</p>

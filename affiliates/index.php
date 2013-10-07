@@ -118,33 +118,23 @@
 		$('#id').focus();
 		$('#btnSubmit').click(function(e) {
 			e.preventDefault();
-			var idNumeric = $.isNumeric($('#id').val());
-			var sasNumber = $.isNumeric($('#sas').val());
-			if (idNumeric) {
-				if ($("#sas").val() == '') {
-					var link = "http://www.shareasale.com/r.cfm?b=266790&u=" + $('#id').val() + "&m=30099&urllink=&afftrack=";
+			if (($("#sas").val() == '') && $('#id').val() != '') {
+				var link = "http://www.shareasale.com/r.cfm?b=266790&u=" + $('#id').val() + "&m=30099&urllink=&afftrack=";
+				$('#link').val(link);
+				$('#btnVisit').show();
+				alert("The link has been updated with your information");
+			} else {
+				if ($('#id').val() == '') {
+					alert("The Share A Sale ID cannot be an empty string");
+					$('#id').focus();
+				} else {
+					var link = "http://www.shareasale.com/r.cfm?b=266790&u=" + $('#id').val() + "&m=30099&urllink=&afftrack=" + $('#sas').val();
 					$('#link').val(link);
 					$('#btnVisit').show();
 					alert("The link has been updated with your information");
-				} else {
-					if ($('#sas').val() != '' && sasNumber) {
-						var link = "http://www.shareasale.com/r.cfm?b=266790&u=" + $('#id').val() + "&m=30099&urllink=&afftrack=" + $('#sas').val();
-						$('#link').val(link);
-						$('#btnVisit').show();
-						alert("The link has been updated with your information");
-					} else {
-						alert("Your Share A Sale User id should only be digits. Please check what you entered and try again");
-						$('#id').val('');
-						$('#sas').val('');
-						$('#link').val('http://www.shareasale.com/r.cfm?b=266790&u={your_Share_A_Sale_ID}&m=30099&urllink=&afftrack={afftrack_value}');
-					}
-				}
-			} else {
-				alert("Your Share A Sale User id should only be digits. Please check what you entered and try again");
-				$('#id').val('');
-				$('#sas').val('');
-				$('#link').val('http://www.shareasale.com/r.cfm?b=266790&u={your_Share_A_Sale_ID}&m=30099&urllink=&afftrack={afftrack_value}');
+				} 
 			}
+			
 		});
 
 		$('#btnReset').click(function(e) {

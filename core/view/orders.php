@@ -25,7 +25,7 @@
 						<?php
 						$status = array("Pending" => "Pending",
 							"On Hold" => "On Hold", "Partially Shipped" => "Partially Shipped", "Fully Shipped" => "Fully Shipped",
-							"Cancelled" => "Cancelled", "Fully Refunded" => "Fully Refunded", "Partially Refunded" => "Partially Refunded");
+							"Cancelled" => "Cancelled", "Fully Refunded" => "Fully Refunded", "Partially Refunded" => "Partially Refunded", "Test Order" => "Test Order");
 							?>
 							<?php foreach ($status as $key => $row): ?>
 								<option value="<?php echo $key ?>" ><?php echo $row ?></option>

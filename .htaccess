@@ -25,6 +25,7 @@ RewriteRule ^(.*)$ http://www.%2/$1 [R=301,L,QSA]
 
 #RewriteRule ^log.asp$ log.php
 #RewriteRule ^login$ index.php?p1=$1
+RewriteRule ^(affiliates)$ affiliates/index.php
 RewriteRule ^([A-z0-9]+)$ index.php?p1=$1
 RewriteRule ^([A-z0-9]+)/$ index.php?p1=$1
 
