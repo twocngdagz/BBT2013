@@ -37,14 +37,14 @@
 						<div class="control-group">
 							<label for="name">SAS afftrack ID (optional) <span class="required">*</span> </label>
 							<div class="controls">
-								<input name="name" id="sas" title="Name" required value=""
+								<input name="name" id="sas" title="Name" value=""
 									class="input-text required-entry span9" type="text" />
 							</div>
 						</div>
 						<div class="control-group">
 							<label for="name">Your Tracking Link <span class="required">*</span> </label>
 							<div class="controls">
-								<input name="name" id="link" title="Name" value="http://www.shareasale.com/r.cfm?b=266790&u={your_Share_A_Sale_ID}&m=30099&urllink=&afftrack={afftrack_value}%E2%80%9D]"
+								<input name="name" id="link" title="Name" value="http://www.shareasale.com/r.cfm?b=266790&u={your_Share_A_Sale_ID}&m=30099&urllink=&afftrack={afftrack_value}"
 									class="input-text required-entry span9" type="text" />
 							</div>
 						</div>
@@ -65,6 +65,7 @@
 
 			</fieldset>
 		</form>
+		<p>View Our Current <a href="<?php echo MCHN_ROOT ?>affiliates/banner.php">Banners</a>
 		<div class="container">&#160;</div>
 		<div class="container">&#160;</div>
 		<p><b>"Let's hear more about your company..."</b></p>
@@ -76,10 +77,10 @@
 		<p>To get your bonus please contact us.</p>
 		<div class="container">&#160;</div>
 		<p><b>"Will it be easy to contact someone when I have question or need help?"</b></p>
-		<p>Absolutely! Baby Bedding Town has a dedicated and aggressive Affiliate Program Manager with SEM, SEO, CPM, and PPC experience to assist you in maximizing your earnings. Our APM will respond to your emails or call you within one business day, and assure your commissions are always properly tracked and credited through Share A Sale {link to affiliate program}. We’re also always here to help you with custom creatives and suggestions for your site. Send us your link and we’ll tell you how to get more folks clicking through to Baby Bedding Town!</p>
+		<p>Absolutely! Baby Bedding Town has a dedicated and aggressive Affiliate Program Manager with SEM, SEO, CPM, and PPC experience to assist you in maximizing your earnings. Our APM will respond to your emails or call you within one business day, and assure your commissions are always properly tracked and credited through <a href="http://www.shareasale.com/shareasale.cfm?merchantID=30099">Share A Sale</a>. We’re also always here to help you with custom creatives and suggestions for your site. Send us your link and we’ll tell you how to get more folks clicking through to Baby Bedding Town!</p>
 		<div class="container">&#160;</div>
 		<p><b>"Sounds great so far, but who tracks the sales that I generate? How does this work?"</b></p>
-		<p>Baby Bedding Town has partnered with Share-A-Sale {link to program}- a third-party company which facilitates affiliations between advertisers (Baby Bedding Town) and publishers (you). It’s easy to sign up, and best of all, it’s totally free! Click here {link to program} to get your Share-A-Sale account up and running, or click here if you’re already a Share-A-Sale member!</p>
+		<p>Baby Bedding Town has partnered with <a href="http://www.shareasale.com/shareasale.cfm?merchantID=30099">Share-A-Sale</a>- a third-party company which facilitates affiliations between advertisers (Baby Bedding Town) and publishers (you). It’s easy to sign up, and best of all, it’s totally free! <a href="http://www.shareasale.com/shareasale.cfm?merchantID=30099">Click here</a> to get your Share-A-Sale account up and running, or click here if you’re already a Share-A-Sale member!</p>
 		<div class="container">&#160;</div>
 		<div class="container">&#160;</div>
 		<h4><p><b>More Affiliate Program Hightlights:</b></p></h4>
@@ -98,9 +99,7 @@
 		<div class="container">&#160;</div>
 		<p><b>More Money Making Opportunities</b></p>
 		<p>There are several alternatives to our basic affiliate program. If you think your site has the potential, the brand or the traffic to send some serious business our way – let’s talk.</p>
-		<p>Send an email to <a href="mailto:alon@babybeddingtown.com" style="margin-right: -2px;"><img width="35px"
-								src="<?php html::p(MCHN_DIR_ASSETS."img/footer/social/email_lrg.png"); ?>"
-								alt=""/></a> explore your options or propose other possibilities.</p>
+		<p>Send an email to <img src="<?php html::p(MCHN_DIR_ASSETS."img/footer/social/email_lrg.png"); ?>" alt=""/> explore your options or propose other possibilities.</p>
 		<p>Good luck, and I look forward to hearing from you and answering any questions or concerns that you may have.</p>
 		<div class="container">&#160;</div>
 		<div class="container">&#160;</div>
@@ -110,9 +109,7 @@
 		<p>8939 East Valley Blvd. Suite B</p>
 		<p>Rosemead, CA 91770</p>
 		<p>(626) 288-6220</p>
-		<p><a href="mailto:alon@babybeddingtown.com" style="margin-right: -2px;"><img width="35px"
-								src="<?php html::p(MCHN_DIR_ASSETS."img/footer/social/email_lrg.png"); ?>"
-								alt=""/></a></p>
+		<p><img src="<?php html::p(MCHN_DIR_ASSETS."img/footer/social/email_lrg.png"); ?>" alt=""/></p>
 	</div>
 </div>
 <script type="text/javascript">
@@ -121,17 +118,32 @@
 		$('#id').focus();
 		$('#btnSubmit').click(function(e) {
 			e.preventDefault();
-			var isValid = true;
 			var idNumeric = $.isNumeric($('#id').val());
 			var sasNumber = $.isNumeric($('#sas').val());
-			if (idNumeric && sasNumber) {
-				var link = "http://www.shareasale.com/r.cfm?b=266790&u=" + $('#id').val() + "&m=30099&urllink=&afftrack=" + $('#sas').val();
-				$('#link').val(link);
-				$('#btnVisit').show();
-				alert("The link has been updated with your information");
+			if (idNumeric) {
+				if ($("#sas").val() == '') {
+					var link = "http://www.shareasale.com/r.cfm?b=266790&u=" + $('#id').val() + "&m=30099&urllink=&afftrack=";
+					$('#link').val(link);
+					$('#btnVisit').show();
+					alert("The link has been updated with your information");
+				} else {
+					if ($('#sas').val() != '' && sasNumber) {
+						var link = "http://www.shareasale.com/r.cfm?b=266790&u=" + $('#id').val() + "&m=30099&urllink=&afftrack=" + $('#sas').val();
+						$('#link').val(link);
+						$('#btnVisit').show();
+						alert("The link has been updated with your information");
+					} else {
+						alert("Your Share A Sale User id should only be digits. Please check what you entered and try again");
+						$('#id').val('');
+						$('#sas').val('');
+						$('#link').val('http://www.shareasale.com/r.cfm?b=266790&u={your_Share_A_Sale_ID}&m=30099&urllink=&afftrack={afftrack_value}');
+					}
+				}
 			} else {
-
 				alert("Your Share A Sale User id should only be digits. Please check what you entered and try again");
+				$('#id').val('');
+				$('#sas').val('');
+				$('#link').val('http://www.shareasale.com/r.cfm?b=266790&u={your_Share_A_Sale_ID}&m=30099&urllink=&afftrack={afftrack_value}');
 			}
 		});
 
@@ -139,7 +151,7 @@
 			e.preventDefault;
 			$('#id').val('');
 			$('#sas').val('');
-			$('#link').val('http://www.shareasale.com/r.cfm?b=266790&u={your_Share_A_Sale_ID}&m=30099&urllink=&afftrack={afftrack_value}%E2%80%9D]');
+			$('#link').val('http://www.shareasale.com/r.cfm?b=266790&u={your_Share_A_Sale_ID}&m=30099&urllink=&afftrack={afftrack_value}');
 			$('#btnVisit').hide();
 		});
 

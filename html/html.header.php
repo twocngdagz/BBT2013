@@ -84,7 +84,7 @@
 <div id="bbtCarousel" class="carousel slide">
   <div class="carousel-inner">
     <div class="item active">
-      <img src="<?php html::p(MCHN_DIR_ASSETS."img/carousel/baby-sleeping.jpg"); ?>" alt="">
+      <img src="<?php echo MCHN_DIR_ASSETS."img/carousel/baby-sleeping.jpg"; ?>" alt="">
       <div class="container">
         <h1 style="margin-top:150px;">Baby Bedding Town</h1>
       </div>
