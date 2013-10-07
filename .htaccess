@@ -3,12 +3,13 @@
 Options +SymLinksIfOwnerMatch
 RewriteEngine on
 
+
+
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule .* - [L]
 
 
 #START RULE IN MENU
-
 
 
 # Force SSL on checkout login account and admin pages
@@ -27,6 +28,8 @@ RewriteRule ^(.*)$ http://www.%2/$1 [R=301,L,QSA]
 RewriteRule ^([A-z0-9]+)$ index.php?p1=$1
 RewriteRule ^([A-z0-9]+)/$ index.php?p1=$1
 
+
+
 RewriteRule ^toy-s-4-kids$ categories.php?id=toy-s-4-kids
 RewriteRule ^a-nursery-safe$ safe-nursery.php
 RewriteRule ^choose-safe-stroller$ strollercarriage.php
@@ -43,6 +46,7 @@ RewriteRule ^about-magento-demo-store$ about-us.php
 RewriteRule ^complete-check-list$ checklist.php
 RewriteRule ^shipping-faqs$ shippingfaq.php
 RewriteRule ^refund-policy$ returnpolicy.php
+
 
 RewriteCond %{QUERY_STRING} ^p=([0-9]*)$
 RewriteRule ^([a-z0-9-]+)/([a-z0-9-]+)$ categories.php?id=$2&p=%1&id2=$1

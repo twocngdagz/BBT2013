@@ -7,9 +7,10 @@
       </a>
       <ul class="nav pull-right">
         <li><a href="<?php html::p(MCHN_ROOT) ?>">Home</a></li>
-        <li><a href="./about-us.php">About</a></li>
-        <li><a href="./customerservice.php">Contact Us</a></li>
-        <li><a href="./cart.php">Cart</a></li>
+        <li><a href="<?php echo MCHN_ROOT ?>about-us.php">About</a></li>
+        <li><a href="<?php echo MCHN_ROOT ?>customerservice.php">Contact Us</a></li>
+        <li><a href="<?php echo MCHN_ROOT ?>cart.php">Cart</a></li>
+        <li><a href="<?php echo MCHN_ROOT ?>affiliates/">Affiliates</a></li>
         <?php if(!empty($s['user_id'])): ?>
           <li style="margin-right:-10px;"><a href="<?php html::p(MCHN_ROOT."dashboard") ?>"><?php html::p($s['first_name']); ?></a></li>
           <?php if($s['permission_group_fk'] != 0 || 5): ?>

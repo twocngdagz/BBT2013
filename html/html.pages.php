@@ -4,6 +4,9 @@
 		switch($page):
 			
 				# MAIN PAGES
+				case 'affiliates':
+					include (AFF . 'index.php');
+				break;
 				case 'users':
 					users::isLoggedIn();
 					include (CNTRLR . 'users.php');

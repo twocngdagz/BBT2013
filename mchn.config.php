@@ -44,6 +44,7 @@
 		define("MDL", MCHN_DIR_CORE ."model/");
 		define("VW", MCHN_DIR_CORE ."view/");
 		define("QCK", MCHN_DIR_CORE ."quicks/");
+		define("AFF", MCHN_DIR_ROOT."affiliates/");
 			
 		define("MCHN_DIR_HTML", MCHN_DIR_ROOT ."html/");
 		
