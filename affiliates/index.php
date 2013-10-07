@@ -65,6 +65,54 @@
 
 			</fieldset>
 		</form>
+		<div class="container">&#160;</div>
+		<div class="container">&#160;</div>
+		<p><b>"Let's hear more about your company..."</b></p>
+		<p>Baby Bedding Town provides top quality designer baby bedding sets, cribs, bassinets, baby furniture, strollers, carseats and more - all at everyday discount prices. Our company, founded in 1936, is family owned and has brick & mortar stores in California. Our superb customer service, e-commerce enabled website and superior search engine rankings will help ensure that a large percentage of click-throughs from your site will convert into a sale on ours.</p>
+		<div class="container">&#160;</div>
+		<p><b>"What exactly is in this for me?"</b></p>
+		<p>We pay 10% commissions plus bonuses based on monthly sales volume – this means the more sales you help generate, the larger your bonus will be.</p>
+		<p>This sort of commission structure keeps our affiliates working with us to help optimize their involvement on an ongoing basis. With an average order size of over $170 every sale you refer can earn you $17 or more per sale!</p>
+		<p>To get your bonus please contact us.</p>
+		<div class="container">&#160;</div>
+		<p><b>"Will it be easy to contact someone when I have question or need help?"</b></p>
+		<p>Absolutely! Baby Bedding Town has a dedicated and aggressive Affiliate Program Manager with SEM, SEO, CPM, and PPC experience to assist you in maximizing your earnings. Our APM will respond to your emails or call you within one business day, and assure your commissions are always properly tracked and credited through Share A Sale {link to affiliate program}. We’re also always here to help you with custom creatives and suggestions for your site. Send us your link and we’ll tell you how to get more folks clicking through to Baby Bedding Town!</p>
+		<div class="container">&#160;</div>
+		<p><b>"Sounds great so far, but who tracks the sales that I generate? How does this work?"</b></p>
+		<p>Baby Bedding Town has partnered with Share-A-Sale {link to program}- a third-party company which facilitates affiliations between advertisers (Baby Bedding Town) and publishers (you). It’s easy to sign up, and best of all, it’s totally free! Click here {link to program} to get your Share-A-Sale account up and running, or click here if you’re already a Share-A-Sale member!</p>
+		<div class="container">&#160;</div>
+		<div class="container">&#160;</div>
+		<h4><p><b>More Affiliate Program Hightlights:</b></p></h4>
+		<p>A family business since 1936</p>
+		<p>$150-$300 Average Order Size</p>
+		<p>90 Day Cookie Terms - Twice Industry Norm</p>
+		<p>Over 15,000 SKUs in Online Product Catalog</p>
+		<p>No Sales Quotas or Minimums</p>
+		<p>No Order Minimums, and Free Shipping Coupons</p>
+		<p>Monthly Sales & Promotions</p>
+		<p>MOnthly Newsletters and Contents with Prizes</p>
+		<p>Fresh Creatives & links are added Monthly</p>
+		<div class="container">&#160;</div>
+		<p><b>Brick & Mortar Retail Presence in California</b></p>
+		<p>Our secure and easy-to-Navigate website converts your visitors better than most Excellent Customer Service to help answer questions and convert your traffic</p>
+		<div class="container">&#160;</div>
+		<p><b>More Money Making Opportunities</b></p>
+		<p>There are several alternatives to our basic affiliate program. If you think your site has the potential, the brand or the traffic to send some serious business our way – let’s talk.</p>
+		<p>Send an email to <a href="mailto:alon@babybeddingtown.com" style="margin-right: -2px;"><img width="35px"
+								src="<?php html::p(MCHN_DIR_ASSETS."img/footer/social/email_lrg.png"); ?>"
+								alt=""/></a> explore your options or propose other possibilities.</p>
+		<p>Good luck, and I look forward to hearing from you and answering any questions or concerns that you may have.</p>
+		<div class="container">&#160;</div>
+		<div class="container">&#160;</div>
+		<p>Alon Cohen</p>
+		<p>Affiliate Program Manager</p>
+		<p>Baby Toytown, Inc.</p>
+		<p>8939 East Valley Blvd. Suite B</p>
+		<p>Rosemead, CA 91770</p>
+		<p>(626) 288-6220</p>
+		<p><a href="mailto:alon@babybeddingtown.com" style="margin-right: -2px;"><img width="35px"
+								src="<?php html::p(MCHN_DIR_ASSETS."img/footer/social/email_lrg.png"); ?>"
+								alt=""/></a></p>
 	</div>
 </div>
 <script type="text/javascript">
