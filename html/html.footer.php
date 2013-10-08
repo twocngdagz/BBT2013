@@ -179,7 +179,7 @@
 					<div class="span3">
 						<div class="text-headings">Information</div>
 						<ul class="nav nav-sidebar">
-							<li><a href=""> Info Links Here </a> <a href="<?php echo MCHN_ROOT ?>a-nursery-safe">A
+							<li><a href="<?php echo MCHN_ROOT ?>affiliates/"> Affiliate Program </a> <a href="<?php echo MCHN_ROOT ?>a-nursery-safe">A
 									Safe Nursery</a> <a href="<?php echo MCHN_ROOT ?>choose-safe-stroller">Stroller &
 									Carriage</a> <a href="<?php echo MCHN_ROOT ?>cars-travelling">Cars & Traveling</a> <a
 								href="<?php echo MCHN_ROOT ?>games-toys">Games & Toys</a> <a href="<?php echo MCHN_ROOT ?>bath-time">Bath Time</a>
