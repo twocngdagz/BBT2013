@@ -1,5 +1,6 @@
 <?php
 $host = $_SERVER['HTTP_HOST'];
+
 if ($host == "localhost") {
     defined('DB_SERVER')    ? null : define("DB_SERVER", "localhost");
     defined('DB_USERNAME')    ? null : define("DB_USERNAME", "root");
@@ -22,6 +23,12 @@ if ($host == "www.babybeddingtown.com") {
     defined('DB_NAME')    ? null : define("DB_NAME", "17670_bbt2013");
 }
 if ($host == "dev.babybeddingtown.com") {
+    defined('DB_SERVER')    ? null : define("DB_SERVER", "localhost");
+    defined('DB_USERNAME')    ? null : define("DB_USERNAME", "17670_site");
+    defined('DB_PASSWORD') ? null : define("DB_PASSWORD", "nqan7sfn");
+    defined('DB_NAME')    ? null : define("DB_NAME", "17670_devsite");
+}
+if ($host == "babybeddingtown.com") {
     defined('DB_SERVER')    ? null : define("DB_SERVER", "localhost");
     defined('DB_USERNAME')    ? null : define("DB_USERNAME", "17670_site");
     defined('DB_PASSWORD') ? null : define("DB_PASSWORD", "nqan7sfn");
