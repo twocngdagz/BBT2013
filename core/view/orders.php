@@ -461,7 +461,7 @@
 
 			$('.flexProductOptions').dblclick(function(e) {
 				$('.trSelected td:first', this).each( function(){
-					window.open('/bbt2013/products.php?id='+$(this).text(), '_blank');
+					window.open('/products.php?id='+$(this).text(), '_blank');
 				});
 			});
 

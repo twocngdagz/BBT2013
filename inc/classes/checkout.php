@@ -148,7 +148,7 @@ class checkout {
   }
 
   public static function updateOrderStatus($status, $shippingmethod, $shippingdate, $trackingnumber, $comment, $id) {
-    echo $shippingdate;
+    
     $sql = "Update `customer_orders` SET
             `status` = '".$status."',
             `shippingmethod` = '".$shippingmethod."',
