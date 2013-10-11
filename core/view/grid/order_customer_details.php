@@ -26,7 +26,7 @@ $sql  = "SELECT
             `customer_account`.`id`, 
             `customer_account`.`email`,
             `customer_account`.`phone`,
-            `customer_orders`.`status`,
+            `customer_orders`.`status`, `customer_orders`.`shippingmethod`, `customer_orders`.`shippingdate`, `customer_orders`.`trackingnumber`, `customer_orders`.`comment`,
             `customer_addresses`.*, `customer_orders`.`cust_fk` FROM `customer_account` 
           LEFT OUTER JOIN `customer_addresses` on ( `customer_account`.`id` = `customer_addresses`.`cust_fk` ) 
           LEFT OUTER JOIN `customer_orders` ON ( `customer_account`.`id` = `customer_orders`.`cust_fk` )
@@ -89,6 +89,10 @@ $entry = array('id'=>$row['id'],
       'szipcode'=> $zipcode,
       'scountry'=> $country,
       'status'=> $row['status'],
+      'comment'=>$row['comment'],
+      'shippingdate'=>$row['shippingdate'],
+      'shippingmethod'=>$row['shippingmethod'],
+      'trackingnumber'=>$row['trackingnumber']
     ),
   );
 $jsonData['rows'][] = $entry;

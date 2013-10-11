@@ -1,11 +1,12 @@
 <?php include 'settings.php';?>
+
 <div class="">
 	<legend>Manage Orders</legend>
 	<table class="flexOrders"></table>
 	<div class="clear"><br /></div>
 </div>
 
-<div class="modal hide fade" id="modal-create-orders"  style="width:70%; left:35%;">
+<div class="modal hide fade" id="modal-create-orders"  data-width="900">
 
 	<ul id="myTab" class="nav nav-tabs">
 		<li class="active" id="order-select"><a href="#orders" data-toggle="tab">Order Status</a></li>
@@ -19,197 +20,154 @@
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 					<h3>Orders</h3>
-					<div><small>Status</small></div>
-					<select name="d[status]" id="status" required>
-						<option value=""></option>
-						<?php
-						$status = array("Pending" => "Pending",
-							"On Hold" => "On Hold", "Partially Shipped" => "Partially Shipped", "Fully Shipped" => "Fully Shipped",
-							"Cancelled" => "Cancelled", "Fully Refunded" => "Fully Refunded", "Partially Refunded" => "Partially Refunded", "Test Order" => "Test Order");
-							?>
-							<?php foreach ($status as $key => $row): ?>
-								<option value="<?php echo $key ?>" ><?php echo $row ?></option>
-							<?php endforeach; ?>
-						</select>	
-					</div>
-					<div class="modal-body">
-						<div class="row-fluid">
-							<div class="span6">
-								<div><small>Billing Address</small></div>
-
-								<div><small>Name *</small></div>
-								<input type="text" class="input-block-level span6"  name="d[first_name]" required placeholder="" id="first_name">
-								<input type="text" class="input-block-level span6" name="d[last_name]" required placeholder="" id="last_name">
-								
-								<div><small>Email</small></div>
-								<input type="text" class="" name="d[email]" required placeholder="" id="email">
-								
-								
-								<div><small>Phone *</small></div>
-								<input type="text" class="" ng-pattern="[-+]?[0-9]*\.?[0-9]*." name="d[phone]" required placeholder="" id="phone">	
-								
-								<div><small>Address</small></div>
-								<input type="text" class="" name="d[address]" required placeholder="" id="address">
-
-								<div><small>Address 2</small></div>
-								<input type="text" class="" name="d[address2]" placeholder="" id="address2">
-
-								<div><small>City</small></div>
-								<input type="text" class="" name="d[city]" required placeholder="" id="city">
-
-								<div class="form-row">
-									<label for="name" class=""> State / Zipcode / Country</label>
-									<select name="d[state]" class='span4' id="state">
-										<?php foreach($options['state'] as $state =>$row): ?>
-											<option value='<?php echo $row; ?>'><?php echo $row ?></option>
-										<?php endforeach; ?>
-									</select>
-									<input type="text" id="zipcode" name="zipcode" class="required input-block-level span4" value='' placeholder="Zipcode" />
-
-									<?php $countryList = array('USA','Canada'); ?>
-									<select name="country" class='span4' id='country'>
-										<?php foreach($countryList as $country): ?>
-											<option value='<?php echo $country ?>'><?php echo $country ?></option>
-										<?php endforeach; ?>
-									</select>
-								</div> 
-
-							</div>
-							
-							<div class="span6">
-								<div><small>Shipping Address</small></div>
-								<div><small>Name *</small></div>
-
-								<input type="text" class="input-block-level span6" name="d[first_name]" required placeholder="" id="sfirst_name">
-								<input type="text" class="input-block-level span6" name="d[last_name]" required placeholder="" id="slast_name">
-								
-								<div><small>Address</small></div>
-								<input type="text" class="" name="d[address]" required placeholder="" id="saddress">
-
-								<div><small>Address 2</small></div>
-								<input type="text" class="" name="d[address2]" placeholder="" id="saddress2">
-
-								<div><small>City</small></div>
-								<input type="text" class="" name="d[city]" required placeholder="" id="scity">
-
-								<div class="form-row">
-									<label for="name" class=""> State / Zipcode / Country</label>
-									<select name="d[state]" class='span4' id='sstate'>
-										<?php foreach($options['state'] as $state =>$row): ?>
-											<option value='<?php echo $row; ?>'><?php echo $row ?></option>
-										<?php endforeach; ?>
-									</select>
-									<input type="text" name="zipcode" class="required input-block-level span4" value='' placeholder="Zipcode" id='szipcode'/>
-
-									<?php $countryList = array('USA','Canada'); ?>
-									<select name="country" class='span4' id='scountry'>
-										<?php foreach($countryList as $country): ?>
-											<option value='<?php echo $country ?>'><?php echo $country ?></option>
-										<?php endforeach; ?>
-									</select>
-								</div> 
-							</div>
-							
-							<div class="span4">
-								
-							</div>
+					<div class="row-fluid">
+						<div class="span6">
+							<div><small>Status</small></div>
+							<select name="d[status]" id="status" required>
+								<option value=""></option>
+								<?php
+								$status = array("Pending" => "Pending",
+									"On Hold" => "On Hold", "Partially Shipped" => "Partially Shipped", "Fully Shipped" => "Fully Shipped",
+									"Cancelled" => "Cancelled", "Fully Refunded" => "Fully Refunded", "Partially Refunded" => "Partially Refunded", "Test Order" => "Test Order");
+									?>
+									<?php foreach ($status as $key => $row): ?>
+										<option value="<?php echo $key ?>" ><?php echo $row ?></option>
+									<?php endforeach; ?>
+							</select>
+							<div><small>Shipping Method</small></div>
+							<input type="text" class="input-block-level span6" name="d[shippingmethod]" placeholder="" id="shippingmethod">
+							<div><small>Comment</small></div>
+							<textarea id="comment" name="d[comment]" rows="3" class="span12"></textarea>
 						</div>
-					</div>
-					<div class="modal-footer">
-						<input type="hidden" name="d[product_id]" value="" id="products-id"/>
-						<input type="hidden" name="d[axn]" value="create" id="action"/>
-						<input type="submit" class="btn btn-success" value="Add" id="submitter" name="button"/>
-						<input type="submit" class="btn btn-danger" value="Delete" id="delete" name="delete" style="display: none"/>
-					</div>
-				</div>
-			</form>
-			<div class="tab-pane" id="order_items">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					<h3>Manage Order Item</h3>
+						<div class="span6">
+							<div><small>Shipping Date</small></div>
+							<input type="text" class="input-block-level span6 datepicker" name="d[shippingdate]" placeholder="" id="shippingdate">
+							<div><small>Tracking Number</small></div>
+							<input type="text" class="input-block-level span6" name="d[trackingnumber]" placeholder="" id="trackingnumber">
+						</div>
+					</div>	
 				</div>
 				<div class="modal-body">
-					<table class="flexProductOptions"></table>
-				</div>
-				<div class="modal-footer">
-					<a href="#option_form"  data-toggle="tab" class="btn btn-success" data-toggle="modal">Create New Product Option</a>
-				</div>
-			</div>
-			
-			<!-- <div class="tab-pane" id="order_details">
-				<form action="./orders" method="post" enctype="multipart/form-data">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-						<h3>Order Item Details</h3>
-					</div>
-					<div class="modal-body">
-						<div class="row-fluid">
-							<div class="span6">
-								<div><small>Name *</small></div>
-								<input type="text" class="" name="d[option_name]" required placeholder="" id="option_name">
-								
-								<div><small>Description *</small></div>
-								<input type="text" name="d[option_description]" placeholder="" id="option_description" required>
-								
-								<div><small>Price *</small></div>
-								<input type="text" class="" ng-pattern="[-+]?[0-9]*\.?[0-9]*." name="d[price]" required placeholder="" id="price-product-option">	
-								
-								<div><small>Weight *</small></div>
-								<input type="text" class="" ng-pattern="[-+]?[0-9]*\.?[0-9]*." name="d[weight]" required placeholder="" id="weight-product-option">	
-								
-								<input type="hidden" class="" name="d[product_id]" id="product-id">	
-							</div>
+					<div class="row-fluid">
+						<div class="span6">
+							<div><small>Billing Address</small></div>
+
+							<div><small>Name *</small></div>
+							<input type="text" class="input-block-level span6"  name="d[first_name]" required placeholder="" id="first_name">
+							<input type="text" class="input-block-level span6" name="d[last_name]" required placeholder="" id="last_name">
 							
-							<div class="span4">
-								<div><small>Thumbnail</small></div>
-								<small>
-									<a href="" id="image_thumbnail_link-product-option" target="_blank">
-										<img src="" id="image_thumbnail_val-product-option" style="width:50px; height:50px;"/>
-										<span></span>
-									</a>
-								</small>
-								<input type="file" name="thumbnail" id="image_thumbnail-product-option" accept="image/png, image/gif, image/jpeg" >
-								<input type="hidden" name="thumbnail_current" id="thumbnail_current-product-option"/>
-								
-								<div><small>Small</small></div>
-								<small>
-									<a href="" id="image_small_link-product-option" target="_blank">
-										<img src="" id="image_small_val-product-option" style="width:50px; height:50px;"/>
-										<span></span>
-									</a>
-								</small>
-								<input type="file" name="small" id="image_small-product-option" accept="image/png, image/gif, image/jpeg" >
-								<input type="hidden" name="small_current" id="small_current-product-option"/>
-								
-								<div><small>Large</small></div>			
-								<small>
-									<a href="" id="image_large_link-product-option" target="_blank">
-										<img src="" id="image_large_val-product-option" style="width:50px; height:50px;"/>
-										<span></span>
-									</a>
-								</small>
-								<input type="file" name="large" id="image_large-product-option" accept="image/png, image/gif, image/jpeg" >
-								<input type="hidden" name="large_current" id="large_current-product-option"/>
-							</div>
+							<div><small>Email</small></div>
+							<input type="text" class="" name="d[email]" required placeholder="" id="email">
+							
+							
+							<div><small>Phone *</small></div>
+							<input type="text" class="" ng-pattern="[-+]?[0-9]*\.?[0-9]*." name="d[phone]" required placeholder="" id="phone">	
+							
+							<div><small>Address</small></div>
+							<input type="text" class="" name="d[address]" required placeholder="" id="address">
+
+							<div><small>Address 2</small></div>
+							<input type="text" class="" name="d[address2]" placeholder="" id="address2">
+
+							<div><small>City</small></div>
+							<input type="text" class="" name="d[city]" required placeholder="" id="city">
+
+							<div class="form-row">
+								<label for="name" class=""> State / Zipcode / Country</label>
+								<select name="d[state]" class='span4' id="state">
+									<?php foreach($options['state'] as $state =>$row): ?>
+										<option value='<?php echo $row; ?>'><?php echo $row ?></option>
+									<?php endforeach; ?>
+								</select>
+								<input type="text" id="zipcode" name="zipcode" class="required input-block-level span4" value='' placeholder="Zipcode" />
+
+								<?php $countryList = array('USA','Canada'); ?>
+								<select name="country" class='span4' id='country'>
+									<?php foreach($countryList as $country): ?>
+										<option value='<?php echo $country ?>'><?php echo $country ?></option>
+									<?php endforeach; ?>
+								</select>
+							</div> 
+
+						</div>
+						
+						<div class="span6">
+							<div><small>Shipping Address</small></div>
+							<div><small>Name *</small></div>
+
+							<input type="text" class="input-block-level span6" name="d[first_name]" required placeholder="" id="sfirst_name">
+							<input type="text" class="input-block-level span6" name="d[last_name]" required placeholder="" id="slast_name">
+							
+							<div><small>Address</small></div>
+							<input type="text" class="" name="d[address]" required placeholder="" id="saddress">
+
+							<div><small>Address 2</small></div>
+							<input type="text" class="" name="d[address2]" placeholder="" id="saddress2">
+
+							<div><small>City</small></div>
+							<input type="text" class="" name="d[city]" required placeholder="" id="scity">
+
+							<div class="form-row">
+								<label for="name" class=""> State / Zipcode / Country</label>
+								<select name="d[state]" class='span4' id='sstate'>
+									<?php foreach($options['state'] as $state =>$row): ?>
+										<option value='<?php echo $row; ?>'><?php echo $row ?></option>
+									<?php endforeach; ?>
+								</select>
+								<input type="text" name="zipcode" class="required input-block-level span4" value='' placeholder="Zipcode" id='szipcode'/>
+
+								<?php $countryList = array('USA','Canada'); ?>
+								<select name="country" class='span4' id='scountry'>
+									<?php foreach($countryList as $country): ?>
+										<option value='<?php echo $country ?>'><?php echo $country ?></option>
+									<?php endforeach; ?>
+								</select>
+							</div> 
+						</div>
+						
+						<div class="span4">
+							
 						</div>
 					</div>
-					<div class="modal-footer">
-						<input type="hidden" name="d[product_option_id]" value="" id="products-option-id"/>
-						<input type="hidden" name="d[axn]" value="create" id="action-product-option"/>
-						<input type="submit" class="btn btn-success" value="Add" id="submitter-product-option" name="button-product-option"/>
-						<input type="submit" class="btn btn-danger" value="Delete" id="delete-product-option" name="delete" style="display: none"/>
-					</div>
-				</form>
-			</div> -->
+				</div>
+				<div class="modal-footer">
+					<input type="hidden" name="d[product_id]" value="" id="products-id"/>
+					<input type="hidden" name="d[axn]" value="create" id="action"/>
+					<input type="submit" class="btn btn-success" value="Add" id="submitter" name="button"/>
+					<input type="submit" class="btn btn-danger" value="Delete" id="delete" name="delete" style="display: none"/>
+				</div>
+			</form>
 		</div>
-
+		<div class="tab-pane" id="order_items">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h3>Manage Order Item</h3>
+			</div>
+			<div class="modal-body">
+				<table class="flexProductOptions"></table>
+			</div>
+			<div class="modal-footer">
+				<a href="#option_form"  data-toggle="tab" class="btn btn-success" data-toggle="modal">Create New Product Option</a>
+			</div>
+		</div>		
 	</div>
+</div>
 
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#myTab a').click(function (e) {
 				e.preventDefault();
 				$(this).tab('show');
+			});
+			$('.datepicker').datepicker({
+				autoclose: true,
+				format: "yyyy-mm-dd"
+			});
+			
+			$("#modal-create-orders").on("show", function () {
+			  $("body").addClass("modal-open");
+			}).on("hidden", function () {
+			  $("body").removeClass("modal-open")
 			});
 			
 			$(".flexOrders").flexigrid({
@@ -243,7 +201,7 @@
 				showTableToggleBtn : true,
 				width : 700,
 				singleSelect: true,
-				height : 270
+				height : 240
 			});
 
 			//on click grid from product to product options
@@ -255,7 +213,6 @@
 						data:"id="+$(this).attr('id').substr(3),
 						success:function(data) {
 							$.each(data.rows, function (index, value) {
-								console.log('Mederic');
 								var options = $(".flexProductOptions").flexigrid(	{
 									url : 'core/view/grid/order_details.php',
 									dataType : 'json',
@@ -333,6 +290,10 @@
 								$('#szipcode').attr('value', value.cell.szipcode);
 								$('#sstate').val(value.cell.sstate);
 								$('#scountry').val(value.cell.scountry);
+								$('#shippingmethod').val(value.cell.shippingmethod);
+								$('#shippingdate').val(value.cell.shippingdate);
+								$('#trackingnumber').val(value.cell.trackingnumber);
+								$('#comment').val(value.cell.comment);
 							});
 						},
 						dataType:'json'
@@ -498,10 +459,15 @@
 			//     });
 			// });
 
+			$('.flexProductOptions').dblclick(function(e) {
+				$('.trSelected td:first', this).each( function(){
+					window.open('/bbt2013/products.php?id='+$(this).text(), '_blank');
+				});
+			});
+
 
 			//on click product options 		
 			$('.flexProductOptions').click(function(event){
-				console.log('Tab clicked');
 				$('.trSelected', this).each( function(){	
 					$.ajax({
 						type:'POST',
@@ -535,12 +501,12 @@
 						},
 						dataType:'json'
 					});
-					$('#product-id').attr('value',$('.flexProducts .trSelected').attr('id').substr(3));
+					/*$('#product-id').attr('value',$('.flexProducts .trSelected').attr('id').substr(3));
 					$('#products-option-id').attr('value',$(this).attr('id').substr(3));
 					$('#myTab li:eq(2) a').tab('show');
 					$('#delete-product-option').show();
 					$('#submitter-product-option').attr('value', 'Update');
-					$('#action-product-option').attr('value', 'update');
+					$('#action-product-option').attr('value', 'update');*/
 				});
 			});
 

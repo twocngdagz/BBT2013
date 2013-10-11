@@ -147,9 +147,14 @@ class checkout {
 
   }
 
-  public static function updateOrderStatus($status, $id) {
+  public static function updateOrderStatus($status, $shippingmethod, $shippingdate, $trackingnumber, $comment, $id) {
+    echo $shippingdate;
     $sql = "Update `customer_orders` SET
-            `status` = '".$status."'
+            `status` = '".$status."',
+            `shippingmethod` = '".$shippingmethod."',
+            `shippingdate` = '$shippingdate',
+            `trackingnumber` = '".$trackingnumber."',
+            `comment` = '".$comment."'
             WHERE `customer_orders`.`id`  = '$id'
             ";
     db::execute_query($sql);

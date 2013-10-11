@@ -10,6 +10,8 @@
 <link rel="stylesheet" type="text/css" href="<?php html::p(MCHN_DIR_3RDPARTY)  ?>flexgrid/css/flexigrid.pack.css">
 <link rel="stylesheet" type="text/css" href="<?php html::p(MCHN_DIR_3RDPARTY)  ?>slider/css/feature-carousel.css">
 <link rel="stylesheet" type="text/css" href="<?php html::p(MCHN_DIR_3RDPARTY)  ?>jquery/css/smoothness/jquery-ui-1.9.1.custom.min.css">
+<link rel="stylesheet" type="text/css" href="<?php html::p(MCHN_DIR_3RDPARTY)  ?>bootstrap-modal/css/bootstrap-modal.css">
+<link rel="stylesheet" type="text/css" href="<?php html::p(MCHN_DIR_3RDPARTY)  ?>bootstrap-datepicker/css/datepicker.css">
 <link rel="stylesheet" type="text/css" href="<?php html::p(MCHN_DIR_ASSETS)  ?>css/style.css">
 
 
@@ -20,6 +22,9 @@
 <script src="<?php html::p(MCHN_DIR_3RDPARTY)  ?>gngnm/js/gngnm.min.js"></script>
 <script src="<?php html::p(MCHN_DIR_3RDPARTY)  ?>angular/js/angular.min.js"></script>
 <script src="<?php html::p(MCHN_DIR_3RDPARTY)  ?>slider/js/jquery.featureCarousel.js"></script>
+<script src="<?php html::p(MCHN_DIR_3RDPARTY)  ?>bootstrap-modal/js/bootstrap-modalmanager.js"></script>
+<script src="<?php html::p(MCHN_DIR_3RDPARTY)  ?>bootstrap-modal/js/bootstrap-modal.js"></script>
+<script src="<?php html::p(MCHN_DIR_3RDPARTY)  ?>bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
 
 <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.8.1/jquery.validate.min.js"></script>
 <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
@@ -76,6 +81,10 @@
   
   .container {
   }
+  
+  .modal .modal-body {
+    overflow-y: auto;
+}
 </style>
 <?php include (MCHN_DIR_HTML . 'html.navigation.php'); ?>
 <?php $serverHome = explode("/", $_SERVER['PHP_SELF']); ?>
