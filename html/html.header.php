@@ -12,6 +12,7 @@
 <link rel="stylesheet" type="text/css" href="<?php html::p(MCHN_DIR_3RDPARTY)  ?>jquery/css/smoothness/jquery-ui-1.9.1.custom.min.css">
 <link rel="stylesheet" type="text/css" href="<?php html::p(MCHN_DIR_3RDPARTY)  ?>bootstrap-modal/css/bootstrap-modal.css">
 <link rel="stylesheet" type="text/css" href="<?php html::p(MCHN_DIR_3RDPARTY)  ?>bootstrap-datepicker/css/datepicker.css">
+<link rel="stylesheet" type="text/css" href="<?php html::p(MCHN_DIR_3RDPARTY)  ?>simplyscroll/jquery.simplyscroll.css">
 <link rel="stylesheet" type="text/css" href="<?php html::p(MCHN_DIR_ASSETS)  ?>css/style.css">
 
 
@@ -25,6 +26,7 @@
 <script src="<?php html::p(MCHN_DIR_3RDPARTY)  ?>bootstrap-modal/js/bootstrap-modalmanager.js"></script>
 <script src="<?php html::p(MCHN_DIR_3RDPARTY)  ?>bootstrap-modal/js/bootstrap-modal.js"></script>
 <script src="<?php html::p(MCHN_DIR_3RDPARTY)  ?>bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script src="<?php html::p(MCHN_DIR_3RDPARTY)  ?>simplyscroll/jquery.simplyscroll.min.js"></script>
 
 <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.8.1/jquery.validate.min.js"></script>
 <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
@@ -86,6 +88,13 @@
     overflow-y: auto;
 }
 </style>
+<script type="text/javascript">
+  (function($) {
+    $(function() {
+      $("#scroller").simplyScroll({orientation:'vertical',direction:'backwards',customClass:'vert',speed:0.5});
+    });
+  })(jQuery);
+</script>
 <?php include (MCHN_DIR_HTML . 'html.navigation.php'); ?>
 <?php $serverHome = explode("/", $_SERVER['PHP_SELF']); ?>
 
@@ -131,15 +140,22 @@
         // getTweets is the only public method. For legacy reasons, it takes between 0 and 3 parameters.
         // getTweets(number_of_tweets, twitter_screenname, custom_parameters_to_go_twitter);
 
-        $tweets = $twitter->getTweets(2,'babybeddingtown');
-        foreach ($tweets as $tweet) {
-      ?>
-          <div style="width:250px;" class="pull-left">
-            <p style="padding:10px 10px 0 40px;; background:url(images/quote.png) no-repeat top left;">
-              <?php echo $tweet['text']; ?>
-            </p>
-          </div>
-      <?php } ?>
+        $tweets = $twitter->getTweets(10,'babybeddingtown');
+        ?>
+        <div style="width:500x; height:75px; overflow:hidden;" class="pull-left">
+          <ul id="scroller">
+          <?php foreach ($tweets as $tweet) { ?>
+            <li style="height: 100px;color:#3c3c3c; font-size: 1.1em; font-weight: normal;">
+              <?php 
+                $tweet = preg_replace('/((http)+(s)?:\/\/[^<>\s]+)/i', '<a href="$0" target="_blank">$0</a>', $tweet['text']);
+                $tweet = preg_replace('/[@]+([A-Za-z0-9-_]+)/', '<a href="http://twitter.com/$1" target="_blank">$1</a>', $tweet );
+                $tweet = preg_replace('/[#]+([A-Za-z0-9-_]+)/', '<a href="http://twitter.com/search?q=%23$1" target="_blank">$0</a>', $tweet );
+                echo $tweet;
+              ?>
+            </li>
+          <?php } ?>
+          </ul>
+        </div>
       <div class="pull-right">
         <div class="input-append" style="margin-top:15px;">
           <input class="span10" id="appendedInputButtons" type="text">
