@@ -5,7 +5,7 @@
     <a href="#modal-create-products" role="button" class="btn btn-success" data-toggle="modal">Create New Product</a>
 </div>
 
-<div class="modal hide fade" id="modal-create-products"  style="width:70%; left:35%;">
+<div class="modal hide fade" id="modal-create-products" data-width="900">
 
 <ul id="myTab" class="nav nav-tabs">
   <li class="active" id="product-select"><a href="#products" data-toggle="tab">Products</a></li>
@@ -37,7 +37,10 @@
 					-->
 					
 					<div><small>Price *</small></div>
-					<input type="text" class="" ng-pattern="[-+]?[0-9]*\.?[0-9]*." name="d[price]" required placeholder="" id="price">	
+					<input type="text" class="" ng-pattern="[-+]?[0-9]*\.?[0-9]*." name="d[price]" required placeholder="" id="price">
+
+					<div><small>Cost *</small></div>
+					<input type="text" class="" ng-pattern="[-+]?[0-9]*\.?[0-9]*." name="d[cost]" required placeholder="" id="cost">	
 					
 					<div><small>Status</small></div>
 					<select name="d[status]" id="status" required>
@@ -155,7 +158,7 @@
 					<input type="text" name="d[option_description]" placeholder="" id="option_description" required>
 					
 					<div><small>Price *</small></div>
-					<input type="text" class="" ng-pattern="[-+]?[0-9]*\.?[0-9]*." name="d[price]" required placeholder="" id="price-product-option">	
+					<input type="text" class="" ng-pattern="[-+]?[0-9]*\.?[0-9]*." name="d[price]" required placeholder="" id="price-product-option">
 					
 					<div><small>Weight *</small></div>
 					<input type="text" class="" ng-pattern="[-+]?[0-9]*\.?[0-9]*." name="d[weight]" required placeholder="" id="weight-product-option">	
@@ -229,11 +232,12 @@ $(document).ready(function() {
 		url : 'core/view/grid/products.php',
 		dataType : 'json',
 		colModel : [ 
-					{ display : 'Id', name : 'id', width : 15, sortable : true, align : 'right'}, 
+					{ display : 'Id', name : 'id', width : 30, sortable : true, align : 'right'}, 
 					{ display : 'Price', name : 'price', width : 60, sortable : true, align : 'left'},
+					{ display : 'Cost', name : 'cost', width : 60, sortable : true, align : 'left'},
 					{ display : 'Name', name : 'name_short', width : 130, sortable : true, align : 'left'}, 
 					{ display : 'Description', name : 'description_long', width : 180, sortable : true, align : 'left'},
-					{ display : 'Comments', name : 'comments', width : 370, sortable : true, align : 'left'},
+					{ display : 'Comments', name : 'comments', width : 350, sortable : true, align : 'left'},
 					{ display : 'Status', name : 'status_text', width : 40, sortable : true, align : 'left'}
 					],
 		searchitems : [ {
@@ -335,6 +339,7 @@ $(document).ready(function() {
         				$('#large_current').attr('value', value.cell.image_large);
         				
         				$('#price').attr('value', value.cell.price);
+        				$('#cost').attr('value', value.cell.cost);
         				
         				$('#category_id').val(value.cell.category_id);
         				$('#brand_id').val(value.cell.brand_id);

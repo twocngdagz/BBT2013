@@ -66,7 +66,8 @@ foreach($rows as $row){
 			'status_text'=>$status,
 			'thumb'=>image::imageFileNaming($thumb),
 			'small'=>image::imageFileNaming($small),
-			'large'=>image::imageFileNaming($large)
+			'large'=>image::imageFileNaming($large),
+			'cost'=>$row['cost']
 		),
 	);
 	$jsonData['rows'][] = $entry;

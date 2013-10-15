@@ -33,7 +33,14 @@
 									<?php foreach ($status as $key => $row): ?>
 										<option value="<?php echo $key ?>" ><?php echo $row ?></option>
 									<?php endforeach; ?>
+							
 							</select>
+							<div>
+								<button class="btn input-block-level span6" type="button">
+	  								Issue Full Refund
+	  							</button>
+	  						</div>
+  							
 							<div><small>Shipping Method</small></div>
 							<input type="text" class="input-block-level span6" name="d[shippingmethod]" placeholder="" id="shippingmethod">
 							<div><small>Comment</small></div>
@@ -459,12 +466,12 @@
 			//     });
 			// });
 
-			$('.flexProductOptions').dblclick(function(e) {
+			/*$('.flexProductOptions').click(function(e) {
 				$('.trSelected td:first', this).each( function(){
 					window.open('/products.php?id='+$(this).text(), '_blank');
 				});
 			});
-
+*/
 
 			//on click product options 		
 			$('.flexProductOptions').click(function(event){

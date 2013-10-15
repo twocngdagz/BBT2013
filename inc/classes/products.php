@@ -106,7 +106,7 @@ class Products {
 	}	
 	
 	# INSERT PRODUCTS
-	public static function insertProducts($user_id, $name_short, $name_long, $description_long, $image_thumbnail, $image_small, $image_large, $comments, $brand_id=NULL, $vendor_id=NULL, $category_id=NULL, $price=0) 
+	public static function insertProducts($user_id, $name_short, $name_long, $description_long, $image_thumbnail, $image_small, $image_large, $comments, $brand_id=NULL, $vendor_id=NULL, $category_id=NULL, $price=0, $cost=0) 
 	{
 		$sql = "INSERT INTO `products_items` (
 				`id` ,
@@ -121,6 +121,7 @@ class Products {
 				`category_id`,
 				`vendor_id`,
 				`price`,
+				`cost`,
 				`added_date` ,
 				`user_id` ,
 				`status`
@@ -137,7 +138,8 @@ class Products {
 				'".html::cln($brand_id)."', 
 				'".html::cln($category_id)."', 
 				'".html::cln($vendor_id)."', 
-				'".html::cln($price)."', 
+				'".html::cln($price)."',
+				'".html::cln($cost)."', 
 				CURRENT_TIMESTAMP ,  '".html::cln($user_id)."',  '1'
 				);
 				";
@@ -145,7 +147,7 @@ class Products {
 	}
 
 	# UPDATE PRODUCTS
-	public static function updateProducts($Products_id, $name_short, $name_long, $description_long, $image_thumbnail, $image_small, $image_large, $comments, $brand_id=NULL, $vendor_id=NULL, $category_id=NULL, $status=NULL, $price=0) 
+	public static function updateProducts($Products_id, $name_short, $name_long, $description_long, $image_thumbnail, $image_small, $image_large, $comments, $brand_id=NULL, $vendor_id=NULL, $category_id=NULL, $status=NULL, $price=0, $cost=0) 
 	{
 		$sql = "UPDATE `products_items` SET  
 				`name_short` =  '".html::cln($name_short)."',
@@ -159,6 +161,7 @@ class Products {
 				`vendor_id` =  '".html::cln($vendor_id)."',
 				`status` =  '".html::cln($status)."',
 				`price` =  '".html::cln($price)."',
+				`cost` =  '".html::cln($cost)."',
 				`comments` =  '".html::cln($comments)."' WHERE  
 				`products_items`.`id` = ".html::cln($Products_id).";";
 		db::execute_query($sql);

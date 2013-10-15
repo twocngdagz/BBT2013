@@ -48,7 +48,8 @@ if(isset($gp["button"])) {
 												$gp['d']['brand_id'],
 												$gp['d']['vendor_id'],
 												$gp['d']['category_id'],
-												$gp['d']['price']);
+												$gp['d']['price'],
+												$gp['d']['cost']);
 											
 						html::alert("success", "Successfully Added new products", "Products Created");	
 				break;
@@ -95,7 +96,8 @@ if(isset($gp["button"])) {
 												$gp['d']['vendor_id'],
 												$gp['d']['category_id'],
 												$gp['d']['status'],
-												$gp['d']['price']);
+												$gp['d']['price'],
+												$gp['d']['cost']);
 					html::alert("success", "Successfully Updated products", "Products Updated");	
 				break;
 			endswitch;
