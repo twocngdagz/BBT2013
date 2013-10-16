@@ -35,11 +35,8 @@
 									<?php endforeach; ?>
 							
 							</select>
-							<div>
-								<button class="btn input-block-level span6" type="button">
-	  								Issue Full Refund
-	  							</button>
-	  						</div>
+							<div><small></small></div>
+							<input type="button" class="btn btn-success input-block-level" value="Issue Full Refund" id="fullrefund" name="fullrefund"/>
   							
 							<div><small>Shipping Method</small></div>
 							<input type="text" class="input-block-level span6" name="d[shippingmethod]" placeholder="" id="shippingmethod">
