@@ -159,6 +159,20 @@
 
 	<script type="text/javascript">
 		$(document).ready(function() {
+			var receipt_number = '';
+			$('#fullrefund').click(function(e) {
+				e.preventDefault();
+				console.log(receipt_number);
+				$.ajax({
+					type:'POST',
+					url:"core/view/grid/order_refund.php",
+					data:"id="+receipt_number,
+					success:function(data) {
+						console.log(data);
+					}
+				});
+			});
+
 			$('#myTab a').click(function (e) {
 				e.preventDefault();
 				$(this).tab('show');
@@ -211,10 +225,12 @@
 			//on click grid from product to product options
 			$('.flexOrders').click(function(event){       
 				$('.trSelected', this).each( function(){
+					receipt_number = $(this).find("td:nth-child(4)").text();
 					$.ajax({
 						type:'POST',
 						url:"core/view/grid/orders.php",
 						data:"id="+$(this).attr('id').substr(3),
+
 						success:function(data) {
 							$.each(data.rows, function (index, value) {
 								var options = $(".flexProductOptions").flexigrid(	{
@@ -244,6 +260,7 @@
 										name : 'price',
 										isdefault : false
 									}],
+									showCheckbox: true,
 									onDoubleClick: false,
 									multiSel: false,
 									sortname : "id",
