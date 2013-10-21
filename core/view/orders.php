@@ -36,7 +36,7 @@
 							
 							</select>
 							<div><small></small></div>
-							<input type="button" class="btn btn-success input-block-level" value="Issue Full Refund" id="fullrefund" name="fullrefund"/>
+							<input type="submit" class="btn btn-success input-block-level" value="Issue Full Refund" id="fullrefund" name="fullrefund"/>
   							
 							<div><small>Shipping Method</small></div>
 							<input type="text" class="input-block-level span6" name="d[shippingmethod]" placeholder="" id="shippingmethod">
@@ -137,6 +137,7 @@
 				<div class="modal-footer">
 					<input type="hidden" name="d[product_id]" value="" id="products-id"/>
 					<input type="hidden" name="d[axn]" value="create" id="action"/>
+					<input type="hidden" name="d[refund]" value="" id="refund" />
 					<input type="submit" class="btn btn-success" value="Add" id="submitter" name="button"/>
 					<input type="submit" class="btn btn-danger" value="Delete" id="delete" name="delete" style="display: none"/>
 				</div>
@@ -151,7 +152,12 @@
 				<table class="flexProductOptions"></table>
 			</div>
 			<div class="modal-footer">
-				<a href="#option_form"  data-toggle="tab" class="btn btn-success" data-toggle="modal">Create New Product Option</a>
+				<form action="./orders" method="post" enctype="multipart/form-data">
+					<input type="hidden" name="d[receipt_number]" value="" id="receipt_number" />
+					<input type="hidden" name="d[partialrefund]" value="" id="partialrefundvalue" />
+					<a href="#option_form"  data-toggle="tab" class="btn btn-success" data-toggle="modal">Create New Product Option</a>				
+					<input type="submit" class="btn btn-success " value="Refund Selected Items" id="partialrefund" name="partialrefund"/>
+				</form>
 			</div>
 		</div>		
 	</div>
@@ -160,17 +166,30 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			var receipt_number = '';
+			var ids = '';
 			$('#fullrefund').click(function(e) {
-				e.preventDefault();
-				console.log(receipt_number);
+				$('#refund').attr('value', receipt_number);
+				/*e.preventDefault();
 				$.ajax({
 					type:'POST',
 					url:"core/view/grid/order_refund.php",
 					data:"id="+receipt_number,
-					success:function(data) {
-						console.log(data);
+					success:function(value) {
+						console.log(value);
+					}
+				});*/
+			});
+
+			$('#partialrefund').click(function(e) {
+				ids = '';
+				$('.datacb').each(function() {
+					
+					if ($(this).is(':checked')) {
+						ids += $(this).attr('id')+ ",";
 					}
 				});
+				$('#partialrefundvalue').attr('value', ids);
+				$('#receipt_number').attr('value', receipt_number);
 			});
 
 			$('#myTab a').click(function (e) {

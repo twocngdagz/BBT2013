@@ -48,7 +48,7 @@ foreach($rows as $row){
 		'cell'=>array(
 			'id'=>$row['id'],
 			'order_fk'=>$row['order_fk'],
-			'product_items_fk'=>$row['product_items_fk'],
+			'product_items_fk'=>'<input id="'.$row['product_items_fk'].'" type="checkbox" value="false" class="datacb"/>'.' '.$row['product_items_fk'],
 			'product_name'=>'<a href="/products.php?id=' . $row['product_items_fk'] .'" target="_blank">'. $row['product_name'] .'</a>',
 			#'receipt'=>$row['payment_receipt_number'],
 			#'product_id'=>$product_id,

@@ -159,7 +159,7 @@
       <div class="pull-right">
         <div class="input-append" style="margin-top:15px;">
           <input class="span10" id="appendedInputButtons" type="text">
-          <button class="btn" type="button"><i class="icon-search"></i></button>
+          <button class="btn" type="button" onclick="document.location.href='/search.php?search=' + document.getElementById('appendedInputButtons').value;"><i class="icon-search"></i></button>
         </div>  
       </div>
     </div>

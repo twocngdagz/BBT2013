@@ -14,8 +14,9 @@
  */
 include_once 'pagination.php';
 
-class Products {
-	
+class Products
+{
+
 	public $pagination;
 	#GET TOTAL PRODUCTS BY CATEGORY ID
 	public static function getProductTotalCategory($category_id)
@@ -173,7 +174,63 @@ class Products {
 		$sql = "DELETE FROM `products_items` WHERE `products_items`.`id` = {$Products_id};";
 		db::execute_query($sql);
 	}
-	
-	
+
+	public static function searchAllProducts($search, $page = 1)
+	{
+
+		$searchSql = self::searchProductsSQL($search, $page);
+		db::execute_query($searchSql);
+		$d_arr = db::get_result();
+		$r = array();
+		foreach($d_arr as $d)
+		{
+			array_push($r, $d);
+		}
+		return $r;
+	}
+
+	public static function countSearchAllProducts($search)
+	{
+
+		$sqlCount = self::searchProductsSQL($search, NULL, TRUE);
+		db::execute_query($sqlCount);
+		$d_arr = db::get_result();
+		$r = array();
+		foreach($d_arr as $d)
+		{
+			array_push($r, $d);
+		}
+
+		return $r;
+	}
+
+	private function searchProductsSQL($search, $page = NULL, $count = FALSE)
+	{
+
+		$limit = '';
+		if($page != NULL)
+		{
+			$itemsPerPage = 30;
+			$startingPosition = ($page - 1) * $itemsPerPage;
+			$limit = "LIMIT $startingPosition, $itemsPerPage";
+		}
+		$select = 'SELECT * FROM `products_items`';
+		if($count !== FALSE)
+		{
+			$select = 'SELECT count(id) FROM `products_items`';
+		}
+		$sql = "$select
+                        WHERE `status` = 1
+                        AND 
+                        (
+                                `name_short` LIKE '%$search%'
+                                OR `name_long` LIKE '%$search%'
+                                OR `description_long` LIKE '%$search%'
+                        )
+			$limit
+                ";
+		return $sql;
+	}
+
 }
 ?>

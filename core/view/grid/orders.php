@@ -41,7 +41,7 @@ if ($id) $where = $where ." and `customer_orders`.`id` = $id";
 
 $sql = "SELECT  `customer_orders`.id ,`customer_orders`.`date`,`customer_orders`.payment_receipt_number,`customer_orders`.`status`,
 		CONCAT(  CAcc.`last_name` ,  ', ',  `CAcc`.`first_name` ) AS  `fullname` ,
-		SUM(  `COI`.`price` *  `COI`.`qty` ) AS  `total`,
+		(  `COI`.`price` *  `COI`.`qty` ) AS  `total`,
 		`customer_orders`.`status` AS  `order_status`, `CA`.zipcode, `CA`.billing_or_shipping
 		FROM  `customer_orders` 
 		LEFT OUTER JOIN `customer_account` as CAcc ON (  `customer_orders`.`cust_fk` =  `CAcc`.`id` ) 
