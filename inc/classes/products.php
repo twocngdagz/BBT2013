@@ -220,7 +220,7 @@ class Products
 			$select = 'SELECT count(id) FROM `products_items`';
 		}
 		$sql = "$select
-                        WHERE `status` = 1
+                        WHERE `status` > 0
                         AND 
                         (
                                 `name_short` LIKE '%$search%'

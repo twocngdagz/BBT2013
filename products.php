@@ -97,12 +97,20 @@ else
   <div style="color:red;font-size:32px;">
   		<b>$<?php html::p(number_format($row["price"],2,".",",")) ?></b>
   		<div style="float: right">
-		  <form action="./cart.php" method="post">
-		    <input type="hidden" name="item" value="<?php html::p($row["id"]) ?>"/>
+		<?php
+		//add to cart button
+		$addtoCartForm  = '<form action="./cart.php" method="post">
+		    <input type="hidden" name="item" value="' . $row["id"] . '"/>
 		    <div><input type="hidden" name="quantity" value="1" /></div>
 		    <input type="hidden" name="direction" value="fromCart"/>      
 		    <input type="submit" class="btn btn-info btn-medium" value="ADD TO CART"/>
-		  </form>
+		  </form>';
+		if($row['status'] == 1)
+		{
+			echo $addtoCartForm;	
+		}
+		
+		?>
 		</div>
   </div>
   <br>
@@ -119,12 +127,16 @@ else
     </div>
   </div>
   <br>
-  <form action="./cart.php" method="post">
-    <input type="hidden" name="item" value="<?php html::p($row["id"]) ?>"/>
-    <div><input type="hidden" name="quantity" value="1" /></div>
-    <input type="hidden" name="direction" value="fromCart"/>      
-    <input type="submit" class="btn btn-info btn-medium" value="ADD TO CART"/>
-  </form>
+	<?php
+	if($row['status'] == 1)
+	{
+		echo $addtoCartForm;
+	}
+	else 
+	{
+		echo 'Sorry, this product is currently not available for purchase.';
+	}
+	?>
 </div>
 <?php endforeach; ?>
 

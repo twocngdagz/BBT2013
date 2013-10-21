@@ -34,7 +34,7 @@ $sql 	= "SELECT `customer_order_items`.* FROM `customer_order_items` $where $sor
 $result = db::execute_query($sql);
 $rows 	= db::get_result();
 $total 	= countRec("`customer_order_items`.`id`","`customer_order_items` $where");
-
+echo $sql;
 header("Content-type: application/json");
 
 $jsonData = array('page'=>$page,'total'=>$total,'rows'=>array());

@@ -155,6 +155,7 @@
 				<form action="./orders" method="post" enctype="multipart/form-data">
 					<input type="hidden" name="d[receipt_number]" value="" id="receipt_number" />
 					<input type="hidden" name="d[partialrefund]" value="" id="partialrefundvalue" />
+					<input type="hidden" name="d[orderid]" value="" id="orderid" />
 					<a href="#option_form"  data-toggle="tab" class="btn btn-success" data-toggle="modal">Create New Product Option</a>				
 					<input type="submit" class="btn btn-success " value="Refund Selected Items" id="partialrefund" name="partialrefund"/>
 				</form>
@@ -167,6 +168,7 @@
 		$(document).ready(function() {
 			var receipt_number = '';
 			var ids = '';
+			var orderid = '';
 			$('#fullrefund').click(function(e) {
 				$('#refund').attr('value', receipt_number);
 				/*e.preventDefault();
@@ -190,6 +192,7 @@
 				});
 				$('#partialrefundvalue').attr('value', ids);
 				$('#receipt_number').attr('value', receipt_number);
+				$('#orderid').attr('value', orderid);
 			});
 
 			$('#myTab a').click(function (e) {
@@ -245,6 +248,7 @@
 			$('.flexOrders').click(function(event){       
 				$('.trSelected', this).each( function(){
 					receipt_number = $(this).find("td:nth-child(4)").text();
+					orderid = $(this).attr('id').substr(3);
 					$.ajax({
 						type:'POST',
 						url:"core/view/grid/orders.php",

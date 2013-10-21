@@ -28,14 +28,18 @@ if (isset($gp['fullrefund'])) {
 if (isset($gp['partialrefund'])) {
 	if (isset($gp['d']['receipt_number'])) {
 		if (isset($gp['d']['partialrefund'])) {
-			$total = 0;
-			$ids = explode(',', $gp['d']['partialrefund']);
-			foreach ($ids as $id) {
-				if (!(empty($id))) {
-					if ($id = '99999') {
-						$total += 19.99
-					} else {
-						
+			if (isset($gp['d']['orderid'])) {
+				$total = 0;
+				$ids = explode(',', $gp['d']['partialrefund']);
+				$receipt_number = $gp['d']['receipt_number'];
+				$orderid = $gp['d']['orderid'];
+				foreach ($ids as $id) {
+					if (!(empty($id))) {
+						if ($id = '99999') {
+							$total += 19.99;
+						} else {
+							
+						}
 					}
 				}
 			}

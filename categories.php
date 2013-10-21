@@ -42,6 +42,7 @@ echo $buffer;
 		$pagination = new Pagination($page, $per_page, $total_count);
 		$sql = "SELECT * FROM `products_items`
 		WHERE (`category_id` = '{$gp['id']}')
+		AND `status` = 1
 		LIMIT {$per_page}
 		OFFSET {$pagination->offset()}";
 		$products = products::getSQL($sql);

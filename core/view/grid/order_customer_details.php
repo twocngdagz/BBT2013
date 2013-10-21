@@ -34,6 +34,7 @@ $sql  = "SELECT
           AND `customer_addresses`.`active` = 1
           ";
 
+
 $result = db::execute_query($sql);
 $rows   = db::get_result();
 

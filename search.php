@@ -63,7 +63,10 @@ else
 		
 		
 		$pagintaionLinks = $previous . 'Page ' . $page . ' of ' . $numPages . $next;
-
+		if($numItems == 0)
+		{
+			$pagintaionLinks = '';
+		}
 		echo 'We found ' . $numItems . ' matches for "' . $searchTerms . '"<br>';
 		echo $pagintaionLinks;
 		echo '<table border="0">';
