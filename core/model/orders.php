@@ -22,6 +22,8 @@ if (isset($gp['fullrefund'])) {
 		if ($error == NULL) {
 			checkout::updateOrderStatus("Fully Refunded",$gp['d']['shippingmethod'],$gp['d']['shippingdate'],$gp['d']['trackingnumber'],$gp['d']['comment'], $gp['d']['product_id']);
 			html::alert("success", "Receipt Number " . $receipt, "Fully Refunded");
+		} else {
+			html::alert("error", $error, "Error");
 		}
 	}
 }
@@ -29,18 +31,58 @@ if (isset($gp['partialrefund'])) {
 	if (isset($gp['d']['receipt_number'])) {
 		if (isset($gp['d']['partialrefund'])) {
 			if (isset($gp['d']['orderid'])) {
+				$error = NULL;
 				$total = 0;
-				$ids = explode(',', $gp['d']['partialrefund']);
+				$ids = rtrim($gp['d']['partialrefund'],",");
+
 				$receipt_number = $gp['d']['receipt_number'];
 				$orderid = $gp['d']['orderid'];
-				foreach ($ids as $id) {
-					if (!(empty($id))) {
-						if ($id = '99999') {
-							$total += 19.99;
-						} else {
-							
-						}
+				$sql = "SELECT * from customer_order_items where order_fk = {$orderid} and product_items_fk in ($ids)";
+				$result = db::execute_query($sql);
+				$rows   = db::get_result();
+				$count_id = count(explode(",", $ids));
+				foreach($rows as $row){
+					$total += $row['price'];
+				}
+				try {
+					Stripe::setApiKey($secretKey);
+
+					$ch = Stripe_Charge::retrieve($receipt_number);
+					$ch->refund(array(
+			        'amount'   => $total * 100
+			        ));
+				} catch (Exception  $e) {
+					$error = $e->getMessage();
+				}
+				if ($error == NULL) {
+					foreach($rows as $row){
+						$sql = "Update customer_order_items set qty = 0 where order_fk = {$orderid} and 
+								product_items_fk = {$row['product_items_fk']}";
+						db::execute_query($sql);
 					}
+					$sql = "Select COUNT(*) from customer_order_items where order_fk = {$orderid}";
+					$result = db::execute_query($sql);
+					$count = db::get_result();
+					if ($count[0]['COUNT(*)'] == $count_id) {
+						$sql = "Update `customer_orders` SET
+			            `status` = 'Fully Refunded'
+			            WHERE `customer_orders`.`id`  = '$orderid'
+			            ";
+					} else {
+						$sql = "Update `customer_orders` SET
+			            `status` = 'Partially Refunded'
+			            WHERE `customer_orders`.`id`  = '$orderid'
+			            ";
+					}
+					if ($count[0]['COUNT(*)'] == $count_id) {
+						html::alert("success", "Receipt Number " . $receipt, "Fully Refunded");
+					} else {
+						html::alert("success", "Receipt Number " . $receipt_number, "Partially Refunded");
+					}
+					db::execute_query($sql);
+					
+				} else {
+					html::alert("error", $error, "Error");
 				}
 			}
 		}

@@ -34,21 +34,27 @@ $sql 	= "SELECT `customer_order_items`.* FROM `customer_order_items` $where $sor
 $result = db::execute_query($sql);
 $rows 	= db::get_result();
 $total 	= countRec("`customer_order_items`.`id`","`customer_order_items` $where");
-echo $sql;
+
 header("Content-type: application/json");
 
 $jsonData = array('page'=>$page,'total'=>$total,'rows'=>array());
+$inputdata = '';
 foreach($rows as $row){
 	#if(!empty($row['product_id'])) $product_id = $row['product_id']; else $product_id = "None";
 	
 	
 	#$product = products::getProducts($product_id);
-	
+	if ($row['qty'] == 0) {
+		$inputdata = $row['product_items_fk'];
+	} else {
+		$inputdata = '<input id="'.$row['product_items_fk'].'" type="checkbox" value="false" class="datacb"/>'.' '.$row['product_items_fk'];
+	}
+
 	$entry = array('id'=>$row['id'],
 		'cell'=>array(
 			'id'=>$row['id'],
 			'order_fk'=>$row['order_fk'],
-			'product_items_fk'=>'<input id="'.$row['product_items_fk'].'" type="checkbox" value="false" class="datacb"/>'.' '.$row['product_items_fk'],
+			'product_items_fk'=> $inputdata,
 			'product_name'=>'<a href="/products.php?id=' . $row['product_items_fk'] .'" target="_blank">'. $row['product_name'] .'</a>',
 			#'receipt'=>$row['payment_receipt_number'],
 			#'product_id'=>$product_id,
