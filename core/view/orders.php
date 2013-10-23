@@ -138,6 +138,7 @@
 					<input type="hidden" name="d[product_id]" value="" id="products-id"/>
 					<input type="hidden" name="d[axn]" value="create" id="action"/>
 					<input type="hidden" name="d[refund]" value="" id="refund" />
+					<input type="hidden" name="d[full_orderid]" value="" id="full_orderid" />
 					<input type="submit" class="btn btn-success" value="Add" id="submitter" name="button"/>
 					<input type="submit" class="btn btn-danger" value="Delete" id="delete" name="delete" style="display: none"/>
 				</div>
@@ -171,6 +172,7 @@
 			var orderid = '';
 			$('#fullrefund').click(function(e) {
 				$('#refund').attr('value', receipt_number);
+				$('#full_orderid').attr('value', orderid);
 				/*e.preventDefault();
 				$.ajax({
 					type:'POST',
