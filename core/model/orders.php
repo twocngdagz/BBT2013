@@ -80,7 +80,7 @@ if (isset($gp['partialrefund'])) {
 					$sql = "Update customer_orders SET comment='" . date("m/d/y") ." Partially refunded by " .$usename . 
 					", " . $items . "' where id = " . $orderid;
 					db::execute_query($sql);
-					echo $sql;
+
 					if ($count[0]['COUNT(*)'] == $count_id) {
 						$sql = "Update `customer_orders` SET
 			            `status` = 'Fully Refunded'
