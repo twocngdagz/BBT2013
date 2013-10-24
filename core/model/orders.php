@@ -29,8 +29,15 @@ if (isset($gp['fullrefund'])) {
 			if ($error == NULL) {
 				checkout::updateOrderStatus("Fully Refunded",$gp['d']['shippingmethod'],$gp['d']['shippingdate'],
 					$gp['d']['trackingnumber'],$gp['d']['comment'], $gp['d']['product_id']);
-				$sql = "Update customer_orders SET comment='" . date("m/d/y") ." Fully refunded by " .$usename . 
-					"' where id = " . $order_id;
+
+				$sql = "Select * from customer_orders where id = " . $order_id;
+				$result = db::execute_query($sql);
+				$comment_result = db::get_result();
+				$comment = $comment_result[0]['comment'];
+				$comment .= "\n" .date("m/d/y") ." Fully refunded by " .$usename;
+
+
+				$sql = "Update customer_orders SET comment='" . $comment . "' where id = " . $order_id;
 				db::execute_query($sql);
 				html::alert("success", "Receipt Number " . $receipt, "Fully Refunded");
 			} else {
@@ -74,12 +81,19 @@ if (isset($gp['partialrefund'])) {
 						db::execute_query($sql);
 						$items .= $row['product_items_fk'] . ", " . $row['product_name'] . " ";
 					}
+
+					$sql = "Select * from customer_orders where id = " . $orderid;
+					$result = db::execute_query($sql);
+					$comment_result = db::get_result();
+					$comment = $comment_result[0]['comment'];
+					$comment .= "\n" .date("m/d/y") ." Partially refunded by " .$usename . ", " . $items;
+
+					$sql = "Update customer_orders SET comment='" . $comment . "' where id = " . $orderid;
+					db::execute_query($sql);
+
 					$sql = "Select COUNT(*) from customer_order_items where order_fk = {$orderid}";
 					$result = db::execute_query($sql);
 					$count = db::get_result();
-					$sql = "Update customer_orders SET comment='" . date("m/d/y") ." Partially refunded by " .$usename . 
-					", " . $items . "' where id = " . $orderid;
-					db::execute_query($sql);
 
 					if ($count[0]['COUNT(*)'] == $count_id) {
 						$sql = "Update `customer_orders` SET
