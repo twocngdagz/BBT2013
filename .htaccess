@@ -23,6 +23,8 @@ RewriteCond %{REQUEST_URI} !checkout
 RewriteCond %{HTTP_HOST} ^(www\.)?(.*)$ [NC]
 RewriteRule ^(.*)$ http://www.%2/$1 [R=301,L,QSA]
 
+
+
 #RewriteRule ^log.asp$ log.php
 RewriteRule ^(login)$ index.php?p1=$1
 RewriteRule ^(dashboard)$ index.php?p1=$1
@@ -39,7 +41,6 @@ RewriteRule ^(lamps)$ categories.php?id=$1
 RewriteRule ^(about-us)$ about-us.php
 RewriteRule ^(contact-us)$ customerservice.php
 RewriteRule ^(cart)$ cart.php
-#RewriteRule ^([A-z0-9]+)$ index.php?p1=$1
 #RewriteRule ^([A-z0-9]+)/$ index.php?p1=$1
 
 
