@@ -1,7 +1,10 @@
+<?php include('../mchn.config.php'); 
+	include (MCHN_DIR_HTML . 'html.header.php');
+?>
 
 <div class="row-fluid">
 	<div class="span3">
-	<?php include('sidebar.php'); ?>
+	<?php include('../sidebar.php'); ?>
 	</div>
 	<div class="span9">
 		<div class="page-head">
@@ -152,3 +155,4 @@
 		})
 	});
 </script>
+<?php include (MCHN_DIR_HTML . 'html.footer.php'); ?>

@@ -24,13 +24,23 @@ RewriteCond %{HTTP_HOST} ^(www\.)?(.*)$ [NC]
 RewriteRule ^(.*)$ http://www.%2/$1 [R=301,L,QSA]
 
 #RewriteRule ^log.asp$ log.php
-#RewriteRule ^login$ index.php?p1=$1
+RewriteRule ^(login)$ index.php?p1=$1
+RewriteRule ^(dashboard)$ index.php?p1=$1
+RewriteRule ^(users)$ index.php?p1=$1
+RewriteRule ^(brands)$ index.php?p1=$1
+RewriteRule ^(logout)$ index.php?p1=$1
+RewriteRule ^(vendors)$ index.php?p1=$1
+RewriteRule ^(category)$ index.php?p1=$1
+RewriteRule ^(products)$ index.php?p1=$1
+RewriteRule ^(orders)$ index.php?p1=$1
+RewriteRule ^(customers)$ index.php?p1=$1
 RewriteRule ^(affiliates)$ affiliates/index.php
+RewriteRule ^(lamps)$ categories.php?id=$1
 RewriteRule ^(about-us)$ about-us.php
 RewriteRule ^(contact-us)$ customerservice.php
 RewriteRule ^(cart)$ cart.php
-RewriteRule ^([A-z0-9]+)$ index.php?p1=$1
-RewriteRule ^([A-z0-9]+)/$ index.php?p1=$1
+#RewriteRule ^([A-z0-9]+)$ index.php?p1=$1
+#RewriteRule ^([A-z0-9]+)/$ index.php?p1=$1
 
 
 

@@ -9,6 +9,7 @@
         <li><a href="<?php html::p(MCHN_ROOT) ?>">Home</a></li>
         <li><a href="<?php echo MCHN_ROOT ?>about-us">About</a></li>
         <li><a href="<?php echo MCHN_ROOT ?>contact-us">Contact Us</a></li>
+        <li><a href="http://www.babybeddingtown.com/content/">Tips & Articles</a></li>
         <li><a href="<?php echo MCHN_ROOT ?>cart">Cart</a></li>
         <li><a href="<?php echo MCHN_ROOT ?>affiliates/">Affiliates</a></li>
         <?php if(!empty($s['user_id'])): ?>
