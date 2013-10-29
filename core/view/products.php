@@ -3,6 +3,9 @@
 	<table class="flexProducts"></table>
 	<div class="clear"><br /></div>
     <a href="#modal-create-products" role="button" class="btn btn-success" data-toggle="modal">Create New Product</a>
+    <form action="core/view/grid/export_product.php" method="post">
+    	<button type="submit" class="btn btn-success" id="btnCSV">Download CSV</button>
+    </form>
 </div>
 
 <div class="modal hide fade" id="modal-create-products" data-width="900">
