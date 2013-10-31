@@ -10,9 +10,9 @@ FORMAT(price,2),
 `products_items`.`image_thumbnail`,
 FORMAT((price*0.1)+price,2),
 '11',
-'94',
+'',
 `products_items`.`description_long`,
-'instock'
+'instock',
 '30099'
 FROM
 products_items
