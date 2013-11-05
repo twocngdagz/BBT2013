@@ -1,37 +1,90 @@
 <?php
-function fputcsv2 ($fh, array $fields, $delimiter = ',', $enclosure = '"', $mysql_null = false) { 
-    $delimiter_esc = preg_quote($delimiter, '/'); 
-    $enclosure_esc = preg_quote($enclosure, '/'); 
-
-    $output = array(); 
-    foreach ($fields as $field) { 
-        if ($field === null && $mysql_null) { 
-            $output[] = 'NULL'; 
-            continue; 
-        } 
-
-        $output[] = preg_match("/(?:${delimiter_esc}|${enclosure_esc}|\s)/", $field) ? ( 
-            $enclosure . str_replace($enclosure, $enclosure . $enclosure, $field) . $enclosure 
-        ) : $field; 
-    } 
-
-    fwrite($fh, join($delimiter, $output) . "\n"); 
-} 
 include_once('../../../mchn.config.php');
+
+function cleanData(&$str)  {
+  $str = preg_replace("/\t/", "", $str);
+  $str = preg_replace("/<.*?>/", " ", $str);
+  $str = preg_replace("/<\/.*?>/", " ", $str);
+  $str = preg_replace("/\n/", "", $str);
+  $str = preg_replace("/\r\n/", "", $str);
+  $str = preg_replace("/\r?\n/", "", $str);
+  $str = preg_replace("/\r/", "", $str);
+  $str = preg_replace("//", "", $str);
+  $str = preg_replace("/ the /", "", $str);
+  $str = preg_replace("/ is /", "", $str);
+  $str = preg_replace("/ and /", "", $str);
+  $str = preg_replace("/ are /", "", $str);
+  $str = preg_replace("/ At /", "", $str);
+  $str = preg_replace("/ & /", "", $str);
+  $str = preg_replace("/ - /", "", $str);
+  $str = preg_replace("/\(|\)/","",$str);
+  $str = preg_replace("/100%/","",$str);
+  $str = trim($str, "(");
+  $str = trim($str, ")");
+  $str = trim($str, ";");
+  $str = trim($str, ","); 
+  $str = trim($str, "   ");
+  $str = trim($str, "&nbsp;");
+  $str = trim($str, "&mdash;");
+  return ($str);
+}
+
+function getSearchTerm($data) {
+  $clean_data = cleanData($data);
+  $data_arr = explode(" ", $clean_data);
+  return implode(",", $data_arr);
+}
+
 $sql = "SELECT
-CONCAT('\"',CONCAT(`products_items`.`id`,'\"')),
-CONCAT('\"',CONCAT(`products_items`.`name_short`,'\"')),
-CONCAT('\"',CONCAT(CONCAT('http://www.babybeddingtown.com\/products.php?id=',`products_items`.`id`),'\"')),
-CONCAT('\"',CONCAT(FORMAT(cost,2),'\"')),
-CONCAT('\"',CONCAT(FORMAT(price,2),'\"')),
-CONCAT('\"',CONCAT(`products_items`.`image_large`,'\"')),
-CONCAT('\"',CONCAT(`products_items`.`image_thumbnail`,'\"')),
-CONCAT('\"',CONCAT(FORMAT((price*0.1)+price,2),'\"')),
-'\"11\"',
-'\"\"',
-CONCAT('\"',CONCAT(`products_items`.`description_long`,'\"')),
-'\"instock\"',
-'\"30099\"'
+CONCAT('\"',CONCAT(`products_items`.`id`,'\"')) as SKU,
+CONCAT('\"',CONCAT(`products_items`.`name_short`,'\"')) as Name,
+CONCAT('\"',CONCAT(CONCAT('http://www.babybeddingtown.com\/products.php?id=',`products_items`.`id`),'\"')) as URL,
+CONCAT('\"',CONCAT(FORMAT(cost,2),'\"')) as Price,
+CONCAT('\"',CONCAT(FORMAT(price,2),'\"')) as RetailPrice,
+CONCAT('\"',CONCAT(`products_items`.`image_large`,'\"')) as FullImage,
+CONCAT('\"',CONCAT(`products_items`.`image_thumbnail`,'\"')) as ThumbnailImage,
+CONCAT('\"',CONCAT(FORMAT((price*0.1)+price,2),'\"')) as Commission,
+'\"11\"' as Category,
+'\"\"' as Subcategory,
+CONCAT('\"',CONCAT(`products_items`.`description_long`,'\"')) as Description,
+CONCAT(CONCAT('\"',`products_items`.`name_long`),'\"') as SearchTerms,
+'\"instock\"' as Status,
+'\"30099\"' as MerchantID,
+'\"\"' as Custom1,
+'\"\"' as Custom2,
+'\"\"' as Custom3,
+'\"\"' as Custom4,
+'\"\"' as Custom5,
+'\"\"' as Manufacturer,
+'\"\"' as PartNumber,
+CONCAT('\"',CONCAT(`category`.`name_short`,'\"')) as MerchantCategory,
+'\"\"' as MerchantSubcategory,
+'\"\"' as ShortDescription,
+'\"\"' as ISBN,
+'\"\"' as UPC,
+'\"\"' as CrossSell,
+'\"\"' as MerchantGroup,
+'\"\"' as MerchantSubgroup,
+'\"\"' as CompatibleWith,
+'\"\"' as CompareTo,
+'\"\"' as QuantityDiscount,
+'\"\"' as Bestseller,
+'\"\"' as ReviewRSSURL,
+'\"\"' as Option1,
+'\"\"' as Option2,
+'\"\"' as Option3,
+'\"\"' as Option4,
+'\"\"' as Option5,
+'\"\"' as customCommissions,
+'\"\"' as customCommissionIsFlatRate,
+'\"\"' as customCommissionNewCustomerMultiplier,
+'\"\"' as mobileURL,
+'\"\"' as moileImage,
+'\"\"' as mobileThumbnail,
+'\"\"' as ReservedForFutureUse,
+'\"\"' as ReservedForFutureUse,
+'\"\"' as ReservedForFutureUse,
+'\"\"' as ReservedForFutureUse
 FROM
 products_items
 LEFT JOIN category ON `category`.`id` = `products_items`.`category_id`
@@ -39,16 +92,19 @@ WHERE `products_items`.`status` = 1";
 $values = array();
 $result = db::execute_query($sql);
 $rows 	= db::get_result();
-$f = fopen('php://memory', 'w');
+$f = fopen('php://output', 'a');
 $str = "";
+$header = '"SKU","Name","URL to product","Price","Retail Price","URL to image","URL to thumbnail image","Commission","Category","SubCategory","Description","SearchTerms","Status","Your MerchantID","Custom 1","Custom 2","Custom 3","Custom 4","Custom 5","Manufacturer","PartNumber","MerchantCategory","MerchantSubcategory","ShortDescription","ISBN","UPC","CrossSell","MerchantGroup","MerchantSubgroup","CompatibleWith","CompareTo","QuantityDiscount","Bestseller","AddToCartURL","ReviewsRSSURL","Option1","Option2","Option3","Option4","Option5","customCommissions","customCommissionIsFlatRate","customCommissionNewCustomerMultiplier","mobileURL","mobileImage","mobileThumbnail","ReservedForFutureUse","ReservedForFutureUse","ReservedForFutureUse","ReservedForFutureUse"' . "\n";
+fwrite($f, $header);
 foreach ($rows as $row) {
+  $row['SearchTerms'] = getSearchTerm($row['SearchTerms']);
 	$str = trim(implode(",",$row),"\t");
+  //getSearchTerm(trim($row['Name'],'"'). " " .trim($row['Description'],'"'));
 	$str .= "\n";
   fwrite($f, $str);
-	//fputcsv2($f, array_values($row));
 }
 fseek($f, 0);
 header('Content-Type: application/csv');
-header('Content-Disposition: attachement; filename="'."sample.csv".'"');
+header('Content-Disposition: attachement; filename="'."datafeed-file.csv".'"');
 fpassthru($f);
 ?>
