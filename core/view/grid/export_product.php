@@ -3,7 +3,7 @@ include_once('../../../mchn.config.php');
 
 function cleanData(&$str)  {
   $str = preg_replace("/\t/", "", $str);
-  $str = preg_replace("/<.*?>/", " ", $str);
+  $str = preg_replace("/<.*>/", " ", $str);
   $str = preg_replace("/<\/.*?>/", " ", $str);
   $str = preg_replace("/\n/", "", $str);
   $str = preg_replace("/\r\n/", "", $str);
@@ -92,12 +92,20 @@ WHERE `products_items`.`status` = 1";
 $values = array();
 $result = db::execute_query($sql);
 $rows 	= db::get_result();
-$f = fopen('php://output', 'a');
+$f = fopen('php://memory', 'w');
 $str = "";
-$header = '"SKU","Name","URL to product","Price","Retail Price","URL to image","URL to thumbnail image","Commission","Category","SubCategory","Description","SearchTerms","Status","Your MerchantID","Custom 1","Custom 2","Custom 3","Custom 4","Custom 5","Manufacturer","PartNumber","MerchantCategory","MerchantSubcategory","ShortDescription","ISBN","UPC","CrossSell","MerchantGroup","MerchantSubgroup","CompatibleWith","CompareTo","QuantityDiscount","Bestseller","AddToCartURL","ReviewsRSSURL","Option1","Option2","Option3","Option4","Option5","customCommissions","customCommissionIsFlatRate","customCommissionNewCustomerMultiplier","mobileURL","mobileImage","mobileThumbnail","ReservedForFutureUse","ReservedForFutureUse","ReservedForFutureUse","ReservedForFutureUse"' . "\n";
+$header = '"SKU","Name","URL","Price","Retail Price","FullImage","ThumbnailImage","Commission","Category","SubCategory","Description","SearchTerms","Status","MerchantID","Custom1","Custom2","Custom3","Custom ","Custom5","Manufacturer","PartNumber","MerchantCategory","MerchantSubcategory","ShortDescription","ISBN","UPC","CrossSell","MerchantGroup","MerchantSubgroup","CompatibleWith","CompareTo","QuantityDiscount","Bestseller","AddToCartURL","ReviewsRSSURL","Option1","Option2","Option3","Option4","Option5","customCommissions","customCommissionIsFlatRate","customCommissionNewCustomerMultiplier","mobileURL","mobileImage","mobileThumbnail","ReservedForFutureUse","ReservedForFutureUse","ReservedForFutureUse","ReservedForFutureUse"' . "\n";
 fwrite($f, $header);
 foreach ($rows as $row) {
   $row['SearchTerms'] = getSearchTerm($row['SearchTerms']);
+  if (substr_count($row['Description'], "<xml>")) {
+    $row['Description'] = "";
+  } else {
+    $row['Description'] = str_replace(array('<p>','</p>','<u>','<strong>','&#160;','</strong>','</u>',','), "", $row['Description']);
+    $row['Description'] = preg_replace("/<.*?>/", "", $row['Description']);
+    $row['Description'] = trim($row['Description']);
+    $row['Description'] = preg_replace('/"+/', '""', $row['Description']);
+  } 
 	$str = trim(implode(",",$row),"\t");
   //getSearchTerm(trim($row['Name'],'"'). " " .trim($row['Description'],'"'));
 	$str .= "\n";
