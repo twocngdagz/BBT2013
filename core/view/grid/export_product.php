@@ -101,10 +101,11 @@ foreach ($rows as $row) {
   if (substr_count($row['Description'], "<xml>")) {
     $row['Description'] = "";
   } else {
-    $row['Description'] = str_replace(array('<p>','</p>','<u>','<strong>','&#160;','</strong>','</u>',','), "", $row['Description']);
+    $row['Description'] = str_replace(array('<p>','</p>','<u>','<strong>','&#160;','</strong>','</u>',',','\n','<br>', '<br/>', '<br />','<BR>','\r'), "", $row['Description']);
     $row['Description'] = preg_replace("/<.*?>/", "", $row['Description']);
     $row['Description'] = trim($row['Description']);
     $row['Description'] = preg_replace('/"+/', '""', $row['Description']);
+    $row['Description'] = preg_replace('/<BR>/', '', $row['Description']);
   } 
 	$str = trim(implode(",",$row),"\t");
   //getSearchTerm(trim($row['Name'],'"'). " " .trim($row['Description'],'"'));
