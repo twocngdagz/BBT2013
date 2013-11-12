@@ -9,16 +9,45 @@ function cleanData(&$str)  {
   $str = preg_replace("/\r\n/", "", $str);
   $str = preg_replace("/\r?\n/", "", $str);
   $str = preg_replace("/\r/", "", $str);
+  $str = preg_replace("/[0-9]/", "", $str);
   $str = preg_replace("//", "", $str);
-  $str = preg_replace("/ the /", "", $str);
-  $str = preg_replace("/ is /", "", $str);
-  $str = preg_replace("/ and /", "", $str);
-  $str = preg_replace("/ are /", "", $str);
-  $str = preg_replace("/ At /", "", $str);
-  $str = preg_replace("/ & /", "", $str);
-  $str = preg_replace("/ - /", "", $str);
-  $str = preg_replace("/\(|\)/","",$str);
-  $str = preg_replace("/100%/","",$str);
+  $str = preg_replace("/ [T|t]hese /", " ", $str);
+  $str = preg_replace("/ [T|t]his /", " ", $str);
+  $str = preg_replace("/ [T|t]hat /", " ", $str);
+  $str = preg_replace("/ bring /", " ", $str);
+  $str = preg_replace("/ enter /", " ", $str);
+  $str = preg_replace("/ comes /", " ", $str);
+  $str = preg_replace("/ into /", " ", $str);
+  $str = preg_replace("/ with /", " ", $str);
+  $str = preg_replace("/ from /", " ", $str);
+  $str = preg_replace("/ and /", " ", $str);
+  $str = preg_replace("/ your /", " ", $str);
+  $str = preg_replace("/ will /", " ", $str);
+  $str = preg_replace("/ who /", " ", $str);
+  $str = preg_replace("/ are /", " ", $str);
+  $str = preg_replace("/ or /", " ", $str);
+  $str = preg_replace("/ on /", " ", $str);
+  $str = preg_replace("/ but /", " ", $str);
+  $str = preg_replace("/ no /", " ", $str);
+  $str = preg_replace("/ yet /", " ", $str);
+  $str = preg_replace("/ for /", " ", $str);
+  $str = preg_replace("/ you /", " ", $str);
+  $str = preg_replace("/ [T|t]he /", " ", $str);
+  $str = preg_replace("/ of /", " ", $str);
+  $str = preg_replace("/ [a|A] /", "", $str);
+  $str = preg_replace("/ in /", " ", $str);
+  $str = preg_replace("/ by /", " ", $str);
+  $str = preg_replace("/ can /", " ", $str);
+  $str = preg_replace("/ to /", " ", $str);
+  $str = preg_replace("/ is /", " ", $str);
+  $str = preg_replace("/ an /", " ", $str);
+  $str = preg_replace("/ as /", " ", $str);
+  $str = preg_replace("/ be /", " ", $str);
+  $str = preg_replace("/ At /", " ", $str);
+  $str = preg_replace("/ & /", " ", $str);
+  $str = preg_replace("/ - /", " ", $str);
+  $str = preg_replace("/\(|\)/"," ",$str);
+  $str = preg_replace("/100%/"," ",$str);
   $str = trim($str, "(");
   $str = trim($str, ")");
   $str = trim($str, ";");
@@ -32,7 +61,16 @@ function cleanData(&$str)  {
 function getSearchTerm($data) {
   $clean_data = cleanData($data);
   $data_arr = explode(" ", $clean_data);
-  return implode(",", $data_arr);
+  $clean_data = implode(",", $data_arr);
+  if (strlen($clean_data) > 255) {
+    if (substr($clean_data, 255,1) == ",") {
+      $clean_data = substr($clean_data, 0, 254);
+    } else {
+      $pos = strrpos(substr($clean_data, 0, 254), ",");
+      $clean_data = substr($clean_data, 0, $pos-1);
+    }
+  }
+  return '"'.$clean_data.'"';
 }
 
 $sql = "SELECT
@@ -97,7 +135,6 @@ $str = "";
 $header = '"SKU","Name","URL","Price","Retail Price","FullImage","ThumbnailImage","Commission","Category","SubCategory","Description","SearchTerms","Status","MerchantID","Custom1","Custom2","Custom3","Custom ","Custom5","Manufacturer","PartNumber","MerchantCategory","MerchantSubcategory","ShortDescription","ISBN","UPC","CrossSell","MerchantGroup","MerchantSubgroup","CompatibleWith","CompareTo","QuantityDiscount","Bestseller","AddToCartURL","ReviewsRSSURL","Option1","Option2","Option3","Option4","Option5","customCommissions","customCommissionIsFlatRate","customCommissionNewCustomerMultiplier","mobileURL","mobileImage","mobileThumbnail","ReservedForFutureUse","ReservedForFutureUse","ReservedForFutureUse","ReservedForFutureUse"' . "\n";
 fwrite($f, $header);
 foreach ($rows as $row) {
-  $row['SearchTerms'] = getSearchTerm($row['SearchTerms']);
   if (substr_count($row['Description'], "<xml>")) {
     $row['Description'] = "";
   } else {
@@ -106,10 +143,11 @@ foreach ($rows as $row) {
     $row['Description'] = str_replace(array('<p>','</p>','<u>','<strong>','&#160;','</strong>','</u>',',','.'), "", $row['Description']);
     $row['Description'] = preg_replace("/<.*?>/", "", $row['Description']);
     $row['Description'] = preg_replace("/[^ \w]/", "", $row['Description']);
-    $row['Description'] = preg_replace('/"+/', '""', $row['Description']);
-  } 
+    $row['Description'] = preg_replace('/"/', '""', $row['Description']);
+    $row['Description'] = trim($row['Description']);
+  }
+  $row['SearchTerms'] = getSearchTerm(preg_replace('/"/',"",$row['SearchTerms']) ." ". preg_replace('/"/',"",$row['Description'])); 
 	$str = trim(implode(",",$row),"\t");
-  //getSearchTerm(trim($row['Name'],'"'). " " .trim($row['Description'],'"'));
 	$str .= "\n";
   fwrite($f, $str);
 }
