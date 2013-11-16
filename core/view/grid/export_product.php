@@ -77,11 +77,11 @@ $sql = "SELECT
 CONCAT('\"',CONCAT(`products_items`.`id`,'\"')) as SKU,
 CONCAT('\"',CONCAT(`products_items`.`name_short`,'\"')) as Name,
 CONCAT('\"',CONCAT(CONCAT('http://www.babybeddingtown.com\/products.php?id=',`products_items`.`id`),'\"')) as URL,
-CONCAT('\"',CONCAT(FORMAT(cost,2),'\"')) as Price,
-CONCAT('\"',CONCAT(FORMAT(price,2),'\"')) as RetailPrice,
+CONCAT('\"',CONCAT(FORMAT(price,2),'\"')) as Price,
+CONCAT('\"',CONCAT(FORMAT(cost,2),'\"')) as RetailPrice,
 CONCAT('\"',CONCAT(`products_items`.`image_large`,'\"')) as FullImage,
 CONCAT('\"',CONCAT(`products_items`.`image_thumbnail`,'\"')) as ThumbnailImage,
-CONCAT('\"',CONCAT(FORMAT((price*0.1)+price,2),'\"')) as Commission,
+CONCAT('\"',CONCAT(FORMAT((price*0.1),2),'\"')) as Commission,
 '\"11\"' as Category,
 '\"\"' as Subcategory,
 CONCAT('\"',CONCAT(`products_items`.`description_long`,'\"')) as Description,
@@ -132,9 +132,12 @@ $result = db::execute_query($sql);
 $rows 	= db::get_result();
 $f = fopen('php://memory', 'w');
 $str = "";
-$header = '"SKU","Name","URL","Price","Retail Price","FullImage","ThumbnailImage","Commission","Category","SubCategory","Description","SearchTerms","Status","MerchantID","Custom1","Custom2","Custom3","Custom ","Custom5","Manufacturer","PartNumber","MerchantCategory","MerchantSubcategory","ShortDescription","ISBN","UPC","CrossSell","MerchantGroup","MerchantSubgroup","CompatibleWith","CompareTo","QuantityDiscount","Bestseller","AddToCartURL","ReviewsRSSURL","Option1","Option2","Option3","Option4","Option5","customCommissions","customCommissionIsFlatRate","customCommissionNewCustomerMultiplier","mobileURL","mobileImage","mobileThumbnail","ReservedForFutureUse","ReservedForFutureUse","ReservedForFutureUse","ReservedForFutureUse"' . "\n";
+$header = 'SKU,"Name","URL","Price","Retail Price","FullImage","ThumbnailImage","Commission","Category","SubCategory","Description","SearchTerms","Status","MerchantID","Custom1","Custom2","Custom3","Custom ","Custom5","Manufacturer","PartNumber","MerchantCategory","MerchantSubcategory","ShortDescription","ISBN","UPC","CrossSell","MerchantGroup","MerchantSubgroup","CompatibleWith","CompareTo","QuantityDiscount","Bestseller","AddToCartURL","ReviewsRSSURL","Option1","Option2","Option3","Option4","Option5","customCommissions","customCommissionIsFlatRate","customCommissionNewCustomerMultiplier","mobileURL","mobileImage","mobileThumbnail","ReservedForFutureUse","ReservedForFutureUse","ReservedForFutureUse","ReservedForFutureUse"' . "\n";
 fwrite($f, $header);
 foreach ($rows as $row) {
+  if ($row['MerchantCategory'] == '"missing"') {
+    $row['MerchantCategory'] = "";
+  }
   if (substr_count($row['Description'], "<xml>")) {
     $row['Description'] = "";
   } else {

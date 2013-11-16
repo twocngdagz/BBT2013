@@ -2,7 +2,7 @@
 	include ('mchn.config.php');
 
 	$htmls='';
-	$htmls.='<div id="navigation" style=>';
+	$htmls.='<div id="navigation" style=>'."\n";
 	
 	$parentCategory = category::getCategoryitems(NULL,1);
 	
@@ -10,31 +10,33 @@
 		if($row['parent_id'] == 0){
 		
 		}else if($row['name_short'] === "Default Category"){
-			$htmls.='<h5><a href="./'.$row['url'].'">Top Sellers</a></h5>';
+			$htmls.='<h5><a href="<?php echo MCHN_ROOT;?>'.$row['url'].'">Top Sellers</a></h5>'."\n";
 		}else{
-			$htmls.='<h5><a href="./'.$row['url'].'">'.$row['name_short'].'</a></h5>';
+			$htmls.='<h5><a href="<?php echo MCHN_ROOT;?>'.$row['url'].'">'.$row['name_short'].'</a></h5>'."\n";
 		}
-		$htmls.='<ul style="list-style: none;margin-left: 10px;">';
+		
 
 		$subCategory = category::getCategoryitems(NULL,1,$row['id']);
-		foreach ($subCategory as $row) {
-			$count = products::getProductTotalCategory($row['id']); 
-			$count = $count[0]['COUNT(*)'];
+		if($subCategory) {
+			$htmls.='<ul style="list-style: none;margin-left: 10px;">'."\n";
+			foreach ($subCategory as $row) {
+			
+				$count = products::getProductTotalCategory($row['id']); 
+				$count = $count[0]['COUNT(*)'];
 
-			if ($count == 0){
-
-			}else{
-				$htmls.='<li><a href="./'.$row['url'].'">'.$row['name_short'].'</a></li>';
+				if ($count > 0){
+					$htmls.='<li><a href="<?php echo MCHN_ROOT;?>'.$row['url'].'">'.$row['name_short'].'</a></li>'."\n";
+				}
 			}
-		}
-		$htmls.='</ul>';
+			$htmls.='</ul>'."\n";
+		}	
 	}
 	
-	$htmls.='</div>';
+	$htmls.='</div>'."\n";
 	
-		if($handle=fopen('side_testing.txt', 'a')) {
-			fwrite($handle, $htmls);
-			fclose($handle);
-		}	
+	if($handle=fopen('side_testing.txt', 'a')) {
+		fwrite($handle, $htmls);
+		fclose($handle);
+	}	
 		
 ?>
