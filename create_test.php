@@ -19,13 +19,17 @@
 		$subCategory = category::getCategoryitems(NULL,1,$row['id']);
 		if($subCategory) {
 			$htmls.='<ul style="list-style: none;margin-left: 10px;">'."\n";
-			foreach ($subCategory as $row) {
+			foreach ($subCategory as $subrow) {
 			
-				$count = products::getProductTotalCategory($row['id']); 
+				$count = products::getProductTotalCategory($subrow['id']); 
 				$count = $count[0]['COUNT(*)'];
 
 				if ($count > 0){
-					$htmls.='<li><a href="<?php echo MCHN_ROOT;?>'.$row['url'].'">'.$row['name_short'].'</a></li>'."\n";
+					if ($row['url'] == "default-category") {
+						$htmls.='<li><a href="<?php echo MCHN_ROOT;?>'.$subrow['url'].'">'.$subrow['name_short'].'</a></li>'."\n";
+					} else {
+						$htmls.='<li><a href="<?php echo MCHN_ROOT;?>'.$row['url'].'/'.$subrow['url'].'">'.$subrow['name_short'].'</a></li>'."\n";
+					}
 				}
 			}
 			$htmls.='</ul>'."\n";

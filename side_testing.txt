@@ -25,19 +25,19 @@
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>baby-bedding">Baby Bedding</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>baby-girl-bedding-sets">Baby Girl Bedding</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>baby-boy-bedding-sets">Baby Boy Bedding</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>nursery-rhyme-themes">Baby Bedding Themes</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>cradle-bedding">Cradle Bedding</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>portacrib-bedding">Porta Crib Bedding</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>toddler-bedding">Toddler Bedding</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>crib-bedding-sheets">Crib Bedding</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>mattresses">Mattresses</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>baby-organic-bedding">Baby Organic Bedding</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>designer-baby-bedding">Baby Bedding Brands</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>baby-sheets">Baby Sheets</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>crib-sheets">Crib Sheets</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>toddler-dust-ruffles">Toddler Dust Ruffles</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-bedding/baby-girl-bedding-sets">Baby Girl Bedding</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-bedding/baby-boy-bedding-sets">Baby Boy Bedding</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-bedding/nursery-rhyme-themes">Baby Bedding Themes</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-bedding/cradle-bedding">Cradle Bedding</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-bedding/portacrib-bedding">Porta Crib Bedding</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-bedding/toddler-bedding">Toddler Bedding</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-bedding/crib-bedding-sheets">Crib Bedding</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-bedding/mattresses">Mattresses</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-bedding/baby-organic-bedding">Baby Organic Bedding</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-bedding/designer-baby-bedding">Baby Bedding Brands</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-bedding/baby-sheets">Baby Sheets</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-bedding/crib-sheets">Crib Sheets</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-bedding/toddler-dust-ruffles">Toddler Dust Ruffles</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>harbor-town-furniture-by-stanley">Harbor Town</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>california-kids-baby-bedding">California Kids</a></h5>
@@ -54,18 +54,18 @@
 <h5><a href="<?php echo MCHN_ROOT;?>brandee-danielle-baby">Brandee Danielle</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>baby-furniture">Baby Furniture</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>baby-cribs">Cribs</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>changing-table">Changing Table</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>cradles">Cradles</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>moses-baskets">Moses Baskets</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>portacribs-playards">Portacribs & Playards</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>bouncers-walkers">Bouncers & Walkers</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>designer-baby-furniture">Baby Furniture Brands</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-furniture/baby-cribs">Cribs</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-furniture/changing-table">Changing Table</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-furniture/cradles">Cradles</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-furniture/moses-baskets">Moses Baskets</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-furniture/portacribs-playards">Portacribs & Playards</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-furniture/bouncers-walkers">Bouncers & Walkers</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-furniture/designer-baby-furniture">Baby Furniture Brands</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>baby-cribs">Cribs</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>metal-artisan-cribs">Metal Artisan Cribs</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>crib-2-college">Crib-2-College</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-cribs/metal-artisan-cribs">Metal Artisan Cribs</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-cribs/crib-2-college">Crib-2-College</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>changing-table">Changing Table</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>baby-boy-bedding-sets">Baby Boy Bedding</a></h5>
@@ -81,9 +81,9 @@
 <h5><a href="<?php echo MCHN_ROOT;?>cradles">Cradles</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>carseats">Carseats</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>booster-seats">Booster Seats</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>carseats-4-babys">Infant Carseats</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>car-seat-accessories">Carseat Accessories</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>carseats/booster-seats">Booster Seats</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>carseats/carseats-4-babys">Infant Carseats</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>carseats/car-seat-accessories">Carseat Accessories</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>planes-trains-auto">Planes Trains & Auto</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>teddy-bears">Teddy Bears</a></h5>
@@ -91,15 +91,15 @@
 <h5><a href="<?php echo MCHN_ROOT;?>snoopy">Snoopy</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>strollers">Strollers</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>twin-strollers">Twin Strollers</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>jogger-strollers">Jogger Strollers</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>stroller-accessories">Stroller Accessories</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>single-strollers">Stroller Brands</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>travel-system">Travel System </a></li>
+<li><a href="<?php echo MCHN_ROOT;?>strollers/twin-strollers">Twin Strollers</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>strollers/jogger-strollers">Jogger Strollers</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>strollers/stroller-accessories">Stroller Accessories</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>strollers/single-strollers">Stroller Brands</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>strollers/travel-system">Travel System </a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>high-chairs">High Chairs</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>feeding">Feeding</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>high-chairs/feeding">Feeding</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>feeding">Feeding</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>sofas-chairs">Sofas & Chairs</a></h5>
@@ -107,52 +107,52 @@
 <h5><a href="<?php echo MCHN_ROOT;?>bedtime-original-baby-bedding">Bedtime Originals</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>travel-systems">Travel</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>carriers">Carriers</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>bags">Bags</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>travel-systems/carriers">Carriers</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>travel-systems/bags">Bags</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>jungle-themes">Jungle & Safari</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>kids-furniture">Kids Furniture</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>sofas-chairs">Sofas & Chairs</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>step-stools">Step Stools</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>chests-dressers-and-furniture">Chests & Dressers</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>tables-chairs-sets">Tables & Chairs Sets</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>storage-solutions">Storage Solutions</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>rockers-4-kids">Rockers 4 Kids</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>toy-boxes">Toy Boxes</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>bookcases">Bookcases</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>beds">Kids Beds</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>desks-study-areas">Desks & Study Areas</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>conversion-rails">Conversion Rails</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>nightstands">Nightstands</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-furniture/sofas-chairs">Sofas & Chairs</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-furniture/step-stools">Step Stools</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-furniture/chests-dressers-and-furniture">Chests & Dressers</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-furniture/tables-chairs-sets">Tables & Chairs Sets</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-furniture/storage-solutions">Storage Solutions</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-furniture/rockers-4-kids">Rockers 4 Kids</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-furniture/toy-boxes">Toy Boxes</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-furniture/bookcases">Bookcases</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-furniture/beds">Kids Beds</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-furniture/desks-study-areas">Desks & Study Areas</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-furniture/conversion-rails">Conversion Rails</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-furniture/nightstands">Nightstands</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>plaids-checks-stripes">Plaids & Stripes</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>kids-bedding">Kids Bedding</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>girls-bedding-sets">Girls Bedding</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>designer-kids-bedding-sets">Kids Bedding Brands</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>kids-bedding-theme">Kids Bedding Themes</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>twin-bedding">Twin Bedding</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>full-bedding">Full Bedding</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>kids-bedding-sheets">Kids Bedding Sheets</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>full-queen-dust-ruffles">Full/Queen Dust Ruffles</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>twin-dust-ruffle">Twin Dust Ruffle</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>pillow-shams">Pillow Shams</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-bedding/girls-bedding-sets">Girls Bedding</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-bedding/designer-kids-bedding-sets">Kids Bedding Brands</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-bedding/kids-bedding-theme">Kids Bedding Themes</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-bedding/twin-bedding">Twin Bedding</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-bedding/full-bedding">Full Bedding</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-bedding/kids-bedding-sheets">Kids Bedding Sheets</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-bedding/full-queen-dust-ruffles">Full/Queen Dust Ruffles</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-bedding/twin-dust-ruffle">Twin Dust Ruffle</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-bedding/pillow-shams">Pillow Shams</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>nursery-rhyme-themes">Baby Bedding Themes</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>winnie-the-pooh-friends">Winnie the Pooh</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>planes-trains-auto">Planes Trains & Auto</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>sand-sea">Sand & Sea</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>jungle-themes">Jungle & Safari</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>plaids-checks-stripes">Plaids & Stripes</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>animals-nature">Nature</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>moon-stars">Moon & Stars</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>frog-s-turtle-s">Frogs & Turtles</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>dragonfly-bedding">Dragonflies</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>butterflies-bees-bedding">Butterflies & Bees</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>animal-farm">Animal Farm</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>princess-pink">Princess</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>nursery-rhyme-themes/winnie-the-pooh-friends">Winnie the Pooh</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>nursery-rhyme-themes/planes-trains-auto">Planes Trains & Auto</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>nursery-rhyme-themes/sand-sea">Sand & Sea</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>nursery-rhyme-themes/jungle-themes">Jungle & Safari</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>nursery-rhyme-themes/plaids-checks-stripes">Plaids & Stripes</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>nursery-rhyme-themes/animals-nature">Nature</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>nursery-rhyme-themes/moon-stars">Moon & Stars</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>nursery-rhyme-themes/frog-s-turtle-s">Frogs & Turtles</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>nursery-rhyme-themes/dragonfly-bedding">Dragonflies</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>nursery-rhyme-themes/butterflies-bees-bedding">Butterflies & Bees</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>nursery-rhyme-themes/animal-farm">Animal Farm</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>nursery-rhyme-themes/princess-pink">Princess</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>modern-baby-bedding">Modern Designs</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>closeouts-specials">Closeouts & Specials</a></h5>
@@ -160,7 +160,7 @@
 <h5><a href="<?php echo MCHN_ROOT;?>animals-nature">Nature</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>cradle-bedding">Cradle Bedding</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>cradle-sheets">Cradle Sheets</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>cradle-bedding/cradle-sheets">Cradle Sheets</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>twin-beds-by-stanley">Twin Beds</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>kidsline-kids-bedding">Kidsline</a></h5>
@@ -179,11 +179,11 @@
 <h5><a href="<?php echo MCHN_ROOT;?>picci">Picci</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>chests-dressers-and-furniture">Chests & Dressers</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>dressing-chests">Dressing Chests</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>chests-dressers-and-furniture/dressing-chests">Dressing Chests</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>stanley-young-america-furniture">Stanley Young America</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>changing-station-kits">Changing Station Kits</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>stanley-young-america-furniture/changing-station-kits">Changing Station Kits</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>metal-artisan-cribs">Metal Artisan Cribs</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>wall-decor">Wall Decor</a></h5>
@@ -219,29 +219,29 @@
 <h5><a href="<?php echo MCHN_ROOT;?>mattresses">Mattresses</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>room-decor">Room Decor</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>rugs">Rugs</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>lamps">Lamps</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>drapes-valances">Drapes</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>clothes-pegs">Clothes Pegs</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>picture-frames">Picture Frames</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>wall-decor">Wall Decor</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>wooden-decor-8-letters">Wooden Letters</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>drawer-knobs">Drawer Knobs</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>shower-curtains">Shower Curtains</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>memo-board">Memory Boards</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>wallborder">Wall Border</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>lampshades">Lampshades</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>night-lights">Night Lights</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>switch-plate-covers">Switch Plate Covers</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>wall-appliques">Wall Appliques</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>baskets">Baskets</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>basket-liners">Basket Liners</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>mirrors">Mirrors</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>valances">Valances</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>growth-charts">Growth Charts</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>clock">Clocks</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>ceiling-sculptures">Ceiling Sculptures</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>plush-animals">Plush Animals</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>room-decor/rugs">Rugs</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>room-decor/lamps">Lamps</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>room-decor/drapes-valances">Drapes</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>room-decor/clothes-pegs">Clothes Pegs</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>room-decor/picture-frames">Picture Frames</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>room-decor/wall-decor">Wall Decor</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>room-decor/wooden-decor-8-letters">Wooden Letters</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>room-decor/drawer-knobs">Drawer Knobs</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>room-decor/shower-curtains">Shower Curtains</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>room-decor/memo-board">Memory Boards</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>room-decor/wallborder">Wall Border</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>room-decor/lampshades">Lampshades</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>room-decor/night-lights">Night Lights</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>room-decor/switch-plate-covers">Switch Plate Covers</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>room-decor/wall-appliques">Wall Appliques</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>room-decor/baskets">Baskets</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>room-decor/basket-liners">Basket Liners</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>room-decor/mirrors">Mirrors</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>room-decor/valances">Valances</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>room-decor/growth-charts">Growth Charts</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>room-decor/clock">Clocks</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>room-decor/ceiling-sculptures">Ceiling Sculptures</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>room-decor/plush-animals">Plush Animals</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>twin-strollers">Twin Strollers</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>toy-boxes">Toy Boxes</a></h5>
@@ -252,8 +252,8 @@
 <h5><a href="<?php echo MCHN_ROOT;?>jogger-strollers">Jogger Strollers</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>toy-s-4-kids">Toys 4 Kids</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>toys-4-girls">Toys 4 Girls</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>stuffed-animals">Stuffed Animals</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>toy-s-4-kids/toys-4-girls">Toys 4 Girls</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>toy-s-4-kids/stuffed-animals">Stuffed Animals</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>toys-4-girls">Toys 4 Girls</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>toys-4-boys">Toys 4 Boys</a></h5>
@@ -278,9 +278,9 @@
 <h5><a href="<?php echo MCHN_ROOT;?>animal-farm">Animal Farm</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>beds">Kids Beds</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>twin-beds-by-stanley">Twin Beds</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>bunk-beds-by-stanley">Bunk Beds</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>double-beds-by-stanley">Double Beds</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>beds/twin-beds-by-stanley">Twin Beds</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>beds/bunk-beds-by-stanley">Bunk Beds</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>beds/double-beds-by-stanley">Double Beds</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>princess-pink">Princess</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>gardens-bedding">Enchanted Gardens</a></h5>
@@ -290,15 +290,15 @@
 <h5><a href="<?php echo MCHN_ROOT;?>stroller-accessories">Stroller Accessories</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>baby-accessories">Baby Accessories</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>baby-blankets">Baby Blankets</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>diaper-stackers">Diaper Stackers</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>hampers">Hampers</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>dust-ruffles">Dust Ruffles</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>bumpers">Bumpers</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>mobiles">Mobiles</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>pillows">Pillows, Shams & Cases</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>changing-pad-covers">Changing Pad Covers</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>nap-mats">Nap Mats</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-accessories/baby-blankets">Baby Blankets</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-accessories/diaper-stackers">Diaper Stackers</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-accessories/hampers">Hampers</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-accessories/dust-ruffles">Dust Ruffles</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-accessories/bumpers">Bumpers</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-accessories/mobiles">Mobiles</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-accessories/pillows">Pillows, Shams & Cases</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-accessories/changing-pad-covers">Changing Pad Covers</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>baby-accessories/nap-mats">Nap Mats</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>car-seat-accessories">Carseat Accessories</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>isabella-furniture-by-stanley">Isabella</a></h5>
@@ -317,63 +317,63 @@
 <h5><a href="<?php echo MCHN_ROOT;?>carter-s"></a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>sports-coverage">Sports Coverage</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>nba">NBA</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>sports-coverage/nba">NBA</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>designer-baby-bedding">Baby Bedding Brands</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>california-kids-baby-bedding">California Kids</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>kidsline-baby-bedding">KidsLine</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>lambs-ivy-baby-bedding">Lambs & Ivy </a></li>
-<li><a href="<?php echo MCHN_ROOT;?>cocalo-baby-bedding">CoCaLo</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>glenna-jean-baby-bedding">Glenna Jean</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>sumersault">Sumersault</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>brandee-danielle-baby">Brandee Danielle</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>fireside-comforts-bedding-4-babys-only">Fireside Comforts</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>sweet-kyla-baby-bedding">Sweet Kyla</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>beverlyhillsbaby-s-bedding">ABC Baby</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>baby-doll">Baby Doll</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>jojo-designs">Sweet JoJo Designs</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-baby-bedding/california-kids-baby-bedding">California Kids</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-baby-bedding/kidsline-baby-bedding">KidsLine</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-baby-bedding/lambs-ivy-baby-bedding">Lambs & Ivy </a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-baby-bedding/cocalo-baby-bedding">CoCaLo</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-baby-bedding/glenna-jean-baby-bedding">Glenna Jean</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-baby-bedding/sumersault">Sumersault</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-baby-bedding/brandee-danielle-baby">Brandee Danielle</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-baby-bedding/fireside-comforts-bedding-4-babys-only">Fireside Comforts</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-baby-bedding/sweet-kyla-baby-bedding">Sweet Kyla</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-baby-bedding/beverlyhillsbaby-s-bedding">ABC Baby</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-baby-bedding/baby-doll">Baby Doll</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-baby-bedding/jojo-designs">Sweet JoJo Designs</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>designer-baby-furniture">Baby Furniture Brands</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>kolcraft">Kolcraft</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>arms-reach-baby-furniture"></a></li>
-<li><a href="<?php echo MCHN_ROOT;?>cribs-by-stanley-young-america">Stanley Young America</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>nursery-smart-baby-kids-furniture">Nursery Smart</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-baby-furniture/kolcraft">Kolcraft</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-baby-furniture/arms-reach-baby-furniture"></a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-baby-furniture/cribs-by-stanley-young-america">Stanley Young America</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-baby-furniture/nursery-smart-baby-kids-furniture">Nursery Smart</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>designer-kids-furniture">Kids Furniture Brands</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>fun-furnishings-kids-furniture">Fun Furnishings</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>kettler-baby-kids-furniture">Kettler Furniture</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>kidkraft">KidKraft</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>childcraft-legacy">ChildCraft / Legacy</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-kids-furniture/fun-furnishings-kids-furniture">Fun Furnishings</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-kids-furniture/kettler-baby-kids-furniture">Kettler Furniture</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-kids-furniture/kidkraft">KidKraft</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-kids-furniture/childcraft-legacy">ChildCraft / Legacy</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>designer-kids-bedding-sets">Kids Bedding Brands</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>fireside-comforts-bedding-4-kids-only">Fireside Comforts</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>kidsline-kids-bedding">Kidsline</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>california-kids-bedding">California Kids</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>sports-coverage">Sports Coverage</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>sweet-jojo-designs-kids-bedding">Sweet JoJo Designs</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-kids-bedding-sets/fireside-comforts-bedding-4-kids-only">Fireside Comforts</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-kids-bedding-sets/kidsline-kids-bedding">Kidsline</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-kids-bedding-sets/california-kids-bedding">California Kids</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-kids-bedding-sets/sports-coverage">Sports Coverage</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-kids-bedding-sets/sweet-jojo-designs-kids-bedding">Sweet JoJo Designs</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>kids-bedding-theme">Kids Bedding Themes</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>nfl-teen-bedding">Football</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>ncaa-teen-bedding">College Sports</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>baseball-theme-bedding">Baseball</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>hockey">Hockey</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-bedding-theme/nfl-teen-bedding">Football</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-bedding-theme/ncaa-teen-bedding">College Sports</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-bedding-theme/baseball-theme-bedding">Baseball</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-bedding-theme/hockey">Hockey</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>designer-strollers">Travel Brands</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>peg-perego-strollers">Peg Perego</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>combi-international-strollers">Combi</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>britax-car-seat">Britax</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>bob-jogging-stroller">B.O.B.</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>recaro-car-seats">Recaro</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>bugaboo-strollers">Bugaboo</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>phil-teds-strollers">Phil & Teds</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>dorel">Dorel</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>kolcraft">Kolcraft</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-strollers/peg-perego-strollers">Peg Perego</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-strollers/combi-international-strollers">Combi</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-strollers/britax-car-seat">Britax</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-strollers/bob-jogging-stroller">B.O.B.</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-strollers/recaro-car-seats">Recaro</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-strollers/bugaboo-strollers">Bugaboo</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-strollers/phil-teds-strollers">Phil & Teds</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-strollers/dorel">Dorel</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>designer-strollers/kolcraft">Kolcraft</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>boys-bedding">Boys Bedding</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>diaper-stackers">Diaper Stackers</a></h5>
@@ -404,8 +404,8 @@
 <h5><a href="<?php echo MCHN_ROOT;?>shower-curtains">Shower Curtains</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>kids-bedding-sheets">Kids Bedding Sheets</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>twin-sheets">Twin Sheets</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>full-queen-sheets">Full/Queen Sheets</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-bedding-sheets/twin-sheets">Twin Sheets</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>kids-bedding-sheets/full-queen-sheets">Full/Queen Sheets</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>twin-sheets">Twin Sheets</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>full-queen-sheets">Full/Queen Sheets</a></h5>
@@ -417,13 +417,13 @@
 <h5><a href="<?php echo MCHN_ROOT;?>miami-heat">Miami Heat</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>single-strollers">Stroller Brands</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>bugaboo">Bugaboo</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>combi">Combi</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>phil-teds">Phil & Teds</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>quinny">Quinny</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>britax">Britax</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>cosco">Cosco</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>peg-perego">Peg Perego</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>single-strollers/bugaboo">Bugaboo</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>single-strollers/combi">Combi</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>single-strollers/phil-teds">Phil & Teds</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>single-strollers/quinny">Quinny</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>single-strollers/britax">Britax</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>single-strollers/cosco">Cosco</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>single-strollers/peg-perego">Peg Perego</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>baby-swing">Baby Swing</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
@@ -440,7 +440,7 @@
 <h5><a href="<?php echo MCHN_ROOT;?>bugaboo">Bugaboo</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>sports-team-bedding">Kids Sports Team Bedding</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>ncaa">NCAA</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>sports-team-bedding/ncaa">NCAA</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>nba">NBA</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
@@ -618,9 +618,9 @@
 <h5><a href="<?php echo MCHN_ROOT;?>lampshades">Lampshades</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>ncaa">NCAA</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>florida-state-seminoles">Florida State Seminoles</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>illinois-fighting-illini">Illinois Fighting Illini</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>virginia-tech-hokies">Virginia Tech Hokies</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>ncaa/florida-state-seminoles">Florida State Seminoles</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>ncaa/illinois-fighting-illini">Illinois Fighting Illini</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>ncaa/virginia-tech-hokies">Virginia Tech Hokies</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>alabama-crimson-tide">Alabama Crimson Tide</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>arkansas-razorbacks">Arkansas Razorbacks</a></h5>
@@ -655,18 +655,18 @@
 <h5><a href="<?php echo MCHN_ROOT;?>booster-seat">Booster Seat</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>collections">Collections</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>harbor-town-furniture-by-stanley">Harbor Town</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>my-haven-furniture-by-stanley">MyHaven</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>isabella-furniture-by-stanley">Isabella</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>4-seasons-by-stanley">All Seasons</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>collections/harbor-town-furniture-by-stanley">Harbor Town</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>collections/my-haven-furniture-by-stanley">MyHaven</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>collections/isabella-furniture-by-stanley">Isabella</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>collections/4-seasons-by-stanley">All Seasons</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>stanley-beds">Stanley Beds</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>cribs">Cribs</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>bunk-beds">Bunk Beds</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>double-full-beds">Double/Full Beds</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>twin-beds">Twin Beds</a></li>
-<li><a href="<?php echo MCHN_ROOT;?>queen-beds">Queen Beds</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>stanley-beds/cribs">Cribs</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>stanley-beds/bunk-beds">Bunk Beds</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>stanley-beds/double-full-beds">Double/Full Beds</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>stanley-beds/twin-beds">Twin Beds</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>stanley-beds/queen-beds">Queen Beds</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>cribs">Cribs</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>bunk-beds">Bunk Beds</a></h5>
@@ -674,7 +674,7 @@
 <h5><a href="<?php echo MCHN_ROOT;?>twin-beds">Twin Beds</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>conversion-kits">Conversion Kits</a></h5>
 <ul style="list-style: none;margin-left: 10px;">
-<li><a href="<?php echo MCHN_ROOT;?>safety-rails">Safety Rails</a></li>
+<li><a href="<?php echo MCHN_ROOT;?>conversion-kits/safety-rails">Safety Rails</a></li>
 </ul>
 <h5><a href="<?php echo MCHN_ROOT;?>toddler-rails">Toddler Rails</a></h5>
 <h5><a href="<?php echo MCHN_ROOT;?>adult-rails">Adult Rails</a></h5>
