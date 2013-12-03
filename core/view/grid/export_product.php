@@ -77,13 +77,13 @@ $sql = "SELECT
 CONCAT('\"',CONCAT(`products_items`.`id`,'\"')) as SKU,
 CONCAT('\"',CONCAT(`products_items`.`name_short`,'\"')) as Name,
 CONCAT('\"',CONCAT(CONCAT('http://www.babybeddingtown.com\/products.php?id=',`products_items`.`id`),'\"')) as URL,
-'\"\"' as Price,
-CONCAT('\"',CONCAT(FORMAT(price,2),'\"')) as RetailPrice,
+CONCAT('\"',CONCAT(FORMAT(price,2),'\"')) as Price,
+'\"\"' as RetailPrice,
 CONCAT('\"',CONCAT(`products_items`.`image_large`,'\"')) as FullImage,
 CONCAT('\"',CONCAT(`products_items`.`image_thumbnail`,'\"')) as ThumbnailImage,
 CONCAT('\"',CONCAT(FORMAT((price*0.1),2),'\"')) as Commission,
 '\"11\"' as Category,
-'\"\"' as Subcategory,
+'\"97\"' as Subcategory,
 CONCAT('\"',CONCAT(`products_items`.`description_long`,'\"')) as Description,
 CONCAT(CONCAT('\"',`products_items`.`name_long`),'\"') as SearchTerms,
 '\"instock\"' as Status,
@@ -126,7 +126,7 @@ CONCAT('\"',CONCAT(`category`.`name_short`,'\"')) as MerchantCategory,
 FROM
 products_items
 LEFT JOIN category ON `category`.`id` = `products_items`.`category_id`
-WHERE `products_items`.`status` = 1";
+WHERE `products_items`.`status` = 1 and price > 0";
 $values = array();
 $result = db::execute_query($sql);
 $rows 	= db::get_result();
