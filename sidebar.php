@@ -982,8 +982,6 @@
 		
 		<li><a href="<?php echo MCHN_ROOT;?>designer-baby-bedding/cocalo-couture">CoCaLo Couture</a></li>
 		
-		<li><a href="<?php echo MCHN_ROOT;?>designer-baby-bedding/trend-lab">Trend Lab</a></li>
-		
 		<li><a href="<?php echo MCHN_ROOT;?>designer-baby-bedding/soho-bedding">Soho</a></li>
 		
 		<li><a href="<?php echo MCHN_ROOT;?>designer-baby-bedding/carter-s"></a></li>
