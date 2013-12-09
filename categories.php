@@ -17,6 +17,11 @@ echo $buffer;
 <?php setlocale(LC_MONETARY, 'en_US'); ?>
 <script type="text/javascript">
 	$(document).ready(function() {
+		$('#myTab a').click(function (e) {
+			e.preventDefault();
+			console.log('click');
+			$(this).tab('show');
+		});
 		var carousel = $("#carousel").featureCarousel({
 			largeFeatureWidth: 0.90,
 			largeFeatureHeight: 0.60,
@@ -24,6 +29,70 @@ echo $buffer;
 			smallFeatureWidth: 0.50,
 			sidePadding:40,
 			smallFeatureOffset: 100
+		});
+
+		$('.productedit').on('click',function (e) {
+			e.preventDefault();
+			var id = $(this).attr('id');
+			$.ajax({
+				type:'POST',
+				url:"core/view/grid/products.php",
+				data:"id=" + id,
+				success:function(data) {
+					$.each(data.rows, function (index, value) {
+						$('#name_short').attr('value', value.cell.name_short);
+						$('#name_long').attr('value', value.cell.name_long);
+						$('#description_short').attr('value', value.cell.description_short);
+						$('#description_long').text(value.cell.description_long);
+
+						$('#image_thumbnail_val').attr('src', value.cell.image_thumbnail);
+						$('#image_thumbnail_link').attr('href', value.cell.image_thumbnail);
+						$('#image_thumbnail_link span').html(value.cell.thumb);
+
+						$('#image_small_val').attr('src', value.cell.image_small);
+						$('#image_small_link').attr('href', value.cell.image_small);
+						$('#image_small_link span').html(value.cell.small);
+
+						$('#image_large_val').attr('src', value.cell.image_large);
+						$('#image_large_link').attr('href', value.cell.image_large);
+						$('#image_large_link span').html(value.cell.large);
+
+						$('#thumbnail_current').attr('value', value.cell.image_thumbnail);
+						$('#small_current').attr('value', value.cell.image_small);
+						$('#large_current').attr('value', value.cell.image_large);
+
+						$('#price').attr('value', value.cell.price);
+						$('#cost').attr('value', value.cell.cost);
+
+						$('#category_id').val(value.cell.category_id);
+						$('#brand_id').val(value.cell.brand_id);
+						$('#vendor_id').val(value.cell.vendor_id);
+						$('#status').val(value.cell.status);
+						$('#comments').text(value.cell.comments);
+						$('#product_order').val(value.cell.product_order);
+
+						$('#products-id').attr('value', value.cell.id);
+						$('#delete').show();
+						$('#submitter').attr('value', 'Update');
+						$('#action').attr('value', 'update');
+						$('#modal-create-products').modal('show');
+					});
+				},
+				dataType:'json'
+			});			
+		});
+
+		$('#modal-create-products').on('shown', function () {
+			if( $('#submitter').attr('value') == 'Add' || $('#submitter').attr('value') == 'Create' ) {
+				$('#option-form-select').hide();
+				$('#options-select').hide();
+				$('#myTab li:eq(0) a').tab('show');
+				$('#myTab li:eq(1) a').tab('hide');
+				$('#myTab li:eq(2) a').tab('hide');
+			} else if( $('#submitter').attr('value') == 'Update') {
+				$('#option-form-select').show();
+				$('#options-select').show();
+			}
 		});
 	});
 </script>
@@ -43,6 +112,7 @@ echo $buffer;
 		$sql = "SELECT * FROM `products_items`
 		WHERE (`category_id` = '{$gp['id']}')
 		AND `status` = 1
+		ORDER BY product_order
 		LIMIT {$per_page}
 		OFFSET {$pagination->offset()}";
 		$products = products::getSQL($sql);
@@ -173,6 +243,16 @@ echo $buffer;
 										<input type="hidden" name="direction" value="fromCart" /> <input
 										type="submit" class="btn btn-info btn-mini" value="ADD TO CART" />
 									</form>
+									<?php 
+										$id = $row["id"];
+										if($_SESSION['user_id'])
+										{
+									?>
+											<a href="#" class="productedit" id="<?php html::p($id) ?>">Edit</a>
+									<?php
+											include('core/view/product_editor.php');
+										}
+									?>
 								</center>
 							</div>
 						</div>

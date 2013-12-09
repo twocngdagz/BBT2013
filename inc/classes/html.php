@@ -138,7 +138,7 @@ class Html {
 	# CLEAN INPUT
 	public static function cln( $text )
 	{
-		return trim(mysql_escape_string($text));
+		return trim(mysql_real_escape_string($text));
 	}
 	
 }

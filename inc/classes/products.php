@@ -32,6 +32,18 @@ class Products
 		}
 		return $r;
 	}
+
+	public static function getProductnoImage()
+	{
+		$sql = "SELECT * from products_items where image_thumbnail like '%noimage%'";
+		db::execute_query($sql);
+		$d_arr = db::get_result();
+		$r = array();
+		foreach ($d_arr as $d) {
+			array_push($r, $d);
+		}
+		return $r;
+	}
 	
 	#GET TOP 3 PRODUCTS BY CATEGORY ID
 	public static function getTopProductByCategoryID($category_id)
