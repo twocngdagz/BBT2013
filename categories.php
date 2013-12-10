@@ -30,6 +30,50 @@ echo $buffer;
 			sidePadding:40,
 			smallFeatureOffset: 100
 		});
+		// $(".flexProductOptions").flexigrid({
+		// 	url : 'core/view/grid/productOptions.php',
+		// 	dataType : 'json',
+		// 	colModel : [ 
+		// 	{ display : 'Id', name : 'id', width : 15, sortable : true, align : 'right'}, 
+		// 	{ display : 'Name', name : 'option_name', width : 180, sortable : true, align : 'left'}, 
+		// 	{ display : 'Description', name : 'option_description', width : 280, sortable : true, align : 'left'},
+		// 	{ display : 'Price', name : 'price', width : 60, sortable : true, align : 'left'},
+		// 	{ display : 'Weight', name : 'weight', width : 60, sortable : true, align : 'left'}
+		// 	],
+		// 	searchitems : [ {
+		// 		display : 'Id',
+		// 		name : 'id'
+		// 	}, {
+		// 		display : 'Option Name',
+		// 		name : 'option_name',
+		// 		isdefault : false
+		// 	}, {
+		// 		display : 'Option Description',
+		// 		name : 'option_description',
+		// 		isdefault : false
+		// 	}, {
+		// 		display : 'Price',
+		// 		name : 'price',
+		// 		isdefault : false
+		// 	}],
+		// 	onDoubleClick: false,
+		// 	multiSel: false,
+		// 	sortname : "id",
+		// 	sortorder : "desc",
+		// 	usepager : true,
+		// 	title : '',
+		// 	useRp : true,
+		// 	resize: false,
+		// 	rp : 10,
+		// 	query: value.cell.id,
+		// 	qtype :'`products_item_options`.`product_id`',
+		// 	showTableToggleBtn : true,
+		// 	width : 700,
+		// 	onSuccess: function(data) {
+		// 	},
+		// 	singleSelect: true,
+		// 	height : 270
+		// });
 
 		$('.productedit').on('click',function (e) {
 			e.preventDefault();
